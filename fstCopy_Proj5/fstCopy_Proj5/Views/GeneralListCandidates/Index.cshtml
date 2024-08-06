@@ -1,0 +1,76 @@
+﻿@model IEnumerable<fstCopy_Proj5.Models.GeneralListCandidate>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayoutPage.cshtml";
+}
+
+<h2>Candidate applications for the party list</h2>
+
+
+<div class="filter-form">
+    @using (Html.BeginForm("Index", "GeneralListCandidates", FormMethod.Get, new { id = "filterForm" }))
+    {
+        <div class="form-group">
+            @Html.Label("General Listing Name")
+            @Html.DropDownList("generalListingName", ViewBag.GeneralListingName as SelectList, "Select", new { @class = "form-control", @onchange = "document.getElementById('filterForm').submit();" })
+        </div>
+        <div class="form-group">
+            @Html.CheckBox("onlyAccepted", (ViewBag.OnlyAccepted as bool?) ?? false, new { @onchange = "document.getElementById('filterForm').submit();" })
+            @Html.Label("Only Accepted")
+        </div>
+    }
+</div>
+
+<table class="table table-borderless table-hover">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.CandidateName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GeneralListing.Name)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            string rowClass = item.Status == "1" ? "accepted-bg" : item.Status == "0" ? "rejected-bg" : "";
+
+            <tr class="@rowClass">
+                <td>
+                    <small class="mb-0 text-muted">
+                        @Html.DisplayFor(modelItem => item.CandidateName)
+                    </small>
+                </td>
+                <td>
+                    <small class="mb-0 text-muted">
+                        @Html.DisplayFor(modelItem => item.Email)
+                    </small>
+                </td>
+                <td>
+                    <small class="mb-0 text-muted">
+                        @Html.DisplayFor(modelItem => item.GeneralListing.Name)
+                    </small>
+                </td>
+                <td>
+                    @using (Html.BeginForm("UpdateStatus", "GeneralListCandidates", FormMethod.Post, new { @style = "display:inline;" }))
+                    {
+                        @Html.Hidden("CandidateID", item.CandidateID)
+                        @Html.DropDownList("Status", new SelectList(new[]
+                             {
+                            new SelectListItem { Text = "Choose", Value = "" },
+                            new SelectListItem { Text = "Accept", Value = "1" },
+                            new SelectListItem { Text = "Reject", Value = "0" }
+                        }, "Value", "Text", item.Status), new { @class = "form-control", @onchange = "this.form.submit();" })
+                    }
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

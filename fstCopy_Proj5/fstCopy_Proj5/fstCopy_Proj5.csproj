@@ -51,6 +51,7 @@
       <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Net.Http" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
@@ -99,6 +100,74 @@
   <ItemGroup>
     <Content Include="Content\404.html" />
     <Content Include="Content\about-us.html" />
+    <Content Include="Content\Admin\assets\avatars\face-1.jpg" />
+    <Content Include="Content\Admin\assets\avatars\face-2.jpg" />
+    <Content Include="Content\Admin\assets\avatars\face-3.jpg" />
+    <Content Include="Content\Admin\assets\avatars\face-4.jpg" />
+    <Content Include="Content\Admin\assets\avatars\face-5.jpg" />
+    <Content Include="Content\Admin\assets\avatars\face-6.jpg" />
+    <Content Include="Content\Admin\assets\avatars\face-7.jpg" />
+    <Content Include="Content\Admin\assets\avatars\face-8.jpg" />
+    <Content Include="Content\Admin\assets\images\logo.svg" />
+    <Content Include="Content\Admin\assets\images\qrcode.svg" />
+    <Content Include="Content\Admin\assets\products\p1.jpg" />
+    <Content Include="Content\Admin\assets\products\p2.jpg" />
+    <Content Include="Content\Admin\assets\products\p3.jpg" />
+    <Content Include="Content\Admin\assets\products\p4.jpg" />
+    <Content Include="Content\Admin\css\apexcharts.css" />
+    <Content Include="Content\Admin\css\app-dark.css" />
+    <Content Include="Content\Admin\css\app-light.css" />
+    <Content Include="Content\Admin\css\app-rtl.css" />
+    <Content Include="Content\Admin\css\bootstrap-datepicker.css" />
+    <Content Include="Content\Admin\css\dataTables.bootstrap4.css" />
+    <Content Include="Content\Admin\css\daterangepicker.css" />
+    <Content Include="Content\Admin\css\dropzone.css" />
+    <Content Include="Content\Admin\css\dropzone.min.css" />
+    <Content Include="Content\Admin\css\feather.css" />
+    <Content Include="Content\Admin\css\fullcalendar.css" />
+    <Content Include="Content\Admin\css\jquery.steps.css" />
+    <Content Include="Content\Admin\css\jquery.timepicker.css" />
+    <Content Include="Content\Admin\css\perfect-scrollbar.css" />
+    <Content Include="Content\Admin\css\quill.snow.css" />
+    <Content Include="Content\Admin\css\select2-bootstrap4.css" />
+    <Content Include="Content\Admin\css\select2.css" />
+    <Content Include="Content\Admin\css\simplebar.css" />
+    <Content Include="Content\Admin\css\uppy.min.css" />
+    <Content Include="Content\Admin\fonts\feather.svg" />
+    <Content Include="Content\Admin\js\apexcharts.custom.js" />
+    <Content Include="Content\Admin\js\apexcharts.min.js" />
+    <Content Include="Content\Admin\js\apps.js" />
+    <Content Include="Content\Admin\js\bootstrap-datepicker.min.js" />
+    <Content Include="Content\Admin\js\bootstrap.min.js" />
+    <Content Include="Content\Admin\js\Chart.min.js" />
+    <Content Include="Content\Admin\js\config.js" />
+    <Content Include="Content\Admin\js\d3.min.js" />
+    <Content Include="Content\Admin\js\datamaps-zoomto.js" />
+    <Content Include="Content\Admin\js\datamaps.all.min.js" />
+    <Content Include="Content\Admin\js\datamaps.custom.js" />
+    <Content Include="Content\Admin\js\dataTables.bootstrap4.min.js" />
+    <Content Include="Content\Admin\js\daterangepicker.js" />
+    <Content Include="Content\Admin\js\dropzone.min.js" />
+    <Content Include="Content\Admin\js\fullcalendar.custom.js" />
+    <Content Include="Content\Admin\js\fullcalendar.js" />
+    <Content Include="Content\Admin\js\gauge.min.js" />
+    <Content Include="Content\Admin\js\jquery.dataTables.min.js" />
+    <Content Include="Content\Admin\js\jquery.mask.min.js" />
+    <Content Include="Content\Admin\js\jquery.min.js" />
+    <Content Include="Content\Admin\js\jquery.sparkline.min.js" />
+    <Content Include="Content\Admin\js\jquery.steps.min.js" />
+    <Content Include="Content\Admin\js\jquery.stickOnScroll.js" />
+    <Content Include="Content\Admin\js\jquery.timepicker.js" />
+    <Content Include="Content\Admin\js\jquery.validate.min.js" />
+    <Content Include="Content\Admin\js\moment.min.js" />
+    <Content Include="Content\Admin\js\perfect-scrollbar.min.js" />
+    <Content Include="Content\Admin\js\popper.min.js" />
+    <Content Include="Content\Admin\js\quill.min.js" />
+    <Content Include="Content\Admin\js\select2.min.js" />
+    <Content Include="Content\Admin\js\simplebar.min.js" />
+    <Content Include="Content\Admin\js\tinycolor-min.js" />
+    <Content Include="Content\Admin\js\topojson.min.js" />
+    <Content Include="Content\Admin\js\uppy.min.js" />
     <Content Include="Content\backblue.gif" />
     <Content Include="Content\blog.html" />
     <Content Include="Content\contact.html" />
@@ -241,7 +310,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AdsController.cs" />
+    <Compile Include="Controllers\ContactController.cs" />
     <Compile Include="Controllers\DATEsController.cs" />
+    <Compile Include="Controllers\GeneralListCandidatesController.cs" />
+    <Compile Include="Controllers\GeneralListingsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Models\Ad.cs">
       <DependentUpon>Model1.tt</DependentUpon>
@@ -319,6 +392,9 @@
     <Content Include="Models\Model1.edmx.diagram">
       <DependentUpon>Model1.edmx</DependentUpon>
     </Content>
+    <Content Include="Content\Admin\fonts\feather.eot" />
+    <Content Include="Content\Admin\fonts\feather.ttf" />
+    <Content Include="Content\Admin\fonts\feather.woff" />
     <None Include="packages.config" />
     <Content Include="Views\Shared\_MainLayout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
@@ -336,6 +412,20 @@
     <Content Include="Views\LocalListCandidates\ThankYou.cshtml" />
     <Content Include="Views\LocalListCandidates\Edit.cshtml" />
     <Content Include="Views\LocalListCandidates\Delete.cshtml" />
+    <Content Include="Views\GeneralListings\Index.cshtml" />
+    <Content Include="Views\GeneralListings\Details.cshtml" />
+    <Content Include="Views\GeneralListings\Create.cshtml" />
+    <Content Include="Views\GeneralListings\Edit.cshtml" />
+    <Content Include="Views\GeneralListings\Delete.cshtml" />
+    <Content Include="Views\Shared\_AdminLayoutPage.cshtml" />
+    <Content Include="Views\GeneralListCandidates\Index.cshtml" />
+    <Content Include="Views\GeneralListCandidates\Details.cshtml" />
+    <Content Include="Views\GeneralListCandidates\Create.cshtml" />
+    <Content Include="Views\GeneralListCandidates\Edit.cshtml" />
+    <Content Include="Views\GeneralListCandidates\Delete.cshtml" />
+    <Content Include="Views\Contact\Index.cshtml" />
+    <Content Include="Views\Contact\DetailsContact.cshtml" />
+    <Content Include="Views\Contact\CreateContact.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -345,6 +435,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Ads\" />
     <Folder Include="Views\LocalResult\" />
   </ItemGroup>
   <ItemGroup>

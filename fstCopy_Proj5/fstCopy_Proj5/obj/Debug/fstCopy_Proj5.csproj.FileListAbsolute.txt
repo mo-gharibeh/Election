@@ -150,3 +150,5 @@ C:\Users\Orange\Desktop\final project\project-5-elections--main\SUHA\fstCopy_Pro
 C:\Users\Orange\Desktop\final project\project-5-elections--main\SUHA\fstCopy_Proj5\fstCopy_Proj5\obj\Debug\fstCopy_.69518A5C.Up2Date
 C:\Users\Orange\Desktop\final project\project-5-elections--main\SUHA\fstCopy_Proj5\fstCopy_Proj5\obj\Debug\fstCopy_Proj5.dll
 C:\Users\Orange\Desktop\final project\project-5-elections--main\SUHA\fstCopy_Proj5\fstCopy_Proj5\obj\Debug\fstCopy_Proj5.pdb
+C:\Users\Orange\Desktop\Election\fstCopy_Proj5\fstCopy_Proj5\obj\Debug\fstCopy_Proj5.csproj.AssemblyReference.cache
+C:\Users\Orange\Desktop\Election\fstCopy_Proj5\fstCopy_Proj5\obj\Debug\fstCopy_Proj5.csproj.CoreCompileInputs.cache
