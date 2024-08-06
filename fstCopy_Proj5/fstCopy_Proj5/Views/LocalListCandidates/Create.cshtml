@@ -1,0 +1,159 @@
+﻿@model fstCopy_Proj5.Models.LocalListCandidate
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>نموذج تقديم طلب الترشح</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <style>
+        body {
+            direction: rtl;
+            text-align: right;
+        }
+
+        .custom-form .control-label {
+            text-align: right;
+        }
+
+        .custom-form .text-center {
+            text-align: center;
+        }
+
+        .custom-form .form-group label {
+            font-weight: bold;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+            .header img {
+                max-width: 150px;
+            }
+
+            .header h2 {
+                font-size: 24px;
+                font-weight: bold;
+            }
+
+        .form-container {
+            border-top: 2px solid red;
+            padding-top: 20px;
+        }
+
+        .form-group.text-center input[type="submit"] {
+            background-color: #d9534f;
+            border-color: #d43f3a;
+            color: #fff;
+            width: 100%;
+        }
+
+            .form-group.text-center input[type="submit"]:hover {
+                background-color: #c9302c;
+                border-color: #ac2925;
+            }
+    </style>
+</head>
+<body>
+    <div class="container custom-form">
+        <div class="header">
+            <h2>نموذج تقديم طلب الترشح</h2>
+            <img src="~/images/share-image.png" alt="Logo">
+
+        </div>
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="form-horizontal form-container">
+                <hr />
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+                <div class="form-group">
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.CandidateName, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.CandidateName, "", new { @class = "text-danger" })
+                    </div>
+                    <label class="control-label col-md-2">اسم المفوض بالكامل</label>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.NationalNumber, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.NationalNumber, "", new { @class = "text-danger" })
+                    </div>
+                    <label class="control-label col-md-2">الرقم الوطني</label>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-md-10">
+                        @Html.DropDownListFor(model => model.Gender, ViewBag.Genders as SelectList, "اختر الجنس", new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.Gender, "", new { @class = "text-danger" })
+                    </div>
+                    <label class="control-label col-md-2">الجنس</label>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-md-10">
+                        @Html.DropDownListFor(model => model.Religion, ViewBag.Religions as SelectList, "اختر الديانة", new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.Religion, "", new { @class = "text-danger" })
+                    </div>
+                    <label class="control-label col-md-2">الدين</label>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-md-10">
+                        @Html.DropDownListFor(model => model.Type_Chair, ViewBag.TypeChairs as SelectList, "اختر نوع الكرسي", new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.Type_Chair, "", new { @class = "text-danger" })
+                    </div>
+                    <label class="control-label col-md-2">نوع الكرسي</label>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.BirthdateCandidate, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.BirthdateCandidate, "", new { @class = "text-danger" })
+                    </div>
+                    <label class="control-label col-md-2">تاريخ الميلاد</label>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-md-10">
+                        @Html.DropDownListFor(model => model.Governorate, ViewBag.Governorates as SelectList, "اختر المحافظة", new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.Governorate, "", new { @class = "text-danger" })
+                    </div>
+                    <label class="control-label col-md-2">المحافظة</label>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-md-10">
+                        @Html.DropDownListFor(model => model.ElectionArea, ViewBag.ElectionAreas as SelectList, "اختر منطقة الانتخابات", new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.ElectionArea, "", new { @class = "text-danger" })
+                    </div>
+                    <label class="control-label col-md-2">منطقة الانتخابات</label>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-md-10">
+                        @Html.HiddenFor(model => model.LocalListingID, new { Value = ViewBag.LocalListID })
+                    </div>
+                </div>
+
+                <div class="form-group text-center">
+                    <div class="col-md-12">
+                        <input type="submit" value="الإنتقال إلى الصفحة التالية" class="btn btn-primary" />
+                    </div>
+                </div>
+            </div>
+        }
+
+        <div class="text-center">
+            @Html.ActionLink("العودة إلى القائمة", "Index", null, new { @class = "btn btn-default" })
+        </div>
+    </div>
+
+</body>
+</html>

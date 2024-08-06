@@ -1,0 +1,107 @@
+﻿
+
+@{
+    ViewBag.Title = "Party Results";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<h2>Party Election Results</h2>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h3>Summary</h3>
+            <p>Total Users: @ViewBag.TotalUsers</p>
+            <p>Party Votes Percentage: @ViewBag.PartyPercentage %</p>
+            <p>Total Party Votes: @ViewBag.PartyVotes</p>
+            <p>Party Threshold (Votes): @ViewBag.PartyThreshold</p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <h4>Parties Above Threshold</h4>
+            @if (((List<string>)ViewBag.PartiesAboveThreshold).Any())
+            {
+                <ul>
+                    @foreach (var item in ViewBag.PartiesAboveThreshold)
+                    {
+                        <li>@Html.Raw(item)</li>
+                    }
+                </ul>
+            }
+            else
+            {
+                <p>No parties above the threshold.</p>
+            }
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <h4>Total Votes for Winning Lists</h4>
+            <p>@ViewBag.WinningListsVotesSum</p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <h4>Seats Won by Party Lists</h4>
+            @if (((List<string>)ViewBag.PartyListsSeats).Any())
+            {
+                <ul>
+                    @foreach (var list in ViewBag.PartyListsSeats)
+                    {
+                        <li>@Html.Raw(list)</li>
+                    }
+                </ul>
+            }
+            else
+            {
+                <p>No list has won any seats.</p>
+            }
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <h4>Winning Candidates from Parties</h4>
+            @if (((List<string>)ViewBag.PartyWinningCandidates).Any())
+            {
+                <ul>
+                    @foreach (var candidate in ViewBag.PartyWinningCandidates)
+                    {
+                        <li>@Html.Raw(candidate)</li>
+                    }
+                </ul>
+            }
+            else
+            {
+                <p>No winning candidates.</p>
+            }
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <h4>Complete Party Lists and Candidates Info</h4>
+            @if (((List<string>)ViewBag.PartyListsAndCandidates).Any())
+            {
+                <ul>
+                    @foreach (var info in ViewBag.PartyListsAndCandidates)
+                    {
+                        <li>@Html.Raw(info)</li>
+                    }
+                </ul>
+            }
+            else
+            {
+                <p>No detailed info available.</p>
+            }
+        </div>
+    </div>
+</div>
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>

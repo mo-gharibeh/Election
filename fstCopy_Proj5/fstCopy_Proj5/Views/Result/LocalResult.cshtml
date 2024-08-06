@@ -1,0 +1,56 @@
+﻿@model List<fstCopy_Proj5.Models.CircleViewModel>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voting Results</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            @for (int i = 0; i < Model.Count; i++)
+            {
+                <div class="col-md-4 mb-4">
+                    <div class="card shadow border">
+                        <div class="card-body">
+                            <h5 class="card-title">Circle @(i + 1)</h5>
+                            <p class="card-text">Local Votes: @Model[i].localvotecounter</p>
+                            <p class="card-text">White Votes: @Model[i].whitelocalcounter</p>
+                            <p class="card-text">Total Votes: @Model[i].totalVotes</p>
+                            <p class="card-text">Threshold: @Model[i].threshold</p>
+
+                            <h6 class="card-subtitle mb-2 text-muted">Winning Lists</h6>
+                            @if (Model[i].winning_lists.Any())
+                            {
+                                foreach (var list in Model[i].winning_lists.Where(l => l.ActualSeats > 0))
+                                {
+                                    <div class="list-group mb-3">
+                                        <h6 class="list-group-item list-group-item-action active">@list.LocalListCandidates - @list.NumberOfVotes (Seats: @list.ActualSeats)</h6>
+                                        @if (Model[i].winningCandidates.ContainsKey(list.ID))
+                                        {
+                                            foreach (var candidate in Model[i].winningCandidates[list.ID])
+                                            {
+                                                <div class="list-group-item">@candidate.CandidateName - @candidate.NumberOfVotesCandidate</div>
+                                            }
+                                        }
+                                    </div>
+                                }
+                            }
+                            else
+                            {
+                                <p class="card-text">No winning lists</p>
+                            }
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
