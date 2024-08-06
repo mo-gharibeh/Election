@@ -319,6 +319,7 @@
     <Compile Include="Controllers\AdsController.cs" />
     <Compile Include="Controllers\ContactController.cs" />
     <Compile Include="Controllers\DATEsController.cs" />
+    <Compile Include="Controllers\Debates1Controller.cs" />
     <Compile Include="Controllers\GeneralListCandidatesController.cs" />
     <Compile Include="Controllers\GeneralListingsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -446,6 +447,14 @@
     <Content Include="Views\USER\LocalElections.cshtml" />
     <Content Include="Views\USER\PartyElections.cshtml" />
     <Content Include="Views\USER\ElectionDistricts.cshtml" />
+    <Content Include="Views\Debates1\Index.cshtml" />
+    <Content Include="Views\Debates1\IndexDebatsesHome.cshtml" />
+    <Content Include="Views\Debates1\Details.cshtml" />
+    <Content Include="Views\Debates1\Create.cshtml" />
+    <Content Include="Views\Debates1\Edit.cshtml" />
+    <Content Include="Views\Debates1\Delete.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Faq.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -455,6 +464,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Debates\" />
     <Folder Include="Views\LocalResult\" />
   </ItemGroup>
   <ItemGroup>

@@ -24,11 +24,11 @@ namespace fstCopy_Proj5.Controllers
             {
                 if (isRead.Value)
                 {
-                    contacts = contacts.Where(c => c.IsRead);
+                    contacts = contacts.Where(c => (bool)c.IsRead);
                 }
                 else
                 {
-                    contacts = contacts.Where(c => !c.IsRead);
+                    contacts = contacts.Where(c => (bool)!c.IsRead);
                 }
             }
 

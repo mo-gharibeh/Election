@@ -1,0 +1,20 @@
+﻿
+@{
+    ViewBag.Title = "IrbedFirstDistrict";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>IrbedFirstDistrict</h2>
+
+
+<p>Select the type of election you want to participate in:</p>
+
+@if (ViewBag.LocalElectionsPath != null)
+{
+    <a href="@Url.Action("LocalElections", "User")">Local Elections</a>
+}
+
+@if (ViewBag.PartyElectionsPath != null)
+{
+    <a href="@Url.Action("PartyElections", "User")">Party Elections</a>
+}

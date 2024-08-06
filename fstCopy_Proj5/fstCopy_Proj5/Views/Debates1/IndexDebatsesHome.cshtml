@@ -1,0 +1,37 @@
+﻿@model IEnumerable<fstCopy_Proj5.Models.Debate>
+
+@{
+    ViewBag.Title = "IndexDebatesHome";
+}
+
+<h2 class="text-center my-4">tometo</h2>
+
+<p class="text-center">
+    @Html.ActionLink("Create New", "Create", null, new { @class = "btn btn-primary" })
+</p>
+
+<div class="container">
+    <div class="row">
+        @foreach (var item in Model)
+        {
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title">@Html.DisplayFor(modelItem => item.Date_Of_Debate)</h5>
+                        <p class="card-text"><strong>Topic:</strong> @Html.DisplayFor(modelItem => item.Topic)</p>
+                        <p class="card-text"><strong>First Candidate:</strong> @Html.DisplayFor(modelItem => item.First_Candidate)</p>
+                        <p class="card-text"><strong>First Candidate List:</strong> @Html.DisplayFor(modelItem => item.First_Candidate_List)</p>
+                        <p class="card-text"><strong>Second Candidate:</strong> @Html.DisplayFor(modelItem => item.Second_Candidate)</p>
+                        <p class="card-text"><strong>Second Candidate List:</strong> @Html.DisplayFor(modelItem => item.Second_Candidate_List)</p>
+                        <p class="card-text">
+                            <strong>Zoom Link:</strong>
+                            <a href="@item.Zoom_link" target="_blank">
+                                @item.Zoom_link
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>

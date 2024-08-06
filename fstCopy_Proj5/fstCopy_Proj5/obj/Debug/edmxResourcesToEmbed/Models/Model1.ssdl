@@ -121,11 +121,11 @@
       <PropertyRef Name="National_ID" />
     </Key>
     <Property Name="National_ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Name" Type="varchar" MaxLength="255" Nullable="false" />
-    <Property Name="Email" Type="varchar" MaxLength="255" Nullable="false" />
-    <Property Name="Password" Type="varchar" MaxLength="255" />
-    <Property Name="ElectionArea" Type="varchar" MaxLength="255" />
-    <Property Name="Gender" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="Email" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="Password" Type="nvarchar" MaxLength="255" />
+    <Property Name="ElectionArea" Type="nvarchar" MaxLength="255" />
+    <Property Name="Gender" Type="nvarchar" MaxLength="255" Nullable="false" />
     <Property Name="BirthDate" Type="date" />
     <Property Name="local_Vote" Type="int" Nullable="false" />
     <Property Name="Party_Vote" Type="int" Nullable="false" />

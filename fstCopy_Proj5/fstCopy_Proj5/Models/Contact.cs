@@ -11,7 +11,7 @@ namespace fstCopy_Proj5.Models
 {
     using System;
     using System.Collections.Generic;
-
+    
     public partial class Contact
     {
         public int id { get; set; }
@@ -19,6 +19,6 @@ namespace fstCopy_Proj5.Models
         public string name { get; set; }
         public string subject { get; set; }
         public string message { get; set; }
-        public bool IsRead { get; set; }
+        public Nullable<bool> IsRead { get; set; }
     }
 }
