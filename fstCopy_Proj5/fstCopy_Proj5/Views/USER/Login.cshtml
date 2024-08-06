@@ -1,0 +1,29 @@
+﻿@model fstCopy_Proj5.Models.USER
+
+@{
+    ViewBag.Title = "Login";
+}
+
+<h2>Login</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.National_ID)
+        @Html.TextBoxFor(model => model.National_ID, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.National_ID, "", new { @class = "text-danger" })
+    </div>
+
+    <button type="submit" class="btn btn-primary">Login</button>
+}
+
+@if (ViewBag.Emailsent != null)
+{
+    <div class="alert alert-success">
+        @ViewBag.Emailsent
+    </div>
+}
+
+@Html.ValidationSummary(true, "", new { @class = "text-danger" })

@@ -51,6 +51,12 @@
       <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=7.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.7.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="PayPal, Version=1.9.1.0, Culture=neutral, PublicKeyToken=5b4afc1ccaef40fb, processorArchitecture=MSIL">
+      <HintPath>..\packages\PayPal.1.9.1\lib\net451\PayPal.dll</HintPath>
+    </Reference>
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
@@ -316,6 +322,7 @@
     <Compile Include="Controllers\GeneralListCandidatesController.cs" />
     <Compile Include="Controllers\GeneralListingsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\USERController.cs" />
     <Compile Include="Models\Ad.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -426,6 +433,19 @@
     <Content Include="Views\Contact\Index.cshtml" />
     <Content Include="Views\Contact\DetailsContact.cshtml" />
     <Content Include="Views\Contact\CreateContact.cshtml" />
+    <Content Include="Views\Ads\advertisementAdmin.cshtml" />
+    <Content Include="Views\Ads\Details.cshtml" />
+    <Content Include="Views\Ads\addAdvertisement.cshtml" />
+    <Content Include="Views\Ads\Publish.cshtml" />
+    <Content Include="Views\Ads\Delete.cshtml" />
+    <Content Include="Views\Ads\SuccessPayment.cshtml" />
+    <Content Include="Views\USER\Index.cshtml" />
+    <Content Include="Views\USER\Login.cshtml" />
+    <Content Include="Views\USER\LoginUser.cshtml" />
+    <Content Include="Views\USER\TypeOfElection.cshtml" />
+    <Content Include="Views\USER\LocalElections.cshtml" />
+    <Content Include="Views\USER\PartyElections.cshtml" />
+    <Content Include="Views\USER\ElectionDistricts.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -435,7 +455,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Ads\" />
     <Folder Include="Views\LocalResult\" />
   </ItemGroup>
   <ItemGroup>

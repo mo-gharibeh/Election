@@ -1,0 +1,17 @@
+﻿@{
+    ViewBag.Title = "Type Of Election";
+}
+
+<h2>Type Of Election</h2>
+
+<p>Select the type of election you want to participate in:</p>
+
+@if (ViewBag.LocalElectionsPath != null)
+{
+    <a href="@Url.Action("LocalElections", "USER")">Local Elections</a>
+}
+
+@if (ViewBag.PartyElectionsPath != null)
+{
+    <a href="@Url.Action("PartyElections", "USER")">Party Elections</a>
+}
