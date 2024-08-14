@@ -12,7 +12,7 @@ namespace fstCopy_Proj5.Models
 {
     public class LocalListCandidatesController : Controller
     {
-        private ElectionEntities1 db = new ElectionEntities1();
+        private ElectionEntities db = new ElectionEntities();
 
 
         public ActionResult Index()

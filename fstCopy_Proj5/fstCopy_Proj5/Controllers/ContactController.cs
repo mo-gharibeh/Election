@@ -11,7 +11,7 @@ namespace fstCopy_Proj5.Controllers
 {
     public class ContactController : Controller
     {
-        private ElectionEntities1 db = new ElectionEntities1();
+        private ElectionEntities db = new ElectionEntities();
 
         // GET: Admin
 
@@ -24,11 +24,11 @@ namespace fstCopy_Proj5.Controllers
             {
                 if (isRead.Value)
                 {
-                    contacts = contacts.Where(c => (bool)c.IsRead);
+                    contacts = contacts.Where(c => (bool) c.IsRead);
                 }
                 else
                 {
-                    contacts = contacts.Where(c => (bool)!c.IsRead);
+                    contacts = contacts.Where(c => !(bool)c.IsRead);
                 }
             }
 

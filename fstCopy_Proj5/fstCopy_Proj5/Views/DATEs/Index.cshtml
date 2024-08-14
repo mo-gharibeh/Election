@@ -4,26 +4,30 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
+
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.startDateNominate)
+            @*@Html.DisplayNameFor(model => model.startDateNominate)*@
+            <label for="startDateNominate"> تاريخ بدء الترشح</label>
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.EndDateNominate)
+            @*@Html.DisplayNameFor(model => model.EndDateNominate)*@
+            <label for="EndDateNominate"> تاريخ نهاية الترشح</label>
+
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.startDateOfElection)
+            @*@Html.DisplayNameFor(model => model.startDateOfElection)*@
+            <label for="startDateOfElection"> تاريخ بداية الانتخابات</label>
+
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.EndDateOfElection)
+            @*@Html.DisplayNameFor(model => model.EndDateOfElection)*@
+            <label for="EndDateOfElection"> تاريخ نهاية الانتخابات</label>
+
         </th>
-        <th></th>
+       
     </tr>
 
     @foreach (var item in Model)
@@ -31,6 +35,7 @@
         <tr>
             <td>
                 @Html.DisplayFor(modelItem => item.startDateNominate)
+
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.EndDateNominate)
@@ -41,11 +46,7 @@
             <td>
                 @Html.DisplayFor(modelItem => item.EndDateOfElection)
             </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
-                @Html.ActionLink("Details", "Details", new { id = item.ID }) |
-                @Html.ActionLink("Delete", "Delete", new { id = item.ID })
-            </td>
+
         </tr>
     }
 

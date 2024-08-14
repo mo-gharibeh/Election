@@ -1,19 +1,17 @@
-﻿using fstCopy_Proj5.Models;
-using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
+﻿using System;
 using System.Linq;
 using System.Net.Mail;
 using System.Net;
 using System.Text;
-using System.Web;
 using System.Web.Mvc;
+using Newtonsoft.Json;
+using fstCopy_Proj5.Models;
 
-namespace fstCopy_Proj5.Controllers
+namespace E_Voting.Controllers
 {
     public class USERController : Controller
     {
-        private ElectionEntities1 DB = new ElectionEntities1();
+        private ElectionEntities DB = new ElectionEntities();
 
         // GET: USER
         public ActionResult Index()
@@ -21,7 +19,7 @@ namespace fstCopy_Proj5.Controllers
             return View();
         }
 
-        public ActionResult Login(USER user)
+        public ActionResult Login(User user)
         {
             try
             {
@@ -31,11 +29,11 @@ namespace fstCopy_Proj5.Controllers
                     return View();
                 }
 
-                var existingUser = DB.USERS.FirstOrDefault(u => u.National_ID == user.National_ID);
+                var existingUser = DB.Users.FirstOrDefault(u => u.NationalNumber == user.NationalNumber);
 
                 if (existingUser == null)
                 {
-                    ModelState.AddModelError("", "User not found.");
+                    ModelState.AddModelError("", "");
                     return View();
                 }
 
@@ -52,7 +50,7 @@ namespace fstCopy_Proj5.Controllers
 
                 // تخزين المستخدم في الجلسة وإعادة التوجيه إلى LoginUser
                 Session["LoggedUser"] = JsonConvert.SerializeObject(existingUser);
-                return RedirectToAction("LoginUser", new { ID = user.National_ID });
+                return RedirectToAction("LoginUser", new { ID = user.ID });
             }
             catch (Exception ex)
             {
@@ -63,13 +61,13 @@ namespace fstCopy_Proj5.Controllers
             return View();
         }
 
-        public ActionResult LoginUser(int nationalNumber)
+        public ActionResult LoginUser(string nationalNumber)
         {
-            var user = DB.USERS.FirstOrDefault(u => u.National_ID == nationalNumber);
+            var user = DB.Users.FirstOrDefault(u => u.NationalNumber == nationalNumber);
 
             if (user == null)
             {
-                ModelState.AddModelError("", "User not found.");
+                ModelState.AddModelError("", "");
                 return View();
             }
 
@@ -100,9 +98,9 @@ namespace fstCopy_Proj5.Controllers
         // Send Email
         private void SendConfirmationEmail(string toEmail, string confirmationCode)
         {
-            string fromEmail = System.Configuration.ConfigurationManager.AppSettings["FromEmail"];
-            string smtpUsername = System.Configuration.ConfigurationManager.AppSettings["SmtpUsername"];
-            string smtpPassword = System.Configuration.ConfigurationManager.AppSettings["SmtpPassword"];
+            string fromEmail = "techlearnhub.contact@gmail.com";
+            string smtpUsername = "techlearnhub.contact@gmail.com";
+            string smtpPassword = "lyrlogeztsxclank";
 
             string subjectText = "Your Confirmation Code";
             string messageText = $"Your confirmation code is {confirmationCode}";
@@ -131,7 +129,7 @@ namespace fstCopy_Proj5.Controllers
 
         public ActionResult TypeOfElection(int id)
         {
-            var user = DB.USERS.Find(id);
+            var user = DB.Users.Find(id);
             if (user == null)
             {
                 return HttpNotFound();
@@ -139,11 +137,11 @@ namespace fstCopy_Proj5.Controllers
 
             // Save the user to the session
             Session["LoggedUser"] = JsonConvert.SerializeObject(user);
-            ViewBag.NationalNumber = user.National_ID;
+            ViewBag.NationalNumber = user.NationalNumber;
 
             // Determine the paths for elections
-            ViewBag.LocalElectionsPath = Convert.ToBoolean( user.local_Vote) ? null : "LocalElections";
-            ViewBag.PartyElectionsPath = Convert.ToBoolean( user.Party_Vote) ? null : "PartyElections";
+            ViewBag.LocalElectionsPath = (bool)user.LocalElections ? null : "LocalElections";
+            ViewBag.PartyElectionsPath = (bool)user.PartyElections ? null : "PartyElections";
 
             return View();
         }
@@ -158,9 +156,9 @@ namespace fstCopy_Proj5.Controllers
             }
 
             var userJson = Session["LoggedUser"].ToString();
-            var user = JsonConvert.DeserializeObject<USER>(userJson);
+            var user = JsonConvert.DeserializeObject<User>(userJson);
 
-            ViewBag.UserId = user.National_ID;
+            ViewBag.UserId = user.ID;
 
             var localLists = DB.LocalLists.Where(l => l.ElectionArea == user.ElectionArea).ToList();
             var candidates = DB.LocalListCandidates.ToList();
@@ -183,12 +181,16 @@ namespace fstCopy_Proj5.Controllers
             }
 
             var userJson = Session["LoggedUser"].ToString();
-            var user = JsonConvert.DeserializeObject<USER>(userJson);
+            var user = JsonConvert.DeserializeObject<User>(userJson);
 
             var selectedList = DB.LocalLists.Find(selectedListId);
 
             if (selectedList != null && selectedCandidateIds != null)
             {
+                if (selectedList.NumberOfVotes == null)
+                {
+                    selectedList.NumberOfVotes = 0;
+                }
                 // Update the number of votes for the selected list
                 selectedList.NumberOfVotes += 1;
                 DB.Entry(selectedList).State = System.Data.Entity.EntityState.Modified;
@@ -199,19 +201,23 @@ namespace fstCopy_Proj5.Controllers
                     var selectedCandidate = DB.LocalListCandidates.FirstOrDefault(c => c.CandidateID == candidateId && c.LocalListingID == selectedListId);
                     if (selectedCandidate != null)
                     {
+                        if (selectedCandidate.NumberOfVotesCandidate == null)
+                        {
+                            selectedCandidate.NumberOfVotesCandidate = 0;
+                        }
                         selectedCandidate.NumberOfVotesCandidate += 1;
                         DB.Entry(selectedCandidate).State = System.Data.Entity.EntityState.Modified;
                     }
                 }
 
                 // Update user table to reflect that the user has voted in local elections
-                user.local_Vote = 1;
+                user.LocalElections = true;
                 DB.Entry(user).State = System.Data.Entity.EntityState.Modified;
 
                 DB.SaveChanges();
             }
 
-            return RedirectToAction("TypeOfElection", new { id = user.National_ID });
+            return RedirectToAction("TypeOfElection", new { id = user.ID });
         }
 
 
@@ -223,9 +229,9 @@ namespace fstCopy_Proj5.Controllers
             }
 
             var userJson = Session["LoggedUser"].ToString();
-            var user = JsonConvert.DeserializeObject<USER>(userJson);
+            var user = JsonConvert.DeserializeObject<User>(userJson);
 
-            ViewBag.UserId = user.National_ID;
+            ViewBag.UserId = user.ID;
 
             // Retrieve all party lists to display in the view
             var partyLists = DB.GeneralListings.ToList();
@@ -241,15 +247,18 @@ namespace fstCopy_Proj5.Controllers
             }
 
             var userJson = Session["LoggedUser"].ToString();
-            var user = JsonConvert.DeserializeObject<USER>(userJson);
+            var user = JsonConvert.DeserializeObject<User>(userJson);
 
-            var selectedPartyList = DB.GeneralListings.Find(selectedPartyListId);
+            var selectedPartyList = DB.GeneralListings.Where(x=> x.GeneralListingID  == selectedPartyListId).FirstOrDefault();
             if (selectedPartyList != null)
             {
                 // Update user table to reflect that the user has voted in party elections
-                user.Party_Vote = 1;
-                user.local_Vote = 1; // Optionally, you can set LocalElections to true here if needed
-
+                user.PartyElections = true;
+                user.LocalElections = true; // Optionally, you can set LocalElections to true here if needed
+                if (selectedPartyList.NumberOfVotes == null)
+                {
+                    selectedPartyList.NumberOfVotes = 0;
+                }
                 // Update the party list to increment the number of votes
                 selectedPartyList.NumberOfVotes += 1;
                 DB.Entry(selectedPartyList).State = System.Data.Entity.EntityState.Modified;
@@ -257,7 +266,7 @@ namespace fstCopy_Proj5.Controllers
                 DB.SaveChanges();
             }
 
-            return RedirectToAction("TypeOfElection", new { id = user.National_ID });
+            return RedirectToAction("TypeOfElection", new { id = user.ID });
         }
 
 
@@ -271,7 +280,7 @@ namespace fstCopy_Proj5.Controllers
             }
 
             var userJson = Session["LoggedUser"].ToString();
-            var user = JsonConvert.DeserializeObject<USER>(userJson);
+            var user = JsonConvert.DeserializeObject<User>(userJson);
 
             ViewBag.ElectionArea = user.ElectionArea;
 
@@ -289,7 +298,7 @@ namespace fstCopy_Proj5.Controllers
                 }
 
                 var userJson = Session["LoggedUser"].ToString();
-                var user = JsonConvert.DeserializeObject<USER>(userJson);
+                var user = JsonConvert.DeserializeObject<User>(userJson);
 
                 if (user == null)
                 {
@@ -297,12 +306,12 @@ namespace fstCopy_Proj5.Controllers
                     return RedirectToAction("Login");
                 }
 
-                user.ElectionArea = "Area 1"; // Setting election area to IrbedFirstDistrict
+                user.ElectionArea = "اربد الأولى"; // Setting election area to IrbedFirstDistrict
                 DB.Entry(user).State = System.Data.Entity.EntityState.Modified;
                 DB.SaveChanges();
 
                 // Redirect to TypeOfElection with the user's ID
-                return RedirectToAction("TypeOfElection", new { id = user.National_ID });
+                return RedirectToAction("TypeOfElection", new { id = user.ID });
             }
             catch (Exception ex)
             {
@@ -323,7 +332,7 @@ namespace fstCopy_Proj5.Controllers
                 }
 
                 var userJson = Session["LoggedUser"].ToString();
-                var user = JsonConvert.DeserializeObject<USER>(userJson);
+                var user = JsonConvert.DeserializeObject<User>(userJson);
 
                 if (user == null)
                 {
@@ -331,12 +340,12 @@ namespace fstCopy_Proj5.Controllers
                     return RedirectToAction("Login");
                 }
 
-                user.ElectionArea = "Area 2"; // Setting election area to IrbedFirstDistrict
+                user.ElectionArea = "اربد الثانية"; // Setting election area to IrbedFirstDistrict
                 DB.Entry(user).State = System.Data.Entity.EntityState.Modified;
                 DB.SaveChanges();
 
                 // Redirect to TypeOfElection with the user's ID
-                return RedirectToAction("TypeOfElection", new { id = user.National_ID });
+                return RedirectToAction("TypeOfElection", new { id = user.ID });
             }
             catch (Exception ex)
             {
@@ -356,7 +365,7 @@ namespace fstCopy_Proj5.Controllers
                 }
 
                 var userJson = Session["LoggedUser"].ToString();
-                var user = JsonConvert.DeserializeObject<USER>(userJson);
+                var user = JsonConvert.DeserializeObject<User>(userJson);
 
                 if (user == null)
                 {
@@ -364,12 +373,12 @@ namespace fstCopy_Proj5.Controllers
                     return RedirectToAction("Login");
                 }
 
-                user.ElectionArea = "Area 3"; // Setting election area to IrbedFirstDistrict
+                user.ElectionArea = "عجلون"; // Setting election area to IrbedFirstDistrict
                 DB.Entry(user).State = System.Data.Entity.EntityState.Modified;
                 DB.SaveChanges();
 
                 // Redirect to TypeOfElection with the user's ID
-                return RedirectToAction("TypeOfElection", new { id = user.National_ID });
+                return RedirectToAction("TypeOfElection", new { id = user.ID });
             }
             catch (Exception ex)
             {
@@ -380,4 +389,6 @@ namespace fstCopy_Proj5.Controllers
         }
     }
 
+
 }
+

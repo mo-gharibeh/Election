@@ -1,26 +1,21 @@
-﻿
-
-@{
-    ViewBag.Title = "Party Results";
-    Layout = "~/Views/Shared/_MainLayout.cshtml";
-}
-
-<h2>Party Election Results</h2>
-
-<div class="container">
-    <div class="row">
-        <div class="col-md-12">
-            <h3>Summary</h3>
-            <p>Total Users: @ViewBag.TotalUsers</p>
-            <p>Party Votes Percentage: @ViewBag.PartyPercentage %</p>
-            <p>Total Party Votes: @ViewBag.PartyVotes</p>
-            <p>Party Threshold (Votes): @ViewBag.PartyThreshold</p>
+﻿<div class="partycontainer">
+    <div class="card">
+        <div class="card-header">
+            <h3>نتائج العملية الانتخابية </h3>
+        </div>
+        <div class="card-body">
+            <p>عدد المقترعين : @ViewBag.TotalUsers</p>
+            <p>نسبة أصوات القائمة الحزبية : @ViewBag.PartyPercentage %</p>
+            <p>مجموع الأصوات الحزبية : @ViewBag.PartyVotes</p>
+            <p>عتبة القائمة الحزبية : @ViewBag.PartyThreshold</p>
         </div>
     </div>
 
-    <div class="row">
-        <div class="col-md-12">
-            <h4>Parties Above Threshold</h4>
+    <div class="card">
+        <div class="card-header">
+            <h4>القوائم الحزبية التي تجاوزت العتبة </h4>
+        </div>
+        <div class="card-body">
             @if (((List<string>)ViewBag.PartiesAboveThreshold).Any())
             {
                 <ul>
@@ -32,21 +27,25 @@
             }
             else
             {
-                <p>No parties above the threshold.</p>
+                <p>لا يوجد قوائم حزبية تجاوزت مستوى العتبة </p>
             }
         </div>
     </div>
 
-    <div class="row">
-        <div class="col-md-12">
-            <h4>Total Votes for Winning Lists</h4>
+    <div class="card">
+        <div class="card-header">
+            <h4>مجموع اصوات القائمة الناجحة </h4>
+        </div>
+        <div class="card-body">
             <p>@ViewBag.WinningListsVotesSum</p>
         </div>
     </div>
 
-    <div class="row">
-        <div class="col-md-12">
-            <h4>Seats Won by Party Lists</h4>
+    <div class="card">
+        <div class="card-header">
+            <h4>مقاعد القائمة الناجحة </h4>
+        </div>
+        <div class="card-body">
             @if (((List<string>)ViewBag.PartyListsSeats).Any())
             {
                 <ul>
@@ -58,14 +57,16 @@
             }
             else
             {
-                <p>No list has won any seats.</p>
+                <p> لا يوجد مقاعد لقائمة ناجحة </p>
             }
         </div>
     </div>
 
-    <div class="row">
-        <div class="col-md-12">
-            <h4>Winning Candidates from Parties</h4>
+    <div class="card">
+        <div class="card-header">
+            <h4>المرشحين الناجحين من القوائم الحزبية </h4>
+        </div>
+        <div class="card-body">
             @if (((List<string>)ViewBag.PartyWinningCandidates).Any())
             {
                 <ul>
@@ -77,14 +78,16 @@
             }
             else
             {
-                <p>No winning candidates.</p>
+                <p>لا يوجد مرشحين ناجحين من القوائم الحزبية</p>
             }
         </div>
     </div>
 
-    <div class="row">
-        <div class="col-md-12">
-            <h4>Complete Party Lists and Candidates Info</h4>
+    <div class="card">
+        <div class="card-header">
+            <h4>معلومات المرشحين والقوائم الحزبية </h4>
+        </div>
+        <div class="card-body">
             @if (((List<string>)ViewBag.PartyListsAndCandidates).Any())
             {
                 <ul>
@@ -96,12 +99,8 @@
             }
             else
             {
-                <p>No detailed info available.</p>
+                <p>لا يوجد معلومات </p>
             }
         </div>
     </div>
 </div>
-
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>

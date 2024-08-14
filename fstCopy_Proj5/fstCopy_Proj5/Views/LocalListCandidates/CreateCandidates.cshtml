@@ -1,5 +1,8 @@
 ﻿@model List<fstCopy_Proj5.Models.LocalListCandidate>
 @{
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+@{
     var candidateCount = Session["CandidateCount"] != null ? Convert.ToInt32(Session["CandidateCount"].ToString()) : 0;
 }
 <!DOCTYPE html>

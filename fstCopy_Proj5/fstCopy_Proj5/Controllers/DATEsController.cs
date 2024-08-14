@@ -12,7 +12,7 @@ namespace fstCopy_Proj5.Controllers
 {
     public class DATEsController : Controller
     {
-        private ElectionEntities1 db = new ElectionEntities1();
+        private ElectionEntities db = new ElectionEntities();
 
 
         // GET: Dates

@@ -11,7 +11,7 @@ namespace fstCopy_Proj5.Controllers
 {
     public class Debates1Controller : Controller
     {
-        private ElectionEntities1 db = new ElectionEntities1();
+        private ElectionEntities db = new ElectionEntities();
 
         // GET: Debates1
         public ActionResult Index()

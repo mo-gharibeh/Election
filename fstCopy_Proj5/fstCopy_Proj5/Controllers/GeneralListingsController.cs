@@ -11,7 +11,7 @@ namespace fstCopy_Proj5.Controllers
 {
     public class GeneralListingsController : Controller
     {
-        private ElectionEntities1 db = new  ElectionEntities1();
+        private ElectionEntities db = new ElectionEntities();
 
         // GET: GeneralListings
         public ActionResult Index()
@@ -128,7 +128,7 @@ namespace fstCopy_Proj5.Controllers
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
 
-            var generalListing = db.GeneralListings.Include(gl => gl.GeneralListCandidates).FirstOrDefault(gl => gl.Name == id);
+            var generalListing = db.GeneralListings.Include(gl => gl.GeneralListingID).FirstOrDefault(gl => gl.Name == id);
 
             if (generalListing == null)
             {

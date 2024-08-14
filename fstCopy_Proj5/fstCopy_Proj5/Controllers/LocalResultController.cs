@@ -9,7 +9,7 @@ namespace fstCopy_Proj5.Controllers
 {
     public class ResultController : Controller
     {
-        ElectionEntities1 db = new ElectionEntities1();
+        private ElectionEntities db = new ElectionEntities();
 
         public ActionResult Index()
         {
@@ -33,13 +33,13 @@ namespace fstCopy_Proj5.Controllers
                 string x = $"Area {counter}";
                 CircleViewModel circleViewModel = new CircleViewModel();
 
-                var records = db.USERS
-                                .Where(u => u.ElectionArea == x && (u.local_Vote == 1 || u.White_Local_Vote == 1))
+                var records = db.Users
+                                .Where(u => u.ElectionArea == x && (u.LocalElections == true || u.whitePaperLocalElections == true))
                                 .ToList();
 
                 circleViewModel.users_circle_local = records;
-                circleViewModel.localvotecounter = records.Count(u => u.local_Vote == 1);
-                circleViewModel.whitelocalcounter = records.Count(u => u.White_Local_Vote == 1);
+                circleViewModel.localvotecounter = records.Count(u => u.LocalElections == true);
+                circleViewModel.whitelocalcounter = records.Count(u => u.whitePaperLocalElections == true);
                 circleViewModel.totalVotes = records.Count();
                 circleViewModel.threshold = circleViewModel.totalVotes * 0.07;
 

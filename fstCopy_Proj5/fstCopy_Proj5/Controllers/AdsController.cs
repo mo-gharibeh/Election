@@ -19,7 +19,7 @@ namespace fstCopy_Proj5.Controllers
 {
     public class AdsController : Controller
     {
-        private ElectionEntities1 db = new ElectionEntities1();
+        private ElectionEntities db = new ElectionEntities();
         private readonly string PayPalBaseUrl = "https://api.sandbox.paypal.com/";
         private readonly string ClientId = "ASxZXiaR7udWcAcvbBajQZ-q905DCxHyYQtIpINbUJBdqW7xrqY1n2hSdvMYXhvvZBK5QHp1b5VSNxcm"; // Replace with your sandbox client ID
         private readonly string Secret = "ELCoZeGQDZ3o-d0FXEIE7VEOQ_qT9w5BiK35AngZaKSUqKyAY3xI0_JeGSRDYuouk3367np3HeyjF_bX"; // Replace with your sandbox secret

@@ -1,11 +1,10 @@
 ﻿@model fstCopy_Proj5.Models.Contact
 
 @{
-    ViewBag.Title = "CreateContact";
+    ViewBag.Title = "إنشاء اتصال";
     Layout = "~/Views/Shared/_MainLayout.cshtml";
 }
-@*<a href="~/Views/Shared/_AdminLayoutPage.cshtml">~/Views/Shared/_AdminLayoutPage.cshtml</a>
-*@
+
 @if (TempData["SuccessMessage"] != null)
 {
     <div class="alert alert-success">
@@ -13,53 +12,128 @@
     </div>
 }
 
-@using (Html.BeginForm("CreateContact", "Contact", FormMethod.Post, new { @class = "form-horizontal" }))
-{@Html.AntiForgeryToken()
+@using (Html.BeginForm("CreateContact", "Contact", FormMethod.Post, new { @class = "contact-form" }))
+{
+    @Html.AntiForgeryToken()
 
-<div class="form-horizontal">
-    <h4>Contact Us</h4>
-    <hr />
-    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-    <div class="form-group">
-        @Html.LabelFor(model => model.email, htmlAttributes: new { @class = "control-label col-md-2" })
-        <div class="col-md-10">
-            @Html.EditorFor(model => model.email, new { htmlAttributes = new { @class = "form-control" } })
-            @Html.ValidationMessageFor(model => model.email, "", new { @class = "text-danger" })
+    <div class="form-container">
+        <h4>اتصل بنا</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.email, "البريد الإلكتروني", htmlAttributes: new { @class = "control-label" })
+            <div class="form-input">
+                @Html.EditorFor(model => model.email, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.email, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.name, "الاسم", htmlAttributes: new { @class = "control-label" })
+            <div class="form-input">
+                @Html.EditorFor(model => model.name, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.name, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.subject, "الموضوع", htmlAttributes: new { @class = "control-label" })
+            <div class="form-input">
+                @Html.EditorFor(model => model.subject, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.subject, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.message, "الرسالة", htmlAttributes: new { @class = "control-label" })
+            <div class="form-input">
+                @Html.EditorFor(model => model.message, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.message, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="form-submit">
+                <input type="submit" value="إرسال" class="btn btn-primary" />
+            </div>
         </div>
     </div>
-
-    <div class="form-group">
-        @Html.LabelFor(model => model.name, htmlAttributes: new { @class = "control-label col-md-2" })
-        <div class="col-md-10">
-            @Html.EditorFor(model => model.name, new { htmlAttributes = new { @class = "form-control" } })
-            @Html.ValidationMessageFor(model => model.name, "", new { @class = "text-danger" })
-        </div>
-    </div>
-
-    <div class="form-group">
-        @Html.LabelFor(model => model.subject, htmlAttributes: new { @class = "control-label col-md-2" })
-        <div class="col-md-10">
-            @Html.EditorFor(model => model.subject, new { htmlAttributes = new { @class = "form-control" } })
-            @Html.ValidationMessageFor(model => model.subject, "", new { @class = "text-danger" })
-        </div>
-    </div>
-
-    <div class="form-group">
-        @Html.LabelFor(model => model.message, htmlAttributes: new { @class = "control-label col-md-2" })
-        <div class="col-md-10">
-            @Html.EditorFor(model => model.message, new { htmlAttributes = new { @class = "form-control" } })
-            @Html.ValidationMessageFor(model => model.message, "", new { @class = "text-danger" })
-        </div>
-    </div>
-
-    <div class="form-group">
-        <div class="col-md-offset-2 col-md-10">
-            <input type="submit" value="Submit" class="btn btn-primary" />
-        </div>
-    </div>
-</div>
 }
 
-@*<div>
-        @Html.ActionLink("Back to List", "Index")
-    </div>*@
+
+<style>
+    
+    .contact-form {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 20px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        background-color: #ffffff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        margin-bottom: 5%;
+        direction: rtl; /* Right-to-left direction */
+    }
+
+    .form-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contact-form h4 {
+        font-size: 24px;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .contact-form hr {
+        margin: 10px 0;
+    }
+
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    .control-label {
+        font-weight: bold;
+        margin-bottom: 5px;
+        display: block;
+        text-align: right; /* Align text to the right */
+    }
+
+    .form-input {
+        margin-bottom: 10px;
+        width: 50%;
+        margin: 0 3%;
+        text-align: right; /* Align input text to the right */
+    }
+
+    .form-control {
+        width: 100%;
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+    }
+
+    .text-danger {
+        color: #dc3545;
+    }
+
+    .form-submit {
+        text-align: center; /* Center the button */
+    }
+
+    .btn-primary {
+        background-color: #dc3545; /* Red color */
+        border-color: #dc3545;
+        color: #fff;
+    }
+
+        .btn-primary:hover {
+            background-color: #c82333;
+            border-color: #bd2130;
+        }
+</style>
+

@@ -14,7 +14,7 @@ namespace fstCopy_Proj5.Models
     
     public partial class Ad
     {
-        public long id { get; set; }
+        public int id { get; set; }
         public string nationalId { get; set; }
         public string data { get; set; }
         public string listId { get; set; }

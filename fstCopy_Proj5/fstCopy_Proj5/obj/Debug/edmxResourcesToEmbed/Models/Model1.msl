@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="ElectionModelStoreContainer" CdmEntityContainer="ElectionEntities1">
+  <EntityContainerMapping StorageEntityContainer="ElectionModelStoreContainer" CdmEntityContainer="ElectionEntities">
     <EntitySetMapping Name="Ads">
       <EntityTypeMapping TypeName="ElectionModel.Ad">
         <MappingFragment StoreEntitySet="Ad">
@@ -127,20 +127,22 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="USERS">
-      <EntityTypeMapping TypeName="ElectionModel.USER">
-        <MappingFragment StoreEntitySet="USERS">
-          <ScalarProperty Name="National_ID" ColumnName="National_ID" />
-          <ScalarProperty Name="Name" ColumnName="Name" />
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="ElectionModel.User">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="NationalNumber" ColumnName="NationalNumber" />
           <ScalarProperty Name="Email" ColumnName="Email" />
           <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
           <ScalarProperty Name="ElectionArea" ColumnName="ElectionArea" />
-          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="Governorate" ColumnName="Governorate" />
           <ScalarProperty Name="BirthDate" ColumnName="BirthDate" />
-          <ScalarProperty Name="local_Vote" ColumnName="local_Vote" />
-          <ScalarProperty Name="Party_Vote" ColumnName="Party_Vote" />
-          <ScalarProperty Name="White_Local_Vote" ColumnName="White_Local_Vote" />
-          <ScalarProperty Name="White_Party_Vote" ColumnName="White_Party_Vote" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="LocalElections" ColumnName="LocalElections" />
+          <ScalarProperty Name="PartyElections" ColumnName="PartyElections" />
+          <ScalarProperty Name="whitePaperLocalElections" ColumnName="whitePaperLocalElections" />
+          <ScalarProperty Name="whitePaperPartyElections" ColumnName="whitePaperPartyElections" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

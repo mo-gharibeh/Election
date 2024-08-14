@@ -4,7 +4,7 @@
     <Key>
       <PropertyRef Name="id" />
     </Key>
-    <Property Name="id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="nationalId" Type="nvarchar(max)" />
     <Property Name="data" Type="nvarchar(max)" />
     <Property Name="listId" Type="nvarchar(max)" />
@@ -57,7 +57,7 @@
     <Property Name="Second_Candidate" Type="varchar" MaxLength="255" />
     <Property Name="Second_Candidate_List" Type="varchar" MaxLength="255" />
     <Property Name="Status" Type="varchar" MaxLength="255" />
-    <Property Name="Zoom_link" Type="varchar(max)" />
+    <Property Name="Zoom_link" Type="nvarchar(max)" />
   </EntityType>
   <EntityType Name="GeneralListCandidates">
     <Key>
@@ -72,7 +72,7 @@
   </EntityType>
   <EntityType Name="GeneralListing">
     <Key>
-      <PropertyRef Name="Name" />
+      <PropertyRef Name="GeneralListingID" />
     </Key>
     <Property Name="GeneralListingID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Name" Type="nvarchar" MaxLength="255" Nullable="false" />
@@ -103,7 +103,7 @@
     <Property Name="ElectionArea" Type="nvarchar" MaxLength="255" />
     <Property Name="NumberOfVotesCandidate" Type="int" />
     <Property Name="LocalListingID" Type="int" />
-    <Property Name="Status" Type="varchar" MaxLength="10" />
+    <Property Name="Status" Type="nvarchar" MaxLength="10" />
   </EntityType>
   <EntityType Name="Payment">
     <Key>
@@ -116,37 +116,28 @@
     <Property Name="TransactionID" Type="nvarchar" MaxLength="100" />
     <Property Name="Status" Type="nvarchar" MaxLength="50" />
   </EntityType>
-  <EntityType Name="USERS">
+  <EntityType Name="Users">
     <Key>
-      <PropertyRef Name="National_ID" />
+      <PropertyRef Name="ID" />
     </Key>
-    <Property Name="National_ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Name" Type="nvarchar" MaxLength="255" Nullable="false" />
-    <Property Name="Email" Type="nvarchar" MaxLength="255" Nullable="false" />
-    <Property Name="Password" Type="nvarchar" MaxLength="255" />
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NationalNumber" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="Email" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Password" Type="nvarchar" MaxLength="25" />
+    <Property Name="FullName" Type="nvarchar" MaxLength="50" />
     <Property Name="ElectionArea" Type="nvarchar" MaxLength="255" />
-    <Property Name="Gender" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="Governorate" Type="nvarchar" MaxLength="50" />
     <Property Name="BirthDate" Type="date" />
-    <Property Name="local_Vote" Type="int" Nullable="false" />
-    <Property Name="Party_Vote" Type="int" Nullable="false" />
-    <Property Name="White_Local_Vote" Type="int" Nullable="false" />
-    <Property Name="White_Party_Vote" Type="int" Nullable="false" />
+    <Property Name="Gender" Type="nvarchar" MaxLength="10" />
+    <Property Name="LocalElections" Type="bit" />
+    <Property Name="PartyElections" Type="bit" />
+    <Property Name="whitePaperLocalElections" Type="bit" />
+    <Property Name="whitePaperPartyElections" Type="bit" />
   </EntityType>
-  <Association Name="FK__GeneralLi__Gener__403A8C7D">
-    <End Role="GeneralListing" Type="Self.GeneralListing" Multiplicity="1">
-      <OnDelete Action="Cascade" />
-    </End>
-    <End Role="GeneralListCandidates" Type="Self.GeneralListCandidates" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="GeneralListing">
-        <PropertyRef Name="Name" />
-      </Principal>
-      <Dependent Role="GeneralListCandidates">
-        <PropertyRef Name="GeneralListingName" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__LocalList__Local__440B1D61">
+  <!--Errors Found During Generation:
+warning 6035: The relationship 'FK__GeneralLi__Gener__5FB337D6' has columns that are not part of the key of the table on the primary side of the relationship. The relationship was excluded.
+        <Association Name="FK__GeneralLi__Gener__5FB337D6" />-->
+  <Association Name="FK__LocalList__Local__4D94879B">
     <End Role="LocalList" Type="Self.LocalList" Multiplicity="0..1" />
     <End Role="LocalListCandidates" Type="Self.LocalListCandidates" Multiplicity="*" />
     <ReferentialConstraint>
@@ -169,12 +160,8 @@
     <EntitySet Name="LocalList" EntityType="Self.LocalList" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="LocalListCandidates" EntityType="Self.LocalListCandidates" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Payment" EntityType="Self.Payment" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="USERS" EntityType="Self.USERS" Schema="dbo" store:Type="Tables" />
-    <AssociationSet Name="FK__GeneralLi__Gener__403A8C7D" Association="Self.FK__GeneralLi__Gener__403A8C7D">
-      <End Role="GeneralListing" EntitySet="GeneralListing" />
-      <End Role="GeneralListCandidates" EntitySet="GeneralListCandidates" />
-    </AssociationSet>
-    <AssociationSet Name="FK__LocalList__Local__440B1D61" Association="Self.FK__LocalList__Local__440B1D61">
+    <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__LocalList__Local__4D94879B" Association="Self.FK__LocalList__Local__4D94879B">
       <End Role="LocalList" EntitySet="LocalList" />
       <End Role="LocalListCandidates" EntitySet="LocalListCandidates" />
     </AssociationSet>

@@ -9,7 +9,7 @@ namespace fstCopy_Proj5.Controllers
 {
     public class PartyResultController : Controller
     {
-        private ElectionEntities1 db = new ElectionEntities1();
+        private ElectionEntities db = new ElectionEntities();
 
         public ActionResult Index()
         {
@@ -29,7 +29,7 @@ namespace fstCopy_Proj5.Controllers
         public long usersNumber()
         {
             long countUsers = 0;
-            var allUsers = db.USERS.ToList();
+            var allUsers = db.Users.ToList();
 
             foreach (var row in allUsers)
             {
@@ -47,11 +47,11 @@ namespace fstCopy_Proj5.Controllers
         public long partyVotersCount()
         {
             long partyVotes = 0;
-            var allUsers = db.USERS.ToList();
+            var allUsers = db.Users.ToList();
 
             foreach (var row in allUsers)
             {
-                partyVotes += Convert.ToInt64(row.Party_Vote);
+                partyVotes += Convert.ToInt64(row.PartyElections);
             }
 
             return partyVotes;

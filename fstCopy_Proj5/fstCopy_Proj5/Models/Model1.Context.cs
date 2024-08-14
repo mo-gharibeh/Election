@@ -13,10 +13,10 @@ namespace fstCopy_Proj5.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class ElectionEntities1 : DbContext
+    public partial class ElectionEntities : DbContext
     {
-        public ElectionEntities1()
-            : base("name=ElectionEntities1")
+        public ElectionEntities()
+            : base("name=ElectionEntities")
         {
         }
     
@@ -35,6 +35,6 @@ namespace fstCopy_Proj5.Models
         public virtual DbSet<LocalList> LocalLists { get; set; }
         public virtual DbSet<LocalListCandidate> LocalListCandidates { get; set; }
         public virtual DbSet<Payment> Payments { get; set; }
-        public virtual DbSet<USER> USERS { get; set; }
+        public virtual DbSet<User> Users { get; set; }
     }
 }

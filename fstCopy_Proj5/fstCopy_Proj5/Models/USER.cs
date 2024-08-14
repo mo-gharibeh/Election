@@ -12,18 +12,20 @@ namespace fstCopy_Proj5.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class USER
+    public partial class User
     {
-        public long National_ID { get; set; }
-        public string Name { get; set; }
+        public int ID { get; set; }
+        public string NationalNumber { get; set; }
         public string Email { get; set; }
         public string Password { get; set; }
+        public string FullName { get; set; }
         public string ElectionArea { get; set; }
-        public string Gender { get; set; }
+        public string Governorate { get; set; }
         public Nullable<System.DateTime> BirthDate { get; set; }
-        public int local_Vote { get; set; }
-        public int Party_Vote { get; set; }
-        public int White_Local_Vote { get; set; }
-        public int White_Party_Vote { get; set; }
+        public string Gender { get; set; }
+        public Nullable<bool> LocalElections { get; set; }
+        public Nullable<bool> PartyElections { get; set; }
+        public Nullable<bool> whitePaperLocalElections { get; set; }
+        public Nullable<bool> whitePaperPartyElections { get; set; }
     }
 }

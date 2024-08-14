@@ -1,5 +1,9 @@
 ﻿@model fstCopy_Proj5.Models.LocalList
 
+@{ 
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+
+}
 <!DOCTYPE html>
 <html>
 <head>
@@ -40,31 +44,28 @@
             max-width: 500px;
         }
 
-
+        .image-section img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
 
         .form-group.text-right {
             text-align: right;
         }
 
-        .image-section img {
-            width: 218%;
-            height: auto;
-            position: relative;
-            bottom: 48px;
-            left: 104%;
-        }
-
-        .form-group.text-right input[type="submit"] {
-            background-color: #d9534f;
-            border-color: #d43f3a;
-            color: #fff;
-            width: 100%;
-        }
-
-            .form-group.text-right input[type="submit"]:hover {
-                background-color: #c9302c;
-                border-color: #ac2925;
+            .form-group.text-right input[type="submit"] {
+                background-color: #d9534f;
+                border-color: #d43f3a;
+                color: #fff;
+                width: 100%;
             }
+
+                .form-group.text-right input[type="submit"]:hover {
+                    background-color: #c9302c;
+                    border-color: #ac2925;
+                }
 
         .btn {
             padding: 6px 12px;
@@ -85,9 +86,6 @@
             background-image: none;
             border: 1px solid transparent;
             border-radius: 4px;
-            position: relative;
-            right: 6%;
-            margin: 50px;
         }
 
         .page-title {
@@ -102,7 +100,6 @@
     <div class="container custom-form">
         <h2 class="page-title">إضافة قائمة جديدة</h2>
         <div class="form-container">
-
             <div class="form-section">
                 @using (Html.BeginForm())
                 {
@@ -142,6 +139,7 @@
                             </div>
                             <label class="control-label col-md-2">دائرة الانتخابية</label>
                         </div>
+
                         <div class="form-group text-right">
                             <div class="col-md-12">
                                 <input type="submit" value="الانتقال إلى النموذج التالي" class="btn btn-primary" />
