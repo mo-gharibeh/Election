@@ -3,32 +3,136 @@
   "WorkspaceRootPath": "C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{2FBF41DC-C892-40BE-BFD2-31DFA7D1FCAB}|fstCopy_Proj5\\fstCopy_Proj5.csproj|C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstcopy_proj5\\views\\admins\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{2FBF41DC-C892-40BE-BFD2-31DFA7D1FCAB}|fstCopy_Proj5\\fstCopy_Proj5.csproj|solutionrelative:fstcopy_proj5\\views\\admins\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{2FBF41DC-C892-40BE-BFD2-31DFA7D1FCAB}|fstCopy_Proj5\\fstCopy_Proj5.csproj|C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstcopy_proj5\\views\\user\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2FBF41DC-C892-40BE-BFD2-31DFA7D1FCAB}|fstCopy_Proj5\\fstCopy_Proj5.csproj|solutionrelative:fstcopy_proj5\\views\\user\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2FBF41DC-C892-40BE-BFD2-31DFA7D1FCAB}|fstCopy_Proj5\\fstCopy_Proj5.csproj|C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstcopy_proj5\\controllers\\adminscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2FBF41DC-C892-40BE-BFD2-31DFA7D1FCAB}|fstCopy_Proj5\\fstCopy_Proj5.csproj|solutionrelative:fstcopy_proj5\\controllers\\adminscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2FBF41DC-C892-40BE-BFD2-31DFA7D1FCAB}|fstCopy_Proj5\\fstCopy_Proj5.csproj|c:\\users\\orange\\desktop\\project5 election\\election\\fstcopy_proj5\\fstcopy_proj5\\models\\locallistcandidatescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2FBF41DC-C892-40BE-BFD2-31DFA7D1FCAB}|fstCopy_Proj5\\fstCopy_Proj5.csproj|solutionrelative:fstcopy_proj5\\models\\locallistcandidatescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2FBF41DC-C892-40BE-BFD2-31DFA7D1FCAB}|fstCopy_Proj5\\fstCopy_Proj5.csproj|C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstcopy_proj5\\views\\users\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{2FBF41DC-C892-40BE-BFD2-31DFA7D1FCAB}|fstCopy_Proj5\\fstCopy_Proj5.csproj|solutionrelative:fstcopy_proj5\\views\\users\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{2FBF41DC-C892-40BE-BFD2-31DFA7D1FCAB}|fstCopy_Proj5\\fstCopy_Proj5.csproj|c:\\users\\orange\\desktop\\project5 election\\election\\fstcopy_proj5\\fstcopy_proj5\\views\\ads\\advertisementadmin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2FBF41DC-C892-40BE-BFD2-31DFA7D1FCAB}|fstCopy_Proj5\\fstCopy_Proj5.csproj|solutionrelative:fstcopy_proj5\\views\\ads\\advertisementadmin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2FBF41DC-C892-40BE-BFD2-31DFA7D1FCAB}|fstCopy_Proj5\\fstCopy_Proj5.csproj|C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstcopy_proj5\\views\\users\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{2FBF41DC-C892-40BE-BFD2-31DFA7D1FCAB}|fstCopy_Proj5\\fstCopy_Proj5.csproj|solutionrelative:fstcopy_proj5\\views\\users\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2FBF41DC-C892-40BE-BFD2-31DFA7D1FCAB}|fstCopy_Proj5\\fstCopy_Proj5.csproj|C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstcopy_proj5\\views\\locallistcandidates\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{2FBF41DC-C892-40BE-BFD2-31DFA7D1FCAB}|fstCopy_Proj5\\fstCopy_Proj5.csproj|solutionrelative:fstcopy_proj5\\views\\locallistcandidates\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{2FBF41DC-C892-40BE-BFD2-31DFA7D1FCAB}|fstCopy_Proj5\\fstCopy_Proj5.csproj|C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstcopy_proj5\\views\\user\\typeofelection.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2FBF41DC-C892-40BE-BFD2-31DFA7D1FCAB}|fstCopy_Proj5\\fstCopy_Proj5.csproj|solutionrelative:fstcopy_proj5\\views\\user\\typeofelection.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FBF41DC-C892-40BE-BFD2-31DFA7D1FCAB}|fstCopy_Proj5\\fstCopy_Proj5.csproj|C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstcopy_proj5\\views\\user\\electiondistricts.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2FBF41DC-C892-40BE-BFD2-31DFA7D1FCAB}|fstCopy_Proj5\\fstCopy_Proj5.csproj|solutionrelative:fstcopy_proj5\\views\\user\\electiondistricts.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FBF41DC-C892-40BE-BFD2-31DFA7D1FCAB}|fstCopy_Proj5\\fstCopy_Proj5.csproj|C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstcopy_proj5\\views\\user\\loginuser.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2FBF41DC-C892-40BE-BFD2-31DFA7D1FCAB}|fstCopy_Proj5\\fstCopy_Proj5.csproj|solutionrelative:fstcopy_proj5\\views\\user\\loginuser.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FBF41DC-C892-40BE-BFD2-31DFA7D1FCAB}|fstCopy_Proj5\\fstCopy_Proj5.csproj|C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstcopy_proj5\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2FBF41DC-C892-40BE-BFD2-31DFA7D1FCAB}|fstCopy_Proj5\\fstCopy_Proj5.csproj|solutionrelative:fstcopy_proj5\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FBF41DC-C892-40BE-BFD2-31DFA7D1FCAB}|fstCopy_Proj5\\fstCopy_Proj5.csproj|C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstcopy_proj5\\views\\contact\\createcontact.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2FBF41DC-C892-40BE-BFD2-31DFA7D1FCAB}|fstCopy_Proj5\\fstCopy_Proj5.csproj|solutionrelative:fstcopy_proj5\\views\\contact\\createcontact.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FBF41DC-C892-40BE-BFD2-31DFA7D1FCAB}|fstCopy_Proj5\\fstCopy_Proj5.csproj|C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstcopy_proj5\\controllers\\contactcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2FBF41DC-C892-40BE-BFD2-31DFA7D1FCAB}|fstCopy_Proj5\\fstCopy_Proj5.csproj|solutionrelative:fstcopy_proj5\\controllers\\contactcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FBF41DC-C892-40BE-BFD2-31DFA7D1FCAB}|fstCopy_Proj5\\fstCopy_Proj5.csproj|C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstcopy_proj5\\views\\generallistcandidates\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2FBF41DC-C892-40BE-BFD2-31DFA7D1FCAB}|fstCopy_Proj5\\fstCopy_Proj5.csproj|solutionrelative:fstcopy_proj5\\views\\generallistcandidates\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FBF41DC-C892-40BE-BFD2-31DFA7D1FCAB}|fstCopy_Proj5\\fstCopy_Proj5.csproj|C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstcopy_proj5\\views\\home\\cotactus.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2FBF41DC-C892-40BE-BFD2-31DFA7D1FCAB}|fstCopy_Proj5\\fstCopy_Proj5.csproj|solutionrelative:fstcopy_proj5\\views\\home\\cotactus.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FBF41DC-C892-40BE-BFD2-31DFA7D1FCAB}|fstCopy_Proj5\\fstCopy_Proj5.csproj|C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstcopy_proj5\\views\\admins\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2FBF41DC-C892-40BE-BFD2-31DFA7D1FCAB}|fstCopy_Proj5\\fstCopy_Proj5.csproj|solutionrelative:fstcopy_proj5\\views\\admins\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2FBF41DC-C892-40BE-BFD2-31DFA7D1FCAB}|fstCopy_Proj5\\fstCopy_Proj5.csproj|C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstcopy_proj5\\views\\shared\\_adminlayoutpage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{2FBF41DC-C892-40BE-BFD2-31DFA7D1FCAB}|fstCopy_Proj5\\fstCopy_Proj5.csproj|solutionrelative:fstcopy_proj5\\views\\shared\\_adminlayoutpage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FBF41DC-C892-40BE-BFD2-31DFA7D1FCAB}|fstCopy_Proj5\\fstCopy_Proj5.csproj|C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstcopy_proj5\\views\\shared\\_mainlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2FBF41DC-C892-40BE-BFD2-31DFA7D1FCAB}|fstCopy_Proj5\\fstCopy_Proj5.csproj|solutionrelative:fstcopy_proj5\\views\\shared\\_mainlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FBF41DC-C892-40BE-BFD2-31DFA7D1FCAB}|fstCopy_Proj5\\fstCopy_Proj5.csproj|C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstcopy_proj5\\models\\contact.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2FBF41DC-C892-40BE-BFD2-31DFA7D1FCAB}|fstCopy_Proj5\\fstCopy_Proj5.csproj|solutionrelative:fstcopy_proj5\\models\\contact.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FBF41DC-C892-40BE-BFD2-31DFA7D1FCAB}|fstCopy_Proj5\\fstCopy_Proj5.csproj|C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstcopy_proj5\\models\\model1.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|",
+      "RelativeMoniker": "D:0:0:{2FBF41DC-C892-40BE-BFD2-31DFA7D1FCAB}|fstCopy_Proj5\\fstCopy_Proj5.csproj|solutionrelative:fstcopy_proj5\\models\\model1.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FBF41DC-C892-40BE-BFD2-31DFA7D1FCAB}|fstCopy_Proj5\\fstCopy_Proj5.csproj|C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstcopy_proj5\\views\\home\\map.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2FBF41DC-C892-40BE-BFD2-31DFA7D1FCAB}|fstCopy_Proj5\\fstCopy_Proj5.csproj|solutionrelative:fstcopy_proj5\\views\\home\\map.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FBF41DC-C892-40BE-BFD2-31DFA7D1FCAB}|fstCopy_Proj5\\fstCopy_Proj5.csproj|C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstcopy_proj5\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2FBF41DC-C892-40BE-BFD2-31DFA7D1FCAB}|fstCopy_Proj5\\fstCopy_Proj5.csproj|solutionrelative:fstcopy_proj5\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FBF41DC-C892-40BE-BFD2-31DFA7D1FCAB}|fstCopy_Proj5\\fstCopy_Proj5.csproj|C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstcopy_proj5\\views\\locallistcandidates\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2FBF41DC-C892-40BE-BFD2-31DFA7D1FCAB}|fstCopy_Proj5\\fstCopy_Proj5.csproj|solutionrelative:fstcopy_proj5\\views\\locallistcandidates\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FBF41DC-C892-40BE-BFD2-31DFA7D1FCAB}|fstCopy_Proj5\\fstCopy_Proj5.csproj|C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstcopy_proj5\\content\\admin\\css\\simplebar.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{2FBF41DC-C892-40BE-BFD2-31DFA7D1FCAB}|fstCopy_Proj5\\fstCopy_Proj5.csproj|solutionrelative:fstcopy_proj5\\content\\admin\\css\\simplebar.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FBF41DC-C892-40BE-BFD2-31DFA7D1FCAB}|fstCopy_Proj5\\fstCopy_Proj5.csproj|C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstcopy_proj5\\views\\users\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2FBF41DC-C892-40BE-BFD2-31DFA7D1FCAB}|fstCopy_Proj5\\fstCopy_Proj5.csproj|solutionrelative:fstcopy_proj5\\views\\users\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FBF41DC-C892-40BE-BFD2-31DFA7D1FCAB}|fstCopy_Proj5\\fstCopy_Proj5.csproj|C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstcopy_proj5\\views\\locallistcandidates\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2FBF41DC-C892-40BE-BFD2-31DFA7D1FCAB}|fstCopy_Proj5\\fstCopy_Proj5.csproj|solutionrelative:fstcopy_proj5\\views\\locallistcandidates\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FBF41DC-C892-40BE-BFD2-31DFA7D1FCAB}|fstCopy_Proj5\\fstCopy_Proj5.csproj|C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstcopy_proj5\\views\\locallistcandidates\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2FBF41DC-C892-40BE-BFD2-31DFA7D1FCAB}|fstCopy_Proj5\\fstCopy_Proj5.csproj|solutionrelative:fstcopy_proj5\\views\\locallistcandidates\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FBF41DC-C892-40BE-BFD2-31DFA7D1FCAB}|fstCopy_Proj5\\fstCopy_Proj5.csproj|C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstcopy_proj5\\views\\locallistcandidates\\createcandidates.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2FBF41DC-C892-40BE-BFD2-31DFA7D1FCAB}|fstCopy_Proj5\\fstCopy_Proj5.csproj|solutionrelative:fstcopy_proj5\\views\\locallistcandidates\\createcandidates.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FBF41DC-C892-40BE-BFD2-31DFA7D1FCAB}|fstCopy_Proj5\\fstCopy_Proj5.csproj|C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstcopy_proj5\\views\\locallistcandidates\\createlist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2FBF41DC-C892-40BE-BFD2-31DFA7D1FCAB}|fstCopy_Proj5\\fstCopy_Proj5.csproj|solutionrelative:fstcopy_proj5\\views\\locallistcandidates\\createlist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FBF41DC-C892-40BE-BFD2-31DFA7D1FCAB}|fstCopy_Proj5\\fstCopy_Proj5.csproj|C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstcopy_proj5\\controllers\\localresultcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2FBF41DC-C892-40BE-BFD2-31DFA7D1FCAB}|fstCopy_Proj5\\fstCopy_Proj5.csproj|solutionrelative:fstcopy_proj5\\controllers\\localresultcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FBF41DC-C892-40BE-BFD2-31DFA7D1FCAB}|fstCopy_Proj5\\fstCopy_Proj5.csproj|C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstcopy_proj5\\models\\locallistcandidate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2FBF41DC-C892-40BE-BFD2-31DFA7D1FCAB}|fstCopy_Proj5\\fstCopy_Proj5.csproj|solutionrelative:fstcopy_proj5\\models\\locallistcandidate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FBF41DC-C892-40BE-BFD2-31DFA7D1FCAB}|fstCopy_Proj5\\fstCopy_Proj5.csproj|C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstcopy_proj5\\views\\locallistcandidates\\thankyou.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2FBF41DC-C892-40BE-BFD2-31DFA7D1FCAB}|fstCopy_Proj5\\fstCopy_Proj5.csproj|solutionrelative:fstcopy_proj5\\views\\locallistcandidates\\thankyou.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FBF41DC-C892-40BE-BFD2-31DFA7D1FCAB}|fstCopy_Proj5\\fstCopy_Proj5.csproj|C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstcopy_proj5\\controllers\\adminscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2FBF41DC-C892-40BE-BFD2-31DFA7D1FCAB}|fstCopy_Proj5\\fstCopy_Proj5.csproj|solutionrelative:fstcopy_proj5\\controllers\\adminscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FBF41DC-C892-40BE-BFD2-31DFA7D1FCAB}|fstCopy_Proj5\\fstCopy_Proj5.csproj|C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstcopy_proj5\\models\\locallistcandidatescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2FBF41DC-C892-40BE-BFD2-31DFA7D1FCAB}|fstCopy_Proj5\\fstCopy_Proj5.csproj|solutionrelative:fstcopy_proj5\\models\\locallistcandidatescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FBF41DC-C892-40BE-BFD2-31DFA7D1FCAB}|fstCopy_Proj5\\fstCopy_Proj5.csproj|C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstcopy_proj5\\views\\locallistcandidates\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2FBF41DC-C892-40BE-BFD2-31DFA7D1FCAB}|fstCopy_Proj5\\fstCopy_Proj5.csproj|solutionrelative:fstcopy_proj5\\views\\locallistcandidates\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FBF41DC-C892-40BE-BFD2-31DFA7D1FCAB}|fstCopy_Proj5\\fstCopy_Proj5.csproj|C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstcopy_proj5\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{2FBF41DC-C892-40BE-BFD2-31DFA7D1FCAB}|fstCopy_Proj5\\fstCopy_Proj5.csproj|solutionrelative:fstcopy_proj5\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FBF41DC-C892-40BE-BFD2-31DFA7D1FCAB}|fstCopy_Proj5\\fstCopy_Proj5.csproj|C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstcopy_proj5\\views\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{2FBF41DC-C892-40BE-BFD2-31DFA7D1FCAB}|fstCopy_Proj5\\fstCopy_Proj5.csproj|solutionrelative:fstcopy_proj5\\views\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2FBF41DC-C892-40BE-BFD2-31DFA7D1FCAB}|fstCopy_Proj5\\fstCopy_Proj5.csproj|C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstcopy_proj5\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -55,16 +159,8 @@
       "RelativeMoniker": "D:0:0:{2FBF41DC-C892-40BE-BFD2-31DFA7D1FCAB}|fstCopy_Proj5\\fstCopy_Proj5.csproj|solutionrelative:fstcopy_proj5\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2FBF41DC-C892-40BE-BFD2-31DFA7D1FCAB}|fstCopy_Proj5\\fstCopy_Proj5.csproj|C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstcopy_proj5\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{2FBF41DC-C892-40BE-BFD2-31DFA7D1FCAB}|fstCopy_Proj5\\fstCopy_Proj5.csproj|solutionrelative:fstcopy_proj5\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{2FBF41DC-C892-40BE-BFD2-31DFA7D1FCAB}|fstCopy_Proj5\\fstCopy_Proj5.csproj|C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstcopy_proj5\\content\\css\\styles.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
       "RelativeMoniker": "D:0:0:{2FBF41DC-C892-40BE-BFD2-31DFA7D1FCAB}|fstCopy_Proj5\\fstCopy_Proj5.csproj|solutionrelative:fstcopy_proj5\\content\\css\\styles.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2FBF41DC-C892-40BE-BFD2-31DFA7D1FCAB}|fstCopy_Proj5\\fstCopy_Proj5.csproj|C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstcopy_proj5\\views\\shared\\_mainlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{2FBF41DC-C892-40BE-BFD2-31DFA7D1FCAB}|fstCopy_Proj5\\fstCopy_Proj5.csproj|solutionrelative:fstcopy_proj5\\views\\shared\\_mainlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2FBF41DC-C892-40BE-BFD2-31DFA7D1FCAB}|fstCopy_Proj5\\fstCopy_Proj5.csproj|C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstcopy_proj5\\controllers\\partyresultcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -83,32 +179,8 @@
       "RelativeMoniker": "D:0:0:{2FBF41DC-C892-40BE-BFD2-31DFA7D1FCAB}|fstCopy_Proj5\\fstCopy_Proj5.csproj|solutionrelative:fstcopy_proj5\\views\\dates\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2FBF41DC-C892-40BE-BFD2-31DFA7D1FCAB}|fstCopy_Proj5\\fstCopy_Proj5.csproj|C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstcopy_proj5\\models\\contact.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2FBF41DC-C892-40BE-BFD2-31DFA7D1FCAB}|fstCopy_Proj5\\fstCopy_Proj5.csproj|solutionrelative:fstcopy_proj5\\models\\contact.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2FBF41DC-C892-40BE-BFD2-31DFA7D1FCAB}|fstCopy_Proj5\\fstCopy_Proj5.csproj|C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstcopy_proj5\\views\\contact\\createcontact.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{2FBF41DC-C892-40BE-BFD2-31DFA7D1FCAB}|fstCopy_Proj5\\fstCopy_Proj5.csproj|solutionrelative:fstcopy_proj5\\views\\contact\\createcontact.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2FBF41DC-C892-40BE-BFD2-31DFA7D1FCAB}|fstCopy_Proj5\\fstCopy_Proj5.csproj|C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstcopy_proj5\\controllers\\contactcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2FBF41DC-C892-40BE-BFD2-31DFA7D1FCAB}|fstCopy_Proj5\\fstCopy_Proj5.csproj|solutionrelative:fstcopy_proj5\\controllers\\contactcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{2FBF41DC-C892-40BE-BFD2-31DFA7D1FCAB}|fstCopy_Proj5\\fstCopy_Proj5.csproj|C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstcopy_proj5\\views\\home\\about.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{2FBF41DC-C892-40BE-BFD2-31DFA7D1FCAB}|fstCopy_Proj5\\fstCopy_Proj5.csproj|solutionrelative:fstcopy_proj5\\views\\home\\about.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2FBF41DC-C892-40BE-BFD2-31DFA7D1FCAB}|fstCopy_Proj5\\fstCopy_Proj5.csproj|C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstcopy_proj5\\views\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
-      "RelativeMoniker": "D:0:0:{2FBF41DC-C892-40BE-BFD2-31DFA7D1FCAB}|fstCopy_Proj5\\fstCopy_Proj5.csproj|solutionrelative:fstcopy_proj5\\views\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2FBF41DC-C892-40BE-BFD2-31DFA7D1FCAB}|fstCopy_Proj5\\fstCopy_Proj5.csproj|C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstcopy_proj5\\models\\date.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2FBF41DC-C892-40BE-BFD2-31DFA7D1FCAB}|fstCopy_Proj5\\fstCopy_Proj5.csproj|solutionrelative:fstcopy_proj5\\models\\date.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2FBF41DC-C892-40BE-BFD2-31DFA7D1FCAB}|fstCopy_Proj5\\fstCopy_Proj5.csproj|C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstcopy_proj5\\controllers\\localresultcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2FBF41DC-C892-40BE-BFD2-31DFA7D1FCAB}|fstCopy_Proj5\\fstCopy_Proj5.csproj|solutionrelative:fstcopy_proj5\\controllers\\localresultcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2FBF41DC-C892-40BE-BFD2-31DFA7D1FCAB}|fstCopy_Proj5\\fstCopy_Proj5.csproj|C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstcopy_proj5\\controllers\\generallistingscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -131,20 +203,8 @@
       "RelativeMoniker": "D:0:0:{2FBF41DC-C892-40BE-BFD2-31DFA7D1FCAB}|fstCopy_Proj5\\fstCopy_Proj5.csproj|solutionrelative:fstcopy_proj5\\app_start\\routeconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2FBF41DC-C892-40BE-BFD2-31DFA7D1FCAB}|fstCopy_Proj5\\fstCopy_Proj5.csproj|C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstcopy_proj5\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
-      "RelativeMoniker": "D:0:0:{2FBF41DC-C892-40BE-BFD2-31DFA7D1FCAB}|fstCopy_Proj5\\fstCopy_Proj5.csproj|solutionrelative:fstcopy_proj5\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{2FBF41DC-C892-40BE-BFD2-31DFA7D1FCAB}|fstCopy_Proj5\\fstCopy_Proj5.csproj|C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstcopy_proj5\\controllers\\adscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2FBF41DC-C892-40BE-BFD2-31DFA7D1FCAB}|fstCopy_Proj5\\fstCopy_Proj5.csproj|solutionrelative:fstcopy_proj5\\controllers\\adscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2FBF41DC-C892-40BE-BFD2-31DFA7D1FCAB}|fstCopy_Proj5\\fstCopy_Proj5.csproj|C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstcopy_proj5\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2FBF41DC-C892-40BE-BFD2-31DFA7D1FCAB}|fstCopy_Proj5\\fstCopy_Proj5.csproj|solutionrelative:fstcopy_proj5\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2FBF41DC-C892-40BE-BFD2-31DFA7D1FCAB}|fstCopy_Proj5\\fstCopy_Proj5.csproj|C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstcopy_proj5\\views\\generallistcandidates\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{2FBF41DC-C892-40BE-BFD2-31DFA7D1FCAB}|fstCopy_Proj5\\fstCopy_Proj5.csproj|solutionrelative:fstcopy_proj5\\views\\generallistcandidates\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2FBF41DC-C892-40BE-BFD2-31DFA7D1FCAB}|fstCopy_Proj5\\fstCopy_Proj5.csproj|C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstcopy_proj5\\views\\generallistcandidates\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -162,31 +222,405 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Details.cshtml",
-              "DocumentMoniker": "C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstCopy_Proj5\\Views\\Admins\\Details.cshtml",
-              "RelativeDocumentMoniker": "fstCopy_Proj5\\Views\\Admins\\Details.cshtml",
-              "ToolTip": "C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstCopy_Proj5\\Views\\Admins\\Details.cshtml",
-              "RelativeToolTip": "fstCopy_Proj5\\Views\\Admins\\Details.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAABAAAA",
+              "DocumentIndex": 1,
+              "Title": "advertisementAdmin.cshtml",
+              "DocumentMoniker": "C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstCopy_Proj5\\Views\\Ads\\advertisementAdmin.cshtml",
+              "RelativeDocumentMoniker": "fstCopy_Proj5\\Views\\Ads\\advertisementAdmin.cshtml",
+              "ToolTip": "C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstCopy_Proj5\\Views\\Ads\\advertisementAdmin.cshtml",
+              "RelativeToolTip": "fstCopy_Proj5\\Views\\Ads\\advertisementAdmin.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-13T10:03:40.943Z"
+              "WhenOpened": "2024-08-20T09:29:20.382Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "TypeOfElection.cshtml",
+              "DocumentMoniker": "C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstCopy_Proj5\\Views\\USER\\TypeOfElection.cshtml",
+              "RelativeDocumentMoniker": "fstCopy_Proj5\\Views\\USER\\TypeOfElection.cshtml",
+              "ToolTip": "C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstCopy_Proj5\\Views\\USER\\TypeOfElection.cshtml",
+              "RelativeToolTip": "fstCopy_Proj5\\Views\\USER\\TypeOfElection.cshtml",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAAB8AAABEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-20T09:16:00.823Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ElectionDistricts.cshtml",
+              "DocumentMoniker": "C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstCopy_Proj5\\Views\\USER\\ElectionDistricts.cshtml",
+              "RelativeDocumentMoniker": "fstCopy_Proj5\\Views\\USER\\ElectionDistricts.cshtml",
+              "ToolTip": "C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstCopy_Proj5\\Views\\USER\\ElectionDistricts.cshtml",
+              "RelativeToolTip": "fstCopy_Proj5\\Views\\USER\\ElectionDistricts.cshtml",
+              "ViewState": "AQIAADoAAAAAAAAAAAAAAE8AAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-20T09:10:39.401Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstCopy_Proj5\\Views\\USER\\Login.cshtml",
+              "RelativeDocumentMoniker": "fstCopy_Proj5\\Views\\USER\\Login.cshtml",
+              "ToolTip": "C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstCopy_Proj5\\Views\\USER\\Login.cshtml",
+              "RelativeToolTip": "fstCopy_Proj5\\Views\\USER\\Login.cshtml",
+              "ViewState": "AQIAAHcAAAAAAAAAAAAAAIIAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-20T08:58:53.424Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "LoginUser.cshtml",
+              "DocumentMoniker": "C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstCopy_Proj5\\Views\\USER\\LoginUser.cshtml",
+              "RelativeDocumentMoniker": "fstCopy_Proj5\\Views\\USER\\LoginUser.cshtml",
+              "ToolTip": "C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstCopy_Proj5\\Views\\USER\\LoginUser.cshtml",
+              "RelativeToolTip": "fstCopy_Proj5\\Views\\USER\\LoginUser.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-20T08:58:52.741Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "CotactUs.cshtml",
+              "DocumentMoniker": "C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstCopy_Proj5\\Views\\Home\\CotactUs.cshtml",
+              "RelativeDocumentMoniker": "fstCopy_Proj5\\Views\\Home\\CotactUs.cshtml",
+              "ToolTip": "C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstCopy_Proj5\\Views\\Home\\CotactUs.cshtml",
+              "RelativeToolTip": "fstCopy_Proj5\\Views\\Home\\CotactUs.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-20T08:45:37.887Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 11,
-              "Title": "Edit.cshtml",
-              "DocumentMoniker": "C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstCopy_Proj5\\Views\\Admins\\Edit.cshtml",
-              "RelativeDocumentMoniker": "fstCopy_Proj5\\Views\\Admins\\Edit.cshtml",
-              "ToolTip": "C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstCopy_Proj5\\Views\\Admins\\Edit.cshtml",
-              "RelativeToolTip": "fstCopy_Proj5\\Views\\Admins\\Edit.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAWAAAA",
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstCopy_Proj5\\Views\\Admins\\Index.cshtml",
+              "RelativeDocumentMoniker": "fstCopy_Proj5\\Views\\Admins\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstCopy_Proj5\\Views\\Admins\\Index.cshtml",
+              "RelativeToolTip": "fstCopy_Proj5\\Views\\Admins\\Index.cshtml",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAAACIAAAAUAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-13T10:02:09.146Z"
+              "WhenOpened": "2024-08-12T20:01:48.223Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstCopy_Proj5\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "fstCopy_Proj5\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstCopy_Proj5\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "fstCopy_Proj5\\Views\\Home\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAABQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-08T06:41:16.69Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstCopy_Proj5\\Views\\Users\\Index.cshtml",
+              "RelativeDocumentMoniker": "fstCopy_Proj5\\Views\\Users\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstCopy_Proj5\\Views\\Users\\Index.cshtml",
+              "RelativeToolTip": "fstCopy_Proj5\\Views\\Users\\Index.cshtml",
+              "ViewState": "AQIAAC0AAAAAAAAAAAAAAEAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-12T20:17:14.106Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "_AdminLayoutPage.cshtml",
+              "DocumentMoniker": "C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstCopy_Proj5\\Views\\Shared\\_AdminLayoutPage.cshtml",
+              "RelativeDocumentMoniker": "fstCopy_Proj5\\Views\\Shared\\_AdminLayoutPage.cshtml",
+              "ToolTip": "C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstCopy_Proj5\\Views\\Shared\\_AdminLayoutPage.cshtml",
+              "RelativeToolTip": "fstCopy_Proj5\\Views\\Shared\\_AdminLayoutPage.cshtml",
+              "ViewState": "AQIAAC0AAAAAAAAAAAAAADMAAAAHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-08T14:24:58.592Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "_MainLayout.cshtml",
+              "DocumentMoniker": "C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstCopy_Proj5\\Views\\Shared\\_MainLayout.cshtml",
+              "RelativeDocumentMoniker": "fstCopy_Proj5\\Views\\Shared\\_MainLayout.cshtml",
+              "ToolTip": "C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstCopy_Proj5\\Views\\Shared\\_MainLayout.cshtml",
+              "RelativeToolTip": "fstCopy_Proj5\\Views\\Shared\\_MainLayout.cshtml",
+              "ViewState": "AQIAAIAAAAAAAAAAAAAiwMUAAABLAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-12T14:23:55.214Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ContactController.cs",
+              "DocumentMoniker": "C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstCopy_Proj5\\Controllers\\ContactController.cs",
+              "RelativeDocumentMoniker": "fstCopy_Proj5\\Controllers\\ContactController.cs",
+              "ToolTip": "C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstCopy_Proj5\\Controllers\\ContactController.cs",
+              "RelativeToolTip": "fstCopy_Proj5\\Controllers\\ContactController.cs",
+              "ViewState": "AQIAADwAAAAAAAAAAAAqwFQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-08T13:50:42.209Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstCopy_Proj5\\Views\\GeneralListCandidates\\Index.cshtml",
+              "RelativeDocumentMoniker": "fstCopy_Proj5\\Views\\GeneralListCandidates\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstCopy_Proj5\\Views\\GeneralListCandidates\\Index.cshtml",
+              "RelativeToolTip": "fstCopy_Proj5\\Views\\GeneralListCandidates\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAADkAAAA7AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-08T14:53:19.057Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
+              "Title": "CreateContact.cshtml",
+              "DocumentMoniker": "C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstCopy_Proj5\\Views\\Contact\\CreateContact.cshtml",
+              "RelativeDocumentMoniker": "fstCopy_Proj5\\Views\\Contact\\CreateContact.cshtml",
+              "ToolTip": "C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstCopy_Proj5\\Views\\Contact\\CreateContact.cshtml",
+              "RelativeToolTip": "fstCopy_Proj5\\Views\\Contact\\CreateContact.cshtml",
+              "ViewState": "AQIAAEsAAAAAAAAAAADwv4EAAAAeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-08T14:53:40.4Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Contact.cs",
+              "DocumentMoniker": "C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstCopy_Proj5\\Models\\Contact.cs",
+              "RelativeDocumentMoniker": "fstCopy_Proj5\\Models\\Contact.cs",
+              "ToolTip": "C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstCopy_Proj5\\Models\\Contact.cs",
+              "RelativeToolTip": "fstCopy_Proj5\\Models\\Contact.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAABcAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-20T08:43:31.69Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Map.cshtml",
+              "DocumentMoniker": "C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstCopy_Proj5\\Views\\Home\\Map.cshtml",
+              "RelativeDocumentMoniker": "fstCopy_Proj5\\Views\\Home\\Map.cshtml",
+              "ToolTip": "C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstCopy_Proj5\\Views\\Home\\Map.cshtml",
+              "RelativeToolTip": "fstCopy_Proj5\\Views\\Home\\Map.cshtml",
+              "ViewState": "AQIAACQAAAAAAAAAAADwv1AAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-20T08:22:15.594Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstCopy_Proj5\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "fstCopy_Proj5\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstCopy_Proj5\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "fstCopy_Proj5\\Controllers\\HomeController.cs",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAQwBsAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-08T13:47:53.73Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Model1.edmx [Diagram1]",
+              "DocumentMoniker": "C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstCopy_Proj5\\Models\\Model1.edmx",
+              "RelativeDocumentMoniker": "fstCopy_Proj5\\Models\\Model1.edmx",
+              "ToolTip": "C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstCopy_Proj5\\Models\\Model1.edmx [Diagram1]",
+              "RelativeToolTip": "fstCopy_Proj5\\Models\\Model1.edmx [Diagram1]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001116|",
+              "WhenOpened": "2024-08-20T06:56:01.372Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstCopy_Proj5\\Views\\LocalListCandidates\\Edit.cshtml",
+              "RelativeDocumentMoniker": "fstCopy_Proj5\\Views\\LocalListCandidates\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstCopy_Proj5\\Views\\LocalListCandidates\\Edit.cshtml",
+              "RelativeToolTip": "fstCopy_Proj5\\Views\\LocalListCandidates\\Edit.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-20T07:06:28.685Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "simplebar.css",
+              "DocumentMoniker": "C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstCopy_Proj5\\Content\\Admin\\css\\simplebar.css",
+              "RelativeDocumentMoniker": "fstCopy_Proj5\\Content\\Admin\\css\\simplebar.css",
+              "ToolTip": "C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstCopy_Proj5\\Content\\Admin\\css\\simplebar.css",
+              "RelativeToolTip": "fstCopy_Proj5\\Content\\Admin\\css\\simplebar.css",
+              "ViewState": "AQIAACsAAAAAAAAAAAAAAC4AAAAaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-08-20T08:15:03.975Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstCopy_Proj5\\Views\\Users\\Create.cshtml",
+              "RelativeDocumentMoniker": "fstCopy_Proj5\\Views\\Users\\Create.cshtml",
+              "ToolTip": "C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstCopy_Proj5\\Views\\Users\\Create.cshtml",
+              "RelativeToolTip": "fstCopy_Proj5\\Views\\Users\\Create.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAGAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-13T10:06:16.231Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstCopy_Proj5\\Views\\LocalListCandidates\\Index.cshtml",
+              "RelativeDocumentMoniker": "fstCopy_Proj5\\Views\\LocalListCandidates\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstCopy_Proj5\\Views\\LocalListCandidates\\Index.cshtml",
+              "RelativeToolTip": "fstCopy_Proj5\\Views\\LocalListCandidates\\Index.cshtml",
+              "ViewState": "AQIAADMAAAAAAAAAAAAAADgAAAAHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-13T06:08:23.15Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstCopy_Proj5\\Views\\LocalListCandidates\\Create.cshtml",
+              "RelativeDocumentMoniker": "fstCopy_Proj5\\Views\\LocalListCandidates\\Create.cshtml",
+              "ToolTip": "C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstCopy_Proj5\\Views\\LocalListCandidates\\Create.cshtml",
+              "RelativeToolTip": "fstCopy_Proj5\\Views\\LocalListCandidates\\Create.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAGAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-20T07:00:14.069Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "CreateCandidates.cshtml",
+              "DocumentMoniker": "C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstCopy_Proj5\\Views\\LocalListCandidates\\CreateCandidates.cshtml",
+              "RelativeDocumentMoniker": "fstCopy_Proj5\\Views\\LocalListCandidates\\CreateCandidates.cshtml",
+              "ToolTip": "C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstCopy_Proj5\\Views\\LocalListCandidates\\CreateCandidates.cshtml",
+              "RelativeToolTip": "fstCopy_Proj5\\Views\\LocalListCandidates\\CreateCandidates.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAADAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-20T07:05:03.334Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "CreateList.cshtml",
+              "DocumentMoniker": "C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstCopy_Proj5\\Views\\LocalListCandidates\\CreateList.cshtml",
+              "RelativeDocumentMoniker": "fstCopy_Proj5\\Views\\LocalListCandidates\\CreateList.cshtml",
+              "ToolTip": "C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstCopy_Proj5\\Views\\LocalListCandidates\\CreateList.cshtml",
+              "RelativeToolTip": "fstCopy_Proj5\\Views\\LocalListCandidates\\CreateList.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-20T07:04:30.931Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "LocalListCandidatesController.cs",
+              "DocumentMoniker": "C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstCopy_Proj5\\Models\\LocalListCandidatesController.cs",
+              "RelativeDocumentMoniker": "fstCopy_Proj5\\Models\\LocalListCandidatesController.cs",
+              "ToolTip": "C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstCopy_Proj5\\Models\\LocalListCandidatesController.cs",
+              "RelativeToolTip": "fstCopy_Proj5\\Models\\LocalListCandidatesController.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAqwBkAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-08T13:53:31.267Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstCopy_Proj5\\Views\\LocalListCandidates\\Delete.cshtml",
+              "RelativeDocumentMoniker": "fstCopy_Proj5\\Views\\LocalListCandidates\\Delete.cshtml",
+              "ToolTip": "C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstCopy_Proj5\\Views\\LocalListCandidates\\Delete.cshtml",
+              "RelativeToolTip": "fstCopy_Proj5\\Views\\LocalListCandidates\\Delete.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-20T07:05:51.128Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "LocalResultController.cs",
+              "DocumentMoniker": "C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstCopy_Proj5\\Controllers\\LocalResultController.cs",
+              "RelativeDocumentMoniker": "fstCopy_Proj5\\Controllers\\LocalResultController.cs",
+              "ToolTip": "C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstCopy_Proj5\\Controllers\\LocalResultController.cs",
+              "RelativeToolTip": "fstCopy_Proj5\\Controllers\\LocalResultController.cs",
+              "ViewState": "AQIAADcAAAAAAAAAAAAewEkAAAA1AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-08T13:51:35.999Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "LocalListCandidate.cs",
+              "DocumentMoniker": "C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstCopy_Proj5\\Models\\LocalListCandidate.cs",
+              "RelativeDocumentMoniker": "fstCopy_Proj5\\Models\\LocalListCandidate.cs",
+              "ToolTip": "C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstCopy_Proj5\\Models\\LocalListCandidate.cs",
+              "RelativeToolTip": "fstCopy_Proj5\\Models\\LocalListCandidate.cs",
+              "ViewState": "AQIAABUAAAAAAAAAAAA7wAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-20T07:12:12.305Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "ThankYou.cshtml",
+              "DocumentMoniker": "C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstCopy_Proj5\\Views\\LocalListCandidates\\ThankYou.cshtml",
+              "RelativeDocumentMoniker": "fstCopy_Proj5\\Views\\LocalListCandidates\\ThankYou.cshtml",
+              "ToolTip": "C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstCopy_Proj5\\Views\\LocalListCandidates\\ThankYou.cshtml",
+              "RelativeToolTip": "fstCopy_Proj5\\Views\\LocalListCandidates\\ThankYou.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-20T07:09:37.404Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "AdminsController.cs",
+              "DocumentMoniker": "C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstCopy_Proj5\\Controllers\\AdminsController.cs",
+              "RelativeDocumentMoniker": "fstCopy_Proj5\\Controllers\\AdminsController.cs",
+              "ToolTip": "C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstCopy_Proj5\\Controllers\\AdminsController.cs",
+              "RelativeToolTip": "fstCopy_Proj5\\Controllers\\AdminsController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-12T20:00:48.459Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "web.config",
+              "DocumentMoniker": "C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstCopy_Proj5\\Views\\web.config",
+              "RelativeDocumentMoniker": "fstCopy_Proj5\\Views\\web.config",
+              "ToolTip": "C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstCopy_Proj5\\Views\\web.config",
+              "RelativeToolTip": "fstCopy_Proj5\\Views\\web.config",
+              "ViewState": "AQIAAB8AAAAAAAAAAABBwB0AAAAxAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2024-08-11T06:50:00.656Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "Web.config",
+              "DocumentMoniker": "C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstCopy_Proj5\\Web.config",
+              "RelativeDocumentMoniker": "fstCopy_Proj5\\Web.config",
+              "ToolTip": "C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstCopy_Proj5\\Web.config",
+              "RelativeToolTip": "fstCopy_Proj5\\Web.config",
+              "ViewState": "AQIAABgAAAAAAAAAAIBJwDsAAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2024-08-11T06:49:40.932Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
               "Title": "UsersController.cs",
               "DocumentMoniker": "C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstCopy_Proj5\\Controllers\\UsersController.cs",
               "RelativeDocumentMoniker": "fstCopy_Proj5\\Controllers\\UsersController.cs",
@@ -198,82 +632,31 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstCopy_Proj5\\Views\\Admins\\Index.cshtml",
-              "RelativeDocumentMoniker": "fstCopy_Proj5\\Views\\Admins\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstCopy_Proj5\\Views\\Admins\\Index.cshtml",
-              "RelativeToolTip": "fstCopy_Proj5\\Views\\Admins\\Index.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAEAAAA",
+              "DocumentIndex": 37,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstCopy_Proj5\\Views\\Admins\\Edit.cshtml",
+              "RelativeDocumentMoniker": "fstCopy_Proj5\\Views\\Admins\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstCopy_Proj5\\Views\\Admins\\Edit.cshtml",
+              "RelativeToolTip": "fstCopy_Proj5\\Views\\Admins\\Edit.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAWAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-12T20:01:48.223Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-13T10:02:09.146Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "_AdminLayoutPage.cshtml",
-              "DocumentMoniker": "C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstCopy_Proj5\\Views\\Shared\\_AdminLayoutPage.cshtml",
-              "RelativeDocumentMoniker": "fstCopy_Proj5\\Views\\Shared\\_AdminLayoutPage.cshtml",
-              "ToolTip": "C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstCopy_Proj5\\Views\\Shared\\_AdminLayoutPage.cshtml",
-              "RelativeToolTip": "fstCopy_Proj5\\Views\\Shared\\_AdminLayoutPage.cshtml",
-              "ViewState": "AQIAAGoAAAAAAAAAAAAIwIQAAAAAAAAA",
+              "DocumentIndex": 36,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstCopy_Proj5\\Views\\Admins\\Details.cshtml",
+              "RelativeDocumentMoniker": "fstCopy_Proj5\\Views\\Admins\\Details.cshtml",
+              "ToolTip": "C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstCopy_Proj5\\Views\\Admins\\Details.cshtml",
+              "RelativeToolTip": "fstCopy_Proj5\\Views\\Admins\\Details.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-08T14:24:58.592Z"
+              "WhenOpened": "2024-08-13T10:03:40.943Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstCopy_Proj5\\Views\\Users\\Index.cshtml",
-              "RelativeDocumentMoniker": "fstCopy_Proj5\\Views\\Users\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstCopy_Proj5\\Views\\Users\\Index.cshtml",
-              "RelativeToolTip": "fstCopy_Proj5\\Views\\Users\\Index.cshtml",
-              "ViewState": "AQIAAC4AAAAAAAAAAAAAAEIAAAAsAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-12T20:17:14.106Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "LocalListCandidatesController.cs",
-              "DocumentMoniker": "C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstCopy_Proj5\\Models\\LocalListCandidatesController.cs",
-              "RelativeDocumentMoniker": "fstCopy_Proj5\\Models\\LocalListCandidatesController.cs",
-              "ToolTip": "C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstCopy_Proj5\\Models\\LocalListCandidatesController.cs",
-              "RelativeToolTip": "fstCopy_Proj5\\Models\\LocalListCandidatesController.cs",
-              "ViewState": "AQIAAMcAAAAAAAAAAAAwwOUAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-08T13:53:31.267Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "AdminsController.cs",
-              "DocumentMoniker": "C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstCopy_Proj5\\Controllers\\AdminsController.cs",
-              "RelativeDocumentMoniker": "fstCopy_Proj5\\Controllers\\AdminsController.cs",
-              "ToolTip": "C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstCopy_Proj5\\Controllers\\AdminsController.cs",
-              "RelativeToolTip": "fstCopy_Proj5\\Controllers\\AdminsController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-12T20:00:48.459Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstCopy_Proj5\\Views\\Users\\Create.cshtml",
-              "RelativeDocumentMoniker": "fstCopy_Proj5\\Views\\Users\\Create.cshtml",
-              "ToolTip": "C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstCopy_Proj5\\Views\\Users\\Create.cshtml",
-              "RelativeToolTip": "fstCopy_Proj5\\Views\\Users\\Create.cshtml",
-              "ViewState": "AQIAALwAAAAAAAAAAAAAALIAAAAWAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-13T10:06:16.231Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 35,
               "Title": "Delete.cshtml",
               "DocumentMoniker": "C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstCopy_Proj5\\Views\\Admins\\Delete.cshtml",
               "RelativeDocumentMoniker": "fstCopy_Proj5\\Views\\Admins\\Delete.cshtml",
@@ -285,7 +668,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 34,
               "Title": "Create.cshtml",
               "DocumentMoniker": "C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstCopy_Proj5\\Views\\Admins\\Create.cshtml",
               "RelativeDocumentMoniker": "fstCopy_Proj5\\Views\\Admins\\Create.cshtml",
@@ -297,19 +680,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstCopy_Proj5\\Views\\LocalListCandidates\\Index.cshtml",
-              "RelativeDocumentMoniker": "fstCopy_Proj5\\Views\\LocalListCandidates\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstCopy_Proj5\\Views\\LocalListCandidates\\Index.cshtml",
-              "RelativeToolTip": "fstCopy_Proj5\\Views\\LocalListCandidates\\Index.cshtml",
-              "ViewState": "AQIAAEoAAAAAAAAAAAAAABkAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-13T06:08:23.15Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 41,
               "Title": "LocalResult.cshtml",
               "DocumentMoniker": "C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstCopy_Proj5\\Views\\Result\\LocalResult.cshtml",
               "RelativeDocumentMoniker": "fstCopy_Proj5\\Views\\Result\\LocalResult.cshtml",
@@ -321,7 +692,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 38,
               "Title": "USERController.cs",
               "DocumentMoniker": "C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstCopy_Proj5\\Controllers\\USERController.cs",
               "RelativeDocumentMoniker": "fstCopy_Proj5\\Controllers\\USERController.cs",
@@ -333,7 +704,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 39,
               "Title": "styles.css",
               "DocumentMoniker": "C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstCopy_Proj5\\Content\\css\\styles.css",
               "RelativeDocumentMoniker": "fstCopy_Proj5\\Content\\css\\styles.css",
@@ -345,43 +716,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstCopy_Proj5\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "fstCopy_Proj5\\Views\\Home\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstCopy_Proj5\\Views\\Home\\Index.cshtml",
-              "RelativeToolTip": "fstCopy_Proj5\\Views\\Home\\Index.cshtml",
-              "ViewState": "AQIAANgBAAAAAAAAAAAkwOMBAABFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-08T06:41:16.69Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "Contact.cs",
-              "DocumentMoniker": "C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstCopy_Proj5\\Models\\Contact.cs",
-              "RelativeDocumentMoniker": "fstCopy_Proj5\\Models\\Contact.cs",
-              "ToolTip": "C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstCopy_Proj5\\Models\\Contact.cs",
-              "RelativeToolTip": "fstCopy_Proj5\\Models\\Contact.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAATAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-12T13:29:51.179Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 43,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstCopy_Proj5\\Views\\DATEs\\Index.cshtml",
               "RelativeDocumentMoniker": "fstCopy_Proj5\\Views\\DATEs\\Index.cshtml",
               "ToolTip": "C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstCopy_Proj5\\Views\\DATEs\\Index.cshtml",
               "RelativeToolTip": "fstCopy_Proj5\\Views\\DATEs\\Index.cshtml",
-              "ViewState": "AQIAABoAAAAAAAAAAAAAAB0AAAAHAAAA",
+              "ViewState": "AQIAABUAAAAAAAAAAEBVwB0AAAAHAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-08-12T13:56:45.179Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 42,
               "Title": "Create.cshtml",
               "DocumentMoniker": "C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstCopy_Proj5\\Views\\DATEs\\Create.cshtml",
               "RelativeDocumentMoniker": "fstCopy_Proj5\\Views\\DATEs\\Create.cshtml",
@@ -393,31 +740,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "_MainLayout.cshtml",
-              "DocumentMoniker": "C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstCopy_Proj5\\Views\\Shared\\_MainLayout.cshtml",
-              "RelativeDocumentMoniker": "fstCopy_Proj5\\Views\\Shared\\_MainLayout.cshtml",
-              "ToolTip": "C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstCopy_Proj5\\Views\\Shared\\_MainLayout.cshtml",
-              "RelativeToolTip": "fstCopy_Proj5\\Views\\Shared\\_MainLayout.cshtml",
-              "ViewState": "AQIAALcAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-12T14:23:55.214Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "ContactController.cs",
-              "DocumentMoniker": "C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstCopy_Proj5\\Controllers\\ContactController.cs",
-              "RelativeDocumentMoniker": "fstCopy_Proj5\\Controllers\\ContactController.cs",
-              "ToolTip": "C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstCopy_Proj5\\Controllers\\ContactController.cs",
-              "RelativeToolTip": "fstCopy_Proj5\\Controllers\\ContactController.cs",
-              "ViewState": "AQIAAB8AAAAAAAAAAAAQwA0AAAAyAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-08T13:50:42.209Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 40,
               "Title": "PartyResultController.cs",
               "DocumentMoniker": "C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstCopy_Proj5\\Controllers\\PartyResultController.cs",
               "RelativeDocumentMoniker": "fstCopy_Proj5\\Controllers\\PartyResultController.cs",
@@ -429,7 +752,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 44,
               "Title": "About.cshtml",
               "DocumentMoniker": "C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstCopy_Proj5\\Views\\Home\\About.cshtml",
               "RelativeDocumentMoniker": "fstCopy_Proj5\\Views\\Home\\About.cshtml",
@@ -441,79 +764,31 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "CreateContact.cshtml",
-              "DocumentMoniker": "C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstCopy_Proj5\\Views\\Contact\\CreateContact.cshtml",
-              "RelativeDocumentMoniker": "fstCopy_Proj5\\Views\\Contact\\CreateContact.cshtml",
-              "ToolTip": "C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstCopy_Proj5\\Views\\Contact\\CreateContact.cshtml",
-              "RelativeToolTip": "fstCopy_Proj5\\Views\\Contact\\CreateContact.cshtml",
-              "ViewState": "AQIAAHsAAAAAAAAAAAAAAIsAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-08T14:53:40.4Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 45,
               "Title": "GeneralListingsController.cs",
               "DocumentMoniker": "C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstCopy_Proj5\\Controllers\\GeneralListingsController.cs",
               "RelativeDocumentMoniker": "fstCopy_Proj5\\Controllers\\GeneralListingsController.cs",
               "ToolTip": "C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstCopy_Proj5\\Controllers\\GeneralListingsController.cs",
               "RelativeToolTip": "fstCopy_Proj5\\Controllers\\GeneralListingsController.cs",
-              "ViewState": "AQIAAHMAAAAAAAAAAAAywIIAAABVAAAA",
+              "ViewState": "AQIAAHQAAAAAAAAAAADwv4IAAABVAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-08T13:52:06.741Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "LocalResultController.cs",
-              "DocumentMoniker": "C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstCopy_Proj5\\Controllers\\LocalResultController.cs",
-              "RelativeDocumentMoniker": "fstCopy_Proj5\\Controllers\\LocalResultController.cs",
-              "ToolTip": "C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstCopy_Proj5\\Controllers\\LocalResultController.cs",
-              "RelativeToolTip": "fstCopy_Proj5\\Controllers\\LocalResultController.cs",
-              "ViewState": "AQIAABAAAAAAAAAAAAAQwEQAAAAeAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-08T13:51:35.999Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 46,
               "Title": "DATEsController.cs",
               "DocumentMoniker": "C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstCopy_Proj5\\Controllers\\DATEsController.cs",
               "RelativeDocumentMoniker": "fstCopy_Proj5\\Controllers\\DATEsController.cs",
               "ToolTip": "C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstCopy_Proj5\\Controllers\\DATEsController.cs",
               "RelativeToolTip": "fstCopy_Proj5\\Controllers\\DATEsController.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAABQAAAAgAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAIBJwBQAAAAgAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-11T06:57:47.297Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "web.config",
-              "DocumentMoniker": "C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstCopy_Proj5\\Views\\web.config",
-              "RelativeDocumentMoniker": "fstCopy_Proj5\\Views\\web.config",
-              "ToolTip": "C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstCopy_Proj5\\Views\\web.config",
-              "RelativeToolTip": "fstCopy_Proj5\\Views\\web.config",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAAAB0AAAAxAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
-              "WhenOpened": "2024-08-11T06:50:00.656Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "DATE.cs",
-              "DocumentMoniker": "C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstCopy_Proj5\\Models\\DATE.cs",
-              "RelativeDocumentMoniker": "fstCopy_Proj5\\Models\\DATE.cs",
-              "ToolTip": "C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstCopy_Proj5\\Models\\DATE.cs",
-              "RelativeToolTip": "fstCopy_Proj5\\Models\\DATE.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAZAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-12T09:40:00.439Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 47,
               "Title": "Debates1Controller.cs",
               "DocumentMoniker": "C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstCopy_Proj5\\Controllers\\Debates1Controller.cs",
               "RelativeDocumentMoniker": "fstCopy_Proj5\\Controllers\\Debates1Controller.cs",
@@ -525,32 +800,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 48,
               "Title": "GeneralListCandidatesController.cs",
               "DocumentMoniker": "C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstCopy_Proj5\\Controllers\\GeneralListCandidatesController.cs",
               "RelativeDocumentMoniker": "fstCopy_Proj5\\Controllers\\GeneralListCandidatesController.cs",
               "ToolTip": "C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstCopy_Proj5\\Controllers\\GeneralListCandidatesController.cs",
               "RelativeToolTip": "fstCopy_Proj5\\Controllers\\GeneralListCandidatesController.cs",
-              "ViewState": "AQIAANgAAAAAAAAAAAAAAIQAAAA9AAAA",
+              "ViewState": "AQIAANUAAAAAAAAAAIBJwIQAAAA9AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-08T15:08:57.344Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
-              "Title": "Web.config",
-              "DocumentMoniker": "C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstCopy_Proj5\\Web.config",
-              "RelativeDocumentMoniker": "fstCopy_Proj5\\Web.config",
-              "ToolTip": "C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstCopy_Proj5\\Web.config",
-              "RelativeToolTip": "fstCopy_Proj5\\Web.config",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAADsAAAAQAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
-              "WhenOpened": "2024-08-11T06:49:40.932Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 50,
               "Title": "AdsController.cs",
               "DocumentMoniker": "C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstCopy_Proj5\\Controllers\\AdsController.cs",
               "RelativeDocumentMoniker": "fstCopy_Proj5\\Controllers\\AdsController.cs",
@@ -562,7 +824,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 49,
               "Title": "RouteConfig.cs",
               "DocumentMoniker": "C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstCopy_Proj5\\App_Start\\RouteConfig.cs",
               "RelativeDocumentMoniker": "fstCopy_Proj5\\App_Start\\RouteConfig.cs",
@@ -574,19 +836,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstCopy_Proj5\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "fstCopy_Proj5\\Controllers\\HomeController.cs",
-              "ToolTip": "C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstCopy_Proj5\\Controllers\\HomeController.cs",
-              "RelativeToolTip": "fstCopy_Proj5\\Controllers\\HomeController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-08T13:47:53.73Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 51,
               "Title": "Create.cshtml",
               "DocumentMoniker": "C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstCopy_Proj5\\Views\\GeneralListCandidates\\Create.cshtml",
               "RelativeDocumentMoniker": "fstCopy_Proj5\\Views\\GeneralListCandidates\\Create.cshtml",
@@ -595,18 +845,6 @@
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-08-08T14:48:34.703Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 35,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstCopy_Proj5\\Views\\GeneralListCandidates\\Index.cshtml",
-              "RelativeDocumentMoniker": "fstCopy_Proj5\\Views\\GeneralListCandidates\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstCopy_Proj5\\Views\\GeneralListCandidates\\Index.cshtml",
-              "RelativeToolTip": "fstCopy_Proj5\\Views\\GeneralListCandidates\\Index.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAEMAAABHAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-08T14:53:19.057Z"
             }
           ]
         }

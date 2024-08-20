@@ -109,6 +109,7 @@
           <Property Name="NumberOfVotesCandidate" Type="int" />
           <Property Name="LocalListingID" Type="int" />
           <Property Name="Status" Type="nvarchar" MaxLength="10" />
+          <Property Name="Email" Type="varchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="Payment">
           <Key>
@@ -281,6 +282,7 @@ warning 6035: The relationship 'FK__GeneralLi__Gener__5FB337D6' has columns that
           <Property Name="NumberOfVotesCandidate" Type="Int32" />
           <Property Name="LocalListingID" Type="Int32" />
           <Property Name="Status" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="LocalList" Relationship="Self.FK__LocalList__Local__4D94879B" FromRole="LocalListCandidates" ToRole="LocalList" />
         </EntityType>
         <EntityType Name="Payment">
@@ -458,6 +460,7 @@ warning 6035: The relationship 'FK__GeneralLi__Gener__5FB337D6' has columns that
                 <ScalarProperty Name="NumberOfVotesCandidate" ColumnName="NumberOfVotesCandidate" />
                 <ScalarProperty Name="LocalListingID" ColumnName="LocalListingID" />
                 <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

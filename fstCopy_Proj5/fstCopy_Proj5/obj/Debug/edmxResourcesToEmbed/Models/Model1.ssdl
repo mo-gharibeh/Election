@@ -104,6 +104,7 @@
     <Property Name="NumberOfVotesCandidate" Type="int" />
     <Property Name="LocalListingID" Type="int" />
     <Property Name="Status" Type="nvarchar" MaxLength="10" />
+    <Property Name="Email" Type="varchar" MaxLength="50" />
   </EntityType>
   <EntityType Name="Payment">
     <Key>

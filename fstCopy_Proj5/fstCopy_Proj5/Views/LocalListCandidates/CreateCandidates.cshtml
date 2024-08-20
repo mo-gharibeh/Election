@@ -1,10 +1,9 @@
 ﻿@model List<fstCopy_Proj5.Models.LocalListCandidate>
 @{
+   
     Layout = "~/Views/Shared/_MainLayout.cshtml";
 }
-@{
-    var candidateCount = Session["CandidateCount"] != null ? Convert.ToInt32(Session["CandidateCount"].ToString()) : 0;
-}
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -63,6 +62,15 @@
         .table tbody tr:nth-child(even) {
             background-color: #f2f2f2;
         }
+
+        .alert-danger {
+            margin-top: 20px;
+            text-align: right;
+        }
+
+        .text-danger {
+            color: red;
+        }
     </style>
 </head>
 <body>
@@ -79,7 +87,15 @@
             @Html.AntiForgeryToken()
             <div class="form-horizontal">
                 <hr />
-                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+                <!-- عرض رسائل الخطأ كـ Alert -->
+                @if (!ViewData.ModelState.IsValid)
+                {
+                    <div class="alert alert-danger">
+                        <strong>خطأ:</strong>
+                        @Html.ValidationSummary(false, "", new { @class = "text-danger" })
+                    </div>
+                }
 
                 <table class="table table-bordered">
                     <thead>
@@ -91,21 +107,24 @@
                         </tr>
                     </thead>
                     <tbody>
-                        @for (int i = 0; i < candidateCount; i++)
+                        @for (int i = 0; i < Model.Count; i++)
                         {
                             <tr>
                                 <td>
-                                    <input type="text" name="candidates[@i].CandidateName" class="form-control" />
+                                    @Html.TextBoxFor(m => m[i].CandidateName, new { @class = "form-control" })
+                                    @Html.ValidationMessageFor(m => m[i].CandidateName, "", new { @class = "text-danger" })
                                 </td>
                                 <td>
-                                    <input type="text" name="candidates[@i].NationalNumber" class="form-control" />
+                                    @Html.TextBoxFor(m => m[i].NationalNumber, new { @class = "form-control" })
+                                    @Html.ValidationMessageFor(m => m[i].NationalNumber, "", new { @class = "text-danger" })
                                 </td>
                                 <td>
-                                    <input type="text" name="candidates[@i].Type_Chair" class="form-control" />
+                                    @Html.TextBoxFor(m => m[i].Type_Chair, new { @class = "form-control" })
+                                    @Html.ValidationMessageFor(m => m[i].Type_Chair, "", new { @class = "text-danger" })
                                 </td>
                                 <td>
-                                    <input type="hidden" name="candidates[@i].LocalListingID" value="@ViewBag.LocalListID" class="form-control" />
-                                    @ViewBag.LocalListID
+                                    @Html.HiddenFor(m => m[i].LocalListingID)
+                                    @Model[i].LocalListingID
                                 </td>
                             </tr>
                         }

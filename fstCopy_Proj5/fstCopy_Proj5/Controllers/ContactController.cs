@@ -74,7 +74,7 @@ namespace fstCopy_Proj5.Controllers
                     {
                         db.Contacts.Add(contact);
                         db.SaveChanges();
-                        TempData["SuccessMessage"] = "Your message has been sent. Thank you for contacting us!";
+                        TempData["SuccessMessage"] = "شكرًا لك على تواصلك معنا. رأيك وملاحظاتك تهمنا ونقدر دعمك. سنقوم بمراجعة رسالتك والرد عليك في أقرب وقت ممكن.";
                         return RedirectToAction("CreateContact");
                     }
 

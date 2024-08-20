@@ -105,6 +105,7 @@
     <Property Name="NumberOfVotesCandidate" Type="Int32" />
     <Property Name="LocalListingID" Type="Int32" />
     <Property Name="Status" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <NavigationProperty Name="LocalList" Relationship="Self.FK__LocalList__Local__4D94879B" FromRole="LocalListCandidates" ToRole="LocalList" />
   </EntityType>
   <EntityType Name="Payment">

@@ -67,7 +67,6 @@
         <div class="header">
             <h2>نموذج تقديم طلب الترشح</h2>
             <img src="~/images/share-image.png" alt="Logo">
-
         </div>
         @using (Html.BeginForm())
         {
@@ -117,6 +116,16 @@
                     <label class="control-label col-md-2">نوع الكرسي</label>
                 </div>
 
+
+
+
+                <div class="form-group">
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+                    </div>
+                    <label class="control-label col-md-2">البريد الإلكتروني</label>
+                </div>
                 <div class="form-group">
                     <div class="col-md-10">
                         @Html.EditorFor(model => model.BirthdateCandidate, new { htmlAttributes = new { @class = "form-control" } })
@@ -124,7 +133,6 @@
                     </div>
                     <label class="control-label col-md-2">تاريخ الميلاد</label>
                 </div>
-
                 <div class="form-group">
                     <div class="col-md-10">
                         @Html.DropDownListFor(model => model.Governorate, ViewBag.Governorates as SelectList, "اختر المحافظة", new { @class = "form-control" })
@@ -156,9 +164,12 @@
         }
 
         <div class="text-center">
-            @*@Html.ActionLink("العودة إلى القائمة", "Index", null, new { @class = "btn btn-default" })*@
+            @Html.ActionLink("العودة إلى القائمة", "Index", null, new { @class = "btn btn-default" })
         </div>
     </div>
 
+    @*@section Scripts {
+            @Scripts.Render("~/bundles/jqueryval")
+        }*@
 </body>
 </html>

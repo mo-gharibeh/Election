@@ -1,147 +1,181 @@
 ﻿@model fstCopy_Proj5.Models.LocalList
 
-@{ 
+@{
+    
     Layout = "~/Views/Shared/_MainLayout.cshtml";
-
 }
 <!DOCTYPE html>
-<html>
+<html lang="ar">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>إضافة قائمة جديدة</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <style>
         body {
             direction: rtl;
             text-align: right;
+            background-color: #f8f9fa;
         }
 
-        .custom-form .control-label {
-            text-align: right;
+        .card {
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            margin-top: 50px;
+            padding: 20px;
+            justify-content: center !important;
         }
 
-        .custom-form .text-center {
-            text-align: center;
+        .table-header {
+            width: 100%;
+            margin-top: 2%;
+            /*            padding-left:3%;
+        */ border-collapse: collapse;
         }
 
-        .custom-form .form-group label {
+            .table-header th, .table-header td {
+                border: 1px solid #333;
+                text-align: center;
+                padding: 10px;
+            }
+
+        .header-logo {
+            width: 150px;
+        }
+
+        .header-title {
+            background-color: #b8b8b8;
+            color: #fff;
+            font-size: 18px;
             font-weight: bold;
         }
 
-        .form-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
+        .header-green {
+            background-color: #008000;
+            color: #fff;
+            font-size: 18px;
+            font-weight: bold;
         }
 
         .form-section {
-            flex: 1;
-            margin-left: 20px;
-            border: 1px solid #ddd;
-            padding: 20px;
-            border-radius: 5px;
-            background-color: #f8f9fa;
-            max-width: 500px;
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 15px;
         }
 
-        .image-section img {
-            width: 100%;
-            height: auto;
-            border-radius: 5px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        .form-group.text-right {
+        .form-group label {
+            font-weight: bold;
             text-align: right;
+            margin-bottom: 10px;
         }
 
-            .form-group.text-right input[type="submit"] {
-                background-color: #d9534f;
-                border-color: #d43f3a;
-                color: #fff;
-                width: 100%;
+        .form-control {
+            text-align: right;
+            direction: rtl;
+            margin-bottom: 15px;
+            height: calc(2.25rem + 10px);
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        .btn-primary {
+            background-color: #d9534f;
+            border-color: #d43f3a;
+            color: #fff;
+            width: 100%;
+            font-size: 18px;
+            padding: 10px;
+            border-radius: 8px;
+        }
+
+            .btn-primary:hover {
+                background-color: #c9302c;
+                border-color: #ac2925;
             }
 
-                .form-group.text-right input[type="submit"]:hover {
-                    background-color: #c9302c;
-                    border-color: #ac2925;
-                }
-
-        .btn {
-            padding: 6px 12px;
-            margin-bottom: 0;
-            font-size: 14px;
-            font-weight: 400;
-            line-height: 1.42857143;
-            text-align: center;
-            white-space: nowrap;
-            vertical-align: middle;
-            -ms-touch-action: manipulation;
-            touch-action: manipulation;
-            cursor: pointer;
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            -ms-user-select: none;
-            user-select: none;
-            background-image: none;
-            border: 1px solid transparent;
-            border-radius: 4px;
-        }
-
         .page-title {
-            text-align: right;
+            text-align: center;
             font-weight: bold;
             font-size: 28px;
             margin-bottom: 40px;
+        }
+
+        .image-section img {
+            border-radius: 15px;
+            width: 100%;
+            object-fit: cover;
+            margin-top: 20px;
         }
     </style>
 </head>
 <body>
     <div class="container custom-form">
-        <h2 class="page-title">إضافة قائمة جديدة</h2>
-        <div class="form-container">
-            <div class="form-section">
-                @using (Html.BeginForm())
+
+        <h2 class="page-title">
+            "ساهم في صنع القرار وتغيير المستقبل، رشّح نفسك الآن وكن جزءًا من مسيرة التطوير في مجتمعنا."
+        </h2>
+
+        <div class="card">
+
+            <div class="image-section">
+                <img src="~/images/image.jpg" alt="Image" class="img-responsive">
+            </div>
+            <table class="table-header">
+                <tr>
+                    <td rowspan="2" class="header-logo"><img src="~/images/loginimg.png" alt="Logo" style="width: 100%; height: auto;"></td>
+                    <td class="header-title">الهيئة المستقلة للانتخاب</td>
+                    <td class="header-green">انتخابات مجلس النواب</td>
+                </tr>
+                <tr>
+                    <td class="header-title">الدائرة الانتخابية المحلية</td>
+                    <td class="header-green">2024</td>
+                </tr>
+            </table>
+
+            <div class="form-section" style="align-self:center">
+                @using (Html.BeginForm("CreateList", "LocalListCandidates"))
                 {
                     @Html.AntiForgeryToken()
                     <div class="form-horizontal">
-                        <hr />
                         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
 
                         <div class="form-group">
-                            <div class="col-md-10">
+                            <label for="ListName" class="control-label">اسم القائمة</label>
+                            <div>
                                 @Html.EditorFor(model => model.ListName, new { htmlAttributes = new { @class = "form-control" } })
                                 @Html.ValidationMessageFor(model => model.ListName, "", new { @class = "text-danger" })
                             </div>
-                            <label class="control-label col-md-2">اسم القائمة</label>
                         </div>
 
                         <div class="form-group">
-                            <div class="col-md-10">
+                            <label for="ID" class="control-label">رقم القائمة</label>
+                            <div>
                                 @Html.EditorFor(model => model.ID, new { htmlAttributes = new { @class = "form-control" } })
                                 @Html.ValidationMessageFor(model => model.ID, "", new { @class = "text-danger" })
                             </div>
-                            <label class="control-label col-md-2">رقم القائمة</label>
                         </div>
 
                         <div class="form-group">
-                            <div class="col-md-10">
+                            <label for="Governorate" class="control-label">المحافظة</label>
+                            <div>
                                 @Html.DropDownListFor(model => model.Governorate, new SelectList(new List<string> { "إربد", "عجلون" }), "اختر المحافظة", new { @class = "form-control" })
                                 @Html.ValidationMessageFor(model => model.Governorate, "", new { @class = "text-danger" })
                             </div>
-                            <label class="control-label col-md-2">المحافظة</label>
                         </div>
 
                         <div class="form-group">
-                            <div class="col-md-10">
+                            <label for="ElectionArea" class="control-label">الدائرة الانتخابية</label>
+                            <div>
                                 @Html.DropDownListFor(model => model.ElectionArea, ViewBag.ElectionAreas as SelectList, "اختر منطقة الانتخابات", new { @class = "form-control" })
                                 @Html.ValidationMessageFor(model => model.ElectionArea, "", new { @class = "text-danger" })
                             </div>
-                            <label class="control-label col-md-2">دائرة الانتخابية</label>
                         </div>
 
                         <div class="form-group text-right">
-                            <div class="col-md-12">
+                            <div>
                                 <input type="submit" value="الانتقال إلى النموذج التالي" class="btn btn-primary" />
                             </div>
                         </div>
@@ -149,10 +183,21 @@
                 }
             </div>
 
-            <div class="image-section">
-                <img src="~/images/jordan.jpg" alt="Image">
-            </div>
         </div>
     </div>
+
+    <!--Start of Tawk.to Script-->
+    <script type="text/javascript">
+        var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+        (function () {
+            var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+            s1.async = true;
+            s1.src = 'https://embed.tawk.to/66b9fbe2146b7af4a439583f/1i537vrfs';
+            s1.charset = 'UTF-8';
+            s1.setAttribute('crossorigin', '*');
+            s0.parentNode.insertBefore(s1, s0);
+        })();
+    </script>
+    <!--End of Tawk.to Script-->
 </body>
 </html>

@@ -112,6 +112,7 @@
           <ScalarProperty Name="NumberOfVotesCandidate" ColumnName="NumberOfVotesCandidate" />
           <ScalarProperty Name="LocalListingID" ColumnName="LocalListingID" />
           <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
