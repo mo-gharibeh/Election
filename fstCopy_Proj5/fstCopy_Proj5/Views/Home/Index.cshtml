@@ -405,12 +405,44 @@
             font-weight: bold;
             text-align: center !important;
         }
+        .theme-custom-box-animation {
+            width: 80% !important;
+            height: auto !important;
+        }
+        .date_container p{
+            
+        }
+        .date_container {
+            margin-left: 24% !important;
+        
+        }
+        .adscontainer {
+            width:85% !important;
+            height:45vh !important;
+        
+        }
 
+            .adscontainer img {
+                margin: 8% -14% -50% 0% !important;
+                border-radius: 20% !important;
+                width: 90% !important;
+                height: 26vh !important;
+            }
+
+            .adscontainer a {
+                
+                margin-bottom:-20% !important;
+            }
+        .section-content-block {
+            padding: 49px 0 100px 0;
+            background: #fff;
+            height: 100vh;
+        }
     </style>
 
 
 </head>
-<body>
+<body style="background-color: #f9fafb !important;">
     <!--  HOME SLIDER BLOCK  -->
 
     <div class="slider-wrap">
@@ -486,7 +518,10 @@
                             <figure><img src="~/Content/images/enti5ab.png" alt="highlights"></figure>
                             <h5><a href="#">الهيئة المستقلة للإنتخاب</a></h5>
                             <div> .أنشئت الهيئة بموجب قانون الهيئة المستقلة للانتخاب رقم (11) لسنة (2012). كهيئة مستقلة، وقد أسند لها مسؤولية الإشراف على العملية الانتخابية النيابية في كل مراحلها</div>
-                            <a href="Commission.html" class="btn btn-theme btn-small theme-custom-box-shadow">إقرأ المزيد <i class="fa fa-long-arrow-right"></i></a>
+                            <br />
+                            <a href="/Home/button1" class="btn btn-theme btn-small theme-custom-box-shadow">إقرأ المزيد <i class="fa fa-long-arrow-right"></i></a>
+                            <br />
+                            <br />
                         </div> <!--  end .main_highlights  -->
                     </div> <!--  end .col-md-3  -->
 
@@ -502,7 +537,9 @@
                                 يشترط فيمن يرغب بالترشح لعضوية مجلس النواب <br> حسب المادة  (10)  ما يلي
                             </div>
                             <br />
+                            <br />
                             <a href="pdf/شروط ومرفقات طلب الترشح للدائرة الانتخابية (العامة_محلية) 2024_1-merged.pdf" class="btn btn-theme btn-small theme-custom-box-shadow" download="شروط ومرفقات طلب الترشح للدائرة الانتخابية (العامة_محلية) 2024_1-merged.pdf">إقرأ المزيد <i class="fa fa-long-arrow-right"></i></a>
+                            <br /><br />
                         </div> <!--  end .main_highlights  -->
                     </div> <!--  end .col-md-3  -->
 
@@ -515,7 +552,10 @@
                                 </a>
                             </h5>
                             <div>انطلقوا معنا في رحلة انتخابية مميزة، حيث نجعل الترشح والتصويت أسهل من أي وقت مضى. نقدم لكم النماذج المطلوبة للترشح للدائرة الانتخابية العامة لضمان سير عملية الترشح بسلاسة ونجاح.</div>
+
                             <a href="#" class="btn btn-theme btn-small theme-custom-box-shadow">إقرأ المزيد  <i class="fa fa-long-arrow-right"></i></a>
+                            <br />
+
                         </div> <!--  end .main_highlights  -->
                     </div> <!--  end .col-md-3  -->
                 </div>
@@ -539,7 +579,7 @@
 
 
     </div>
-    <div class="date_container" style="text-align:center !important">
+    <div class="date_container" style="text-align:center !important; width:50%; position:center !important;">
         @*Include the Local Result Partial View*@
         @Html.Action("Index", "DATEs")
     </div>
@@ -596,9 +636,13 @@
 
 
     <div class="container">
-    
+        <h2 style="text-align:center;">المناظرات </h2>
+        <br />
+        <br />
         @Html.Action("IndexDebatsesHome", "Debates1")
     </div>
+    <br />
+    <br />
 
 
 
@@ -684,23 +728,23 @@
 
             <div class="row">
 
-                <div class="container">
+                <div class="adscontainer">
                     @*Include the Local Result Partial View*@
                     @Html.Action("Publishs", "Ads")
                 </div>
 
                 @*<div class="row">
-                    <div class="col-md-12 col-sm-12 text-center">
-                        <a class="btn btn-theme margin-top-48" href="#">Load All Campaigns</a>
-                    </div>
-                </div>*@
+                        <div class="col-md-12 col-sm-12 text-center">
+                            <a class="btn btn-theme margin-top-48" href="#">Load All Campaigns</a>
+                        </div>
+                    </div>*@
 
             </div> <!--  end .container  -->
         </div>
     </section>
 
 
-   
+
 
 
 

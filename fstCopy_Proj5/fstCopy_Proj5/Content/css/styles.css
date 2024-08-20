@@ -1731,7 +1731,12 @@ header.one-page .navbar-nav > li {
             transition-delay: .25s
         }
 
-.highlight-layout-1 {
+
+        
+        
+        
+        
+        {
     margin: 24px 0;
     background: rgba(0,0,0,0);
     padding: 0px;
@@ -7592,7 +7597,7 @@ span.border-bold-dashed {
     width: 100% !important;
     display: inline-block !important;
     clear: both;
-    height: 30vh;
+    height: 50vh;
 }
 
 .theme-custom-box-animation {
