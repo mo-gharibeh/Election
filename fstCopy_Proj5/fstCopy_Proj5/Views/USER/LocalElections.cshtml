@@ -6,60 +6,62 @@
 }
 <body>
     
+    <div style="padding-top: 85px; padding-bottom: 85px">
 
+        @using (Html.BeginForm("LocalElections", "User", FormMethod.Post))
+        {
+            @Html.AntiForgeryToken()
 
-    @using (Html.BeginForm("LocalElections", "User", FormMethod.Post))
-    {
-        @Html.AntiForgeryToken()
+            <div style="display: flex; flex-direction: row; justify-content: space-evenly; align-content:center; ">
 
-        <div style="display: flex; flex-direction: row; justify-content: space-evenly; align-content:center; ">
+                <div class="row">
+                    <h2 style="text-align : center">أهلا بك في صفحة القوائم المحلية.</h2>
 
-            <div class="row">
-                <h2>.أهلا بك في صفحة القوائم المحلية</h2>
-
-                @if (localLists != null && localLists.Any())
-                {
-                    foreach (var list in localLists)
+                    @if (localLists != null && localLists.Any())
                     {
-                        <div class="col-md-4 mb-4">
-                            <div class="card election-card" style="width: 18rem;">
-                                <div class="card-body">
-                                    <h5 class="card-title">@list.ListName</h5>
-                                    <p class="card-text">
-                                        Election Area: @list.ElectionArea<br />
-                                        Governorate: @list.Governorate
-                                    </p>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="selectedListId" value="@list.ID" id="list@list.ID">
-                                        <label class="form-check-label" for="list@list.ID">
-                                            Select @list.ListName
-                                        </label>
+                        foreach (var list in localLists)
+                        {
+                            <div class="col-md-4 mb-4">
+                                <div class="card election-card" style="width: 18rem;">
+                                    <div class="card-body">
+                                        <h5 class="card-title">@list.ListName</h5>
+                                        <p class="card-text">
+                                            الدائرة : @list.ElectionArea<br />
+                                            المحافظة : @list.Governorate
+                                        </p>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="selectedListId" value="@list.ID" id="list@list.ID">
+                                            <label class="form-check-label" for="list@list.ID">
+                                                @list.ListName
+                                            </label>
+                                        </div>
+                                        <p>
+                                            <strong>المرشحين :</strong><br />
+                                            @foreach (var candidate in candidates.Where(c => c.LocalListingID == list.ID))
+                                            {
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" name="selectedCandidateIds" value="@candidate.CandidateID" id="candidate@candidate.CandidateID">
+                                                    <label class="form-check-label" for="candidate@candidate.CandidateID">
+                                                        @candidate.CandidateName
+                                                    </label>
+                                                </div>
+                                            }
+                                        </p>
                                     </div>
-                                    <p>
-                                        <strong>Candidates:</strong><br />
-                                        @foreach (var candidate in candidates.Where(c => c.LocalListingID == list.ID))
-                                        {
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" name="selectedCandidateIds" value="@candidate.CandidateID" id="candidate@candidate.CandidateID">
-                                                <label class="form-check-label" for="candidate@candidate.CandidateID">
-                                                    @candidate.CandidateName
-                                                </label>
-                                            </div>
-                                        }
-                                    </p>
+                                    <br />
                                 </div>
                             </div>
-                        </div>
+                        }
                     }
-                }
-                else
-                {
-                    <p>No lists available for your election area.</p>
-                }
+                    else
+                    {
+                        <p>No lists available for your election area.</p>
+                    }
+                </div>
             </div>
-        </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
-    }
+            <button type="submit" class="btn btn-primary" style="padding: 25px; margin-right: 40rem;">تأكيد التصويت </button>
+        }
+    </div>
 </body>
 <style>
     body{
@@ -115,4 +117,8 @@
             background-color: #f8f9fa;
             color: #dc3545;
         }
+    .row {
+        /* margin-right: -15px; */
+        margin-left: 92px;
+    }
 </style>

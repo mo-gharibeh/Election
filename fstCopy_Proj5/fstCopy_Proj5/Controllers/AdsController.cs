@@ -178,7 +178,7 @@ namespace fstCopy_Proj5.Controllers
             db.Entry(ad).State = EntityState.Modified;
             db.SaveChanges();
 
-            return RedirectToAction("Publish", new { id = ad.id });
+            return RedirectToAction("advertisementAdmin", new { id = ad.id });
         }
 
         public ActionResult Publishs()

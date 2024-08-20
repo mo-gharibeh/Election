@@ -137,6 +137,23 @@
                     </li>
                 </ul>
 
+                <ul class="navbar-nav flex-fill w-100 mb-2">
+                    <li class="nav-item dropdown">
+                        @Html.Raw($"<a href='{Url.Action("advertisementAdmin", "Ads", new { area = "" })}' class='nav-link'><i class='bi bi-envelope'></i><span class='ml-3 item-text'>الاعلانات</span><span class='sr-only'>(current)</span></a>")
+                    </li>
+                </ul>
+
+                <ul class="navbar-nav flex-fill w-100 mb-2">
+                    <li class="nav-item dropdown">
+                        @Html.Raw($"<a href='{Url.Action("Index", "Debates1", new { area = "" })}' class='nav-link'><i class='bi bi-envelope'></i><span class='ml-3 item-text'>المناظرات</span><span class='sr-only'>(current)</span></a>")
+                    </li>
+                </ul>
+
+                <ul class="navbar-nav flex-fill w-100 mb-2">
+                    <li class="nav-item dropdown">
+                        @Html.Raw($"<a href='{Url.Action("IndexAdmin", "DATEs", new { area = "" })}' class='nav-link'><i class='bi bi-envelope'></i><span class='ml-3 item-text'>الوقت</span><span class='sr-only'>(current)</span></a>")
+                    </li>
+                </ul>
 
 
 

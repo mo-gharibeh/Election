@@ -493,6 +493,8 @@
     <Content Include="Views\Users\Index.cshtml" />
     <Content Include="Views\Home\Map.cshtml" />
     <Content Include="Views\Home\button1.cshtml" />
+    <Content Include="Views\Debates1\DebatesAdmin.cshtml" />
+    <Content Include="Views\DATEs\IndexAdmin.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

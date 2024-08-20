@@ -254,7 +254,7 @@ namespace E_Voting.Controllers
             {
                 // Update user table to reflect that the user has voted in party elections
                 user.PartyElections = true;
-                user.LocalElections = true; // Optionally, you can set LocalElections to true here if needed
+                //user.LocalElections = true; // Optionally, you can set LocalElections to true here if needed
                 if (selectedPartyList.NumberOfVotes == null)
                 {
                     selectedPartyList.NumberOfVotes = 0;

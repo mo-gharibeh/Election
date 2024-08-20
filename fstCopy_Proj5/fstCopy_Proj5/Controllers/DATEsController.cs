@@ -21,6 +21,11 @@ namespace fstCopy_Proj5.Controllers
             return View(db.DATES.ToList());
         }
 
+        public ActionResult IndexAdmin()
+        {
+            return View(db.DATES.ToList());
+        }
+
         // GET: Dates/Create
         public ActionResult Create()
         {

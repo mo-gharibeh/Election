@@ -28,13 +28,16 @@ namespace fstCopy_Proj5.Controllers
                 { 3, 3 }
             };
 
+            string[] arr = { "اربد الاولى", "اربد الثانية", "عجلون" };
             for (int counter = 1; counter <= 3; counter++)
             {
-                string x = $"Area {counter}";
+                
+                //string x = $"Area {counter}";
                 CircleViewModel circleViewModel = new CircleViewModel();
+                string selectedArea = arr[counter - 1];
 
                 var records = db.Users
-                                .Where(u => u.ElectionArea == x && (u.LocalElections == true || u.whitePaperLocalElections == true))
+                                .Where(u => u.ElectionArea == selectedArea && (u.LocalElections == true || u.whitePaperLocalElections == true))
                                 .ToList();
 
                 circleViewModel.users_circle_local = records;
@@ -43,7 +46,7 @@ namespace fstCopy_Proj5.Controllers
                 circleViewModel.totalVotes = records.Count();
                 circleViewModel.threshold = circleViewModel.totalVotes * 0.07;
 
-                var local_lists = db.LocalLists.Where(l => l.ElectionArea == x).ToList();
+                var local_lists = db.LocalLists.Where(l => l.ElectionArea == selectedArea).ToList();
                 var winning_lists = local_lists.Where(l => l.NumberOfVotes  >= circleViewModel.threshold).ToList();
 
                 if (!winning_lists.Any() && local_lists.Any())
