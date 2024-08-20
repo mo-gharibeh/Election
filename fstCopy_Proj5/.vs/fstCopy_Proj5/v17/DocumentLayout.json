@@ -31,11 +31,11 @@
       "RelativeMoniker": "D:0:0:{2FBF41DC-C892-40BE-BFD2-31DFA7D1FCAB}|fstCopy_Proj5\\fstCopy_Proj5.csproj|solutionrelative:fstcopy_proj5\\controllers\\adminscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2FBF41DC-C892-40BE-BFD2-31DFA7D1FCAB}|fstCopy_Proj5\\fstCopy_Proj5.csproj|c:\\users\\orange\\desktop\\project5 election\\election\\fstcopy_proj5\\fstcopy_proj5\\views\\generallistcandidates\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{2FBF41DC-C892-40BE-BFD2-31DFA7D1FCAB}|fstCopy_Proj5\\fstCopy_Proj5.csproj|C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstcopy_proj5\\views\\generallistcandidates\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{2FBF41DC-C892-40BE-BFD2-31DFA7D1FCAB}|fstCopy_Proj5\\fstCopy_Proj5.csproj|solutionrelative:fstcopy_proj5\\views\\generallistcandidates\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2FBF41DC-C892-40BE-BFD2-31DFA7D1FCAB}|fstCopy_Proj5\\fstCopy_Proj5.csproj|c:\\users\\orange\\desktop\\project5 election\\election\\fstcopy_proj5\\fstcopy_proj5\\views\\generallistings\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{2FBF41DC-C892-40BE-BFD2-31DFA7D1FCAB}|fstCopy_Proj5\\fstCopy_Proj5.csproj|C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstcopy_proj5\\views\\generallistings\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{2FBF41DC-C892-40BE-BFD2-31DFA7D1FCAB}|fstCopy_Proj5\\fstCopy_Proj5.csproj|solutionrelative:fstcopy_proj5\\views\\generallistings\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
@@ -43,7 +43,7 @@
       "RelativeMoniker": "D:0:0:{2FBF41DC-C892-40BE-BFD2-31DFA7D1FCAB}|fstCopy_Proj5\\fstCopy_Proj5.csproj|solutionrelative:fstcopy_proj5\\views\\home\\map.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2FBF41DC-C892-40BE-BFD2-31DFA7D1FCAB}|fstCopy_Proj5\\fstCopy_Proj5.csproj|c:\\users\\orange\\desktop\\project5 election\\election\\fstcopy_proj5\\fstcopy_proj5\\views\\home\\faq.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{2FBF41DC-C892-40BE-BFD2-31DFA7D1FCAB}|fstCopy_Proj5\\fstCopy_Proj5.csproj|C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstcopy_proj5\\views\\home\\faq.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{2FBF41DC-C892-40BE-BFD2-31DFA7D1FCAB}|fstCopy_Proj5\\fstCopy_Proj5.csproj|solutionrelative:fstcopy_proj5\\views\\home\\faq.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
@@ -272,7 +272,7 @@
               "RelativeDocumentMoniker": "fstCopy_Proj5\\Views\\Home\\Index.cshtml",
               "ToolTip": "C:\\Users\\Orange\\Desktop\\Project5 Election\\Election\\fstCopy_Proj5\\fstCopy_Proj5\\Views\\Home\\Index.cshtml",
               "RelativeToolTip": "fstCopy_Proj5\\Views\\Home\\Index.cshtml",
-              "ViewState": "AQIAAFYBAAAAAAAAAAAvwJgBAAAUAAAA",
+              "ViewState": "AQIAAHoBAAAAAAAAAAAcwIcBAAAQAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-08-08T06:41:16.69Z",
               "IsPinned": true,
@@ -288,8 +288,7 @@
               "RelativeToolTip": "fstCopy_Proj5\\Views\\GeneralListCandidates\\Create.cshtml",
               "ViewState": "AQIAAGAAAAAAAAAAAAAEwG4AAAAbAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-08T14:48:34.703Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-08T14:48:34.703Z"
             },
             {
               "$type": "Document",
@@ -301,8 +300,7 @@
               "RelativeToolTip": "fstCopy_Proj5\\Controllers\\GeneralListCandidatesController.cs",
               "ViewState": "AQIAAAsAAAAAAAAAAAAAABMAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-08T15:08:57.344Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-08T15:08:57.344Z"
             },
             {
               "$type": "Document",
@@ -314,8 +312,7 @@
               "RelativeToolTip": "fstCopy_Proj5\\Controllers\\GeneralListingsController.cs",
               "ViewState": "AQIAAHQAAAAAAAAAAAAswIUAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-08T13:52:06.741Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-08T13:52:06.741Z"
             },
             {
               "$type": "Document",
@@ -327,8 +324,7 @@
               "RelativeToolTip": "fstCopy_Proj5\\Views\\GeneralListCandidates\\Index.cshtml",
               "ViewState": "AQIAADgAAAAAAAAAAAAcwEQAAAAoAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-08T14:53:19.057Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-08T14:53:19.057Z"
             },
             {
               "$type": "Document",
@@ -340,8 +336,7 @@
               "RelativeToolTip": "fstCopy_Proj5\\Controllers\\AdminsController.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAXAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-12T20:00:48.459Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-12T20:00:48.459Z"
             },
             {
               "$type": "Document",
@@ -353,8 +348,7 @@
               "RelativeToolTip": "fstCopy_Proj5\\Views\\Admins\\Index.cshtml",
               "ViewState": "AQIAAB0AAAAAAAAAAAAcwCwAAAAVAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-12T20:01:48.223Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-12T20:01:48.223Z"
             },
             {
               "$type": "Document",
@@ -366,8 +360,7 @@
               "RelativeToolTip": "fstCopy_Proj5\\Views\\Home\\About.cshtml",
               "ViewState": "AQIAAGMAAAAAAAAAAAAswHQAAAA6AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-12T10:12:22.438Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-12T10:12:22.438Z"
             },
             {
               "$type": "Document",
@@ -391,8 +384,7 @@
               "RelativeToolTip": "fstCopy_Proj5\\Views\\GeneralListCandidates\\Edit.cshtml",
               "ViewState": "AQIAACcAAAAAAAAAAAAAADAAAABJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-20T13:13:59.055Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-20T13:13:59.055Z"
             },
             {
               "$type": "Document",
@@ -404,8 +396,7 @@
               "RelativeToolTip": "fstCopy_Proj5\\Views\\GeneralListings\\Create.cshtml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-20T13:22:07.068Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-20T13:22:07.068Z"
             },
             {
               "$type": "Document",
@@ -429,8 +420,7 @@
               "RelativeToolTip": "fstCopy_Proj5\\Views\\Home\\Map.cshtml",
               "ViewState": "AQIAALQAAAAAAAAAAAAswMYAAAAhAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-20T08:22:15.594Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-20T08:22:15.594Z"
             },
             {
               "$type": "Document",
@@ -466,8 +456,7 @@
               "RelativeToolTip": "fstCopy_Proj5\\Views\\Home\\Faq.cshtml",
               "ViewState": "AQIAACEAAAAAAAAAAAAAAC0AAAAbAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-20T12:52:48.007Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-20T12:52:48.007Z"
             },
             {
               "$type": "Document",
@@ -491,8 +480,7 @@
               "RelativeToolTip": "fstCopy_Proj5\\Views\\Contact\\CreateContact.cshtml",
               "ViewState": "AQIAAGIAAAAAAAAAAAAswIIAAAAUAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-08T14:53:40.4Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-08T14:53:40.4Z"
             },
             {
               "$type": "Document",
