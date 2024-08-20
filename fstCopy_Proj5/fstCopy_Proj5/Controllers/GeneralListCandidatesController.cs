@@ -16,17 +16,32 @@ namespace fstCopy_Proj5.Controllers
 
         // GET: GeneralListCandidates
         public ActionResult Index(string generalListingName, bool? onlyAccepted)
+
         {
-            var generalListCandidates = db.GeneralListCandidates.Include(g => g.GeneralListingName);
+
+            var generalListings = db.GeneralListings.ToList();
+            var initialValue = generalListings.FirstOrDefault()?.Name; // Select the first item's name as the initial value
+
+            // Set the selected value to either the passed generalListingName or the initialValue
+            var selectedValue = generalListingName ?? initialValue;
+
+            // Create the SelectList with the selected value
+            ViewBag.GeneralListingName = new SelectList(generalListings, "Name", "Name", selectedValue: selectedValue);
+
+            // Use the selectedValue for further logic in your action if needed
+            generalListingName = selectedValue;
+
+
+            var generalListCandidates = db.GeneralListCandidates.ToList();
 
             if (!string.IsNullOrEmpty(generalListingName))
             {
-                generalListCandidates = generalListCandidates.Where(c => c.GeneralListingName == generalListingName);
+                generalListCandidates = generalListCandidates.Where(c => c.GeneralListingName == generalListingName).ToList();
             }
 
             if (onlyAccepted.HasValue && onlyAccepted.Value)
             {
-                generalListCandidates = generalListCandidates.Where(c => c.Status == "1");
+                generalListCandidates = generalListCandidates.Where(c => c.Status == "1").ToList();
             }
 
             ViewBag.GeneralListingName = new SelectList(db.GeneralListings, "Name", "Name", generalListingName);
@@ -78,7 +93,7 @@ namespace fstCopy_Proj5.Controllers
             return View(generalListCandidate);
         }
 
-        
+
 
 
 
@@ -86,8 +101,14 @@ namespace fstCopy_Proj5.Controllers
         // GET: GeneralListCandidates/Create
         public ActionResult Create()
         {
-            ViewBag.GeneralListingName = new SelectList(db.GeneralListings, "Name", "Name");
 
+            var generalListings = db.GeneralListings.ToList();
+            var initialValue = generalListings.FirstOrDefault()?.Name; // This will select the first item's name as the initial value
+
+            ViewBag.GeneralListingName = new SelectList(generalListings, "Name", "Name", selectedValue: initialValue);
+            //ViewBag.GeneralListingName = new SelectList(db.GeneralListings, "Name", "Name");
+            // ViewBag.GeneralListingName =  "الحق";
+            //Session["GeneralListingName"] = ViewBag.GeneralListingName;
             // Initialize a new GeneralListCandidate object with a default Status value
             var candidate = new GeneralListCandidate
             {

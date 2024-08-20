@@ -32,7 +32,7 @@
                 @Html.DisplayNameFor(model => model.Email)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.GeneralListing.Name)
+                @Html.DisplayNameFor(model => model.GeneralListingName)
             </th>
             <th></th>
         </tr>
@@ -55,7 +55,7 @@
                 </td>
                 <td>
                     <small class="mb-0 text-muted">
-                        @Html.DisplayFor(modelItem => item.GeneralListing.Name)
+                        @Html.DisplayFor(modelItem => item.GeneralListingName)
                     </small>
                 </td>
                 <td>
@@ -63,7 +63,7 @@
                     {
                         @Html.Hidden("CandidateID", item.CandidateID)
                         @Html.DropDownList("Status", new SelectList(new[]
-                             {
+                                  {
                             new SelectListItem { Text = "Choose", Value = "" },
                             new SelectListItem { Text = "Accept", Value = "1" },
                             new SelectListItem { Text = "Reject", Value = "0" }
@@ -74,3 +74,4 @@
         }
     </tbody>
 </table>
+

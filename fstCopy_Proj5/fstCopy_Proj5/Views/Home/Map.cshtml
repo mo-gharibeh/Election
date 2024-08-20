@@ -3,78 +3,211 @@
     ViewBag.Title = "Map";
     Layout = "~/Views/Shared/_MainLayout.cshtml";
 }
-
-<h2>Map</h2>
-
-
-<!-- Map container with background image acting as the map -->
-<div id="map" style="height: 100%; width: 100%; min-height: 500px; position: relative;"></div>
-
-<!-- CSS for the map and marker styling -->
-<style>
-    html, body {
-        height: 100%;
-        margin: 0;
-    }
-
-    #map {
-        width: 100%;
-        height: 100vh; /* Full height of the viewport */
-        min-height: 500px; /* Minimum height */
-        background-image: url('@Url.Content("~/Content/images/static-map.jpg")'); /* Path to your static map image */
-        background-size: cover; /* Make sure the image covers the entire div */
-        background-position: center;
-    }
-
-    .marker {
-        position: absolute;
-        width: 20px;
-        height: 20px;
-        background-color: red;
-        border-radius: 50%;
-        transform: translate(-50%, -100%);
-    }
-
-    .tooltip {
-        position: absolute;
-        background-color: #fff;
-        padding: 5px;
-        border: 1px solid #ccc;
-        display: none;
-        transform: translate(-50%, -100%);
-        white-space: nowrap;
-    }
-
-    .marker:hover + .tooltip {
-        display: block;
-    }
-</style>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Country Map Example</title>
+    <script src="mapdata.js"></script>
+    <script src="countrymap.js"></script>
+</head>
+<body>
+    <h1>HTML5/Javascript Country Map</h1>
+    <div id="map"></div>
 
 
-    <script>
-        // Function to create a marker on the static image map
-        function createMarker(lat, lng, comment) {
-            var map = document.getElementById('map');
+    <p>This map was created and can be edited at <a href="http://simplemaps.com/custom/country/h0jdt5SE">http://simplemaps.com/custom/country/h0jdt5SE</a>
 
-            // Create the marker element
-            var marker = document.createElement('div');
-            marker.className = 'marker';
-            marker.style.left = lat + '%'; // X percentage position
-            marker.style.top = lng + '%';  // Y percentage position
-            map.appendChild(marker);
 
-            // Create a tooltip for the marker
-            var tooltip = document.createElement('div');
-            tooltip.className = 'tooltip';
-            tooltip.innerHTML = comment;
-            map.appendChild(tooltip);
+    <p>
+        To remove the "Simplemaps.com Trial" text, <a href="http://simplemaps.com/pricing" />purchase a map license</a>.
 
-            // Position the tooltip relative to the marker
-            tooltip.style.left = lat + '%';
-            tooltip.style.top = (lng - 2) + '%';  // Slightly above the marker
-        }
+        Then, register your license at the link above (Options > Register Purchase).  Or, simply replace the countrymap.js file in this folder (trial version) with the countrymap.js file that you are emailed (full version).
 
-        // Adding markers to the static map
-        createMarker(50, 50, 'Irbid: Known for its universities'); // Example position, adjust accordingly
-        createMarker(60, 40, 'Ajloun: Famous for its castle');    // Example position, adjust accordingly
-    </script>
+    </p>
+
+    <p>To learn how to install this map on your web page, see the <a href="http://simplemaps.com/docs">Documentation</a>.</p>
+</body>
+</html>
+
+<script>
+    var simplemaps_countrymap_mapdata = {
+        main_settings: {
+            //General settings
+            width: "responsive", //'700' or 'responsive'
+            background_color: "#FFFFFF",
+            background_transparent: "yes",
+            border_color: "#ffffff",
+
+            //State defaults
+            state_description: "State description",
+            state_color: "#88A4BC",
+            state_hover_color: "#3B729F",
+            state_url: "",
+            border_size: 1.5,
+            all_states_inactive: "no",
+            all_states_zoomable: "yes",
+
+            //Location defaults
+            location_description: "Location description",
+            location_url: "",
+            location_color: "#FF0067",
+            location_opacity: 0.8,
+            location_hover_opacity: 1,
+            location_size: 25,
+            location_type: "square",
+            location_image_source: "frog.png",
+            location_border_color: "#FFFFFF",
+            location_border: 2,
+            location_hover_border: 2.5,
+            all_locations_inactive: "no",
+            all_locations_hidden: "no",
+
+            //Label defaults
+            label_color: "#ffffff",
+            label_hover_color: "#ffffff",
+            label_size: 16,
+            label_font: "Arial",
+            label_display: "auto",
+            label_scale: "yes",
+            hide_labels: "no",
+            hide_eastern_labels: "no",
+
+            //Zoom settings
+            zoom: "yes",
+            manual_zoom: "yes",
+            back_image: "no",
+            initial_back: "no",
+            initial_zoom: "-1",
+            initial_zoom_solo: "no",
+            region_opacity: 1,
+            region_hover_opacity: 0.6,
+            zoom_out_incrementally: "yes",
+            zoom_percentage: 0.99,
+            zoom_time: 0.5,
+
+            //Popup settings
+            popup_color: "white",
+            popup_opacity: 0.9,
+            popup_shadow: 1,
+            popup_corners: 5,
+            popup_font: "12px/1.5 Verdana, Arial, Helvetica, sans-serif",
+            popup_nocss: "no",
+
+            //Advanced settings
+            div: "map",
+            auto_load: "yes",
+            url_new_tab: "no",
+            images_directory: "default",
+            fade_time: 0.1,
+            link_text: "View Website",
+            popups: "detect",
+            state_image_url: "",
+            state_image_position: "",
+            location_image_url: ""
+        },
+        state_specific: {
+            JOAJ: {
+                name: "Ajloun",
+                color: "Green",
+                description: "عدد الدوائر: 1"
+            },
+            JOAM: {
+                name: "Amman"
+            },
+            JOAQ: {
+                name: "Aqaba"
+            },
+            JOAT: {
+                name: "Tafilah"
+            },
+            JOAZ: {
+                name: "Zarqa"
+            },
+            JOBA: {
+                name: "Balqa"
+            },
+            JOIR: {
+                name: "Irbid",
+                color: "Brown",
+                description: "عدد الدوائر:2"
+            },
+            JOJA: {
+                name: "Jarash"
+            },
+            JOKA: {
+                name: "Karak"
+            },
+            JOMA: {
+                name: "Mafraq"
+            },
+            JOMD: {
+                name: "Madaba"
+            },
+            JOMN: {
+                name: "Ma`an"
+            }
+        },
+        locations: {},
+        labels: {
+            "0": {
+                parent_id: "JOIR2",
+                name: "Irbid2"
+            },
+            JOAJ: {
+                name: "Ajlun",
+                parent_id: "JOAJ"
+            },
+            JOAM: {
+                name: "Amman",
+                parent_id: "JOAM"
+            },
+            JOAQ: {
+                name: "Aqaba",
+                parent_id: "JOAQ"
+            },
+            JOAT: {
+                name: "Tafilah",
+                parent_id: "JOAT"
+            },
+            JOAZ: {
+                name: "Zarqa",
+                parent_id: "JOAZ"
+            },
+            JOBA: {
+                name: "Balqa",
+                parent_id: "JOBA"
+            },
+            JOIR: {
+                name: "Irbid",
+                parent_id: "JOIR"
+            },
+            JOJA: {
+                name: "Jarash",
+                parent_id: "JOJA"
+            },
+            JOKA: {
+                name: "Karak",
+                parent_id: "JOKA"
+            },
+            JOMA: {
+                name: "Mafraq",
+                parent_id: "JOMA"
+            },
+            JOMD: {
+                name: "Madaba",
+                parent_id: "JOMD"
+            },
+            JOMN: {
+                name: "Ma`an",
+                parent_id: "JOMN"
+            }
+        },
+        legend: {
+            entries: []
+        },
+        regions: {}
+    };
+</script>
+
+
