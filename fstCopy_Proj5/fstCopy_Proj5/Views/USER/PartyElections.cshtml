@@ -8,32 +8,37 @@
     {
         @Html.AntiForgeryToken()
 
-    <div class="row">
+        <div class="row">
 
-        <h2 style="text-align : center">أهلا بك في صفحة القوائم المحلية.</h2>
+            <h2 style="text-align : center">.أهلا بك في صفحة القوائم الحزبية</h2>
 
-         @foreach (var party in Model)
-        {
-            <div class="col-md-4 mb-4">
-                <div class="card election-card" style="width: 18rem;">
-                    <img src="~/images/petra.jpg" class="card-img-top" alt="Party Image">
-                    <div class="card-body">
-                        <h5 class="card-title"> القائمة @*@party.Name*@</h5>
-                        <div class="form-check">
-                            <label class="form-check-label" style="font-size : 30px" for="party@party.GeneralListingID">
-                                 @party.Name
-                            </label>
-                            <input class="form-check-input" type="radio" name="selectedPartyListId" value="@party.GeneralListingID" id="party@party.GeneralListingID">
+            @foreach (var party in Model)
+            {
+                <div class="col-md-4 mb-4">
+                    <div class="card election-card" style="width: 18rem;">
+                        <img src="~/images/localParty.jpg" class="card-img-top" alt="Party Image">
+                        <div class="card-body">
+                            <h5 class="card-title"> القائمة @*@party.Name*@</h5>
+                            <div class="form-check">
+                                <label class="form-check-label" style="font-size : 30px" for="party@party.GeneralListingID">
+                                    @party.Name
+                                </label>
+                                <input class="form-check-input" type="radio" name="selectedPartyListId" value="@party.GeneralListingID" id="party@party.GeneralListingID">
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        }
-    </div>
+            }
+        </div>
 
-        <button type="submit" class="btn btn-primary" style="padding: 25px; margin-left: 40rem;">تأكيد التصويت </button>
+        <button type="submit" class="btn btn-primary" onclick="return confirmSubmission();">تأكيد التصويت</button>
     }
 </div>
+<script>
+    function confirmSubmission() {
+        return confirm("هل أنت متأكد من التصويت؟");
+    }
+</script>
 
 <style>
     .election-card {
@@ -100,4 +105,13 @@
         justify-content: center;
     
     }
+    
+    .btn-primary {
+        color: #fff;
+        background-color: #337ab7;
+        border-color: #2e6da4;
+        display: block;  /*Center align button /*/
+        margin: 2rem auto;/* / Center align and add margin*/ 
+    }
+
 </style>

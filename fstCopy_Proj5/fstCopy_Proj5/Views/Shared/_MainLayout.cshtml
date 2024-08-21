@@ -83,8 +83,10 @@
                             <li>@Html.ActionLink("من نحن", "About", "Home")</li>
                             <li>@Html.ActionLink("تواصل معنا", "CreateContact", "Contact")</li>
                             <li>@Html.ActionLink("الأسئلة الشائعة", "Faq", "Home")</li>
+                            <li>@Html.ActionLink("البحث عن الرقم الوطني", "Search", "Home")</li>
 
                            
+
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">الخدمات <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
@@ -92,10 +94,12 @@
 
 
                                     <li>@Html.ActionLink("طلب الترشح المحلي", "CreateList", "LocalListCandidates")</li>
-                                    <li>@Html.ActionLink("طلب الترشح الحزبي", "Create", "GeneralListCandidates")</li>
+                                    <li>@Html.ActionLink("طلب الترشح الحزبي", "GeneralListCandidates", "GeneralListings")</li>
                                     <li>@Html.ActionLink("طلب الإعلان", "addAdvertisement", "Ads")</li>
                                     <li>@Html.ActionLink("طلب المناظرات", "Create", "Debates1")</li>
                             </li>
+
+
 
                         </ul>
 

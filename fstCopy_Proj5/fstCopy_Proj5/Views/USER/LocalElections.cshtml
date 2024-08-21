@@ -5,7 +5,7 @@
     Layout = "~/Views/Shared/_MainLayout.cshtml";
 }
 <body>
-    
+
     <div style="padding-top: 85px; padding-bottom: 85px">
 
         @using (Html.BeginForm("LocalElections", "User", FormMethod.Post))
@@ -15,7 +15,7 @@
             <div style="display: flex; flex-direction: row; justify-content: space-evenly; align-content:center; ">
 
                 <div class="row">
-                    <h2 style="text-align : center">أهلا بك في صفحة القوائم المحلية.</h2>
+                    <h2 style="text-align : center">.أهلا بك في صفحة القوائم المحلية</h2>
 
                     @if (localLists != null && localLists.Any())
                     {
@@ -23,8 +23,9 @@
                         {
                             <div class="col-md-4 mb-4">
                                 <div class="card election-card" style="width: 18rem;">
+                                    <img src="~/images/localParty.jpg" class="card-img-top" alt="Party Image">
                                     <div class="card-body">
-                                        <h5 class="card-title">@list.ListName</h5>
+                                        <h5 class="card-title">اسم القائمه :  @list.ListName </h5>
                                         <p class="card-text">
                                             الدائرة : @list.ElectionArea<br />
                                             المحافظة : @list.Governorate
@@ -59,14 +60,21 @@
                     }
                 </div>
             </div>
-            <button type="submit" class="btn btn-primary" style="padding: 25px; margin-right: 40rem;">تأكيد التصويت </button>
+            <button type="submit" class="btn btn-primary" onclick="return confirmSubmission();">تأكيد التصويت</button>
         }
     </div>
 </body>
-<style>
-    body{
-        direction:rtl;
+<script>
+    function confirmSubmission() {
+        return confirm("هل أنت متأكد من التصويت؟");
     }
+</script>
+
+<style>
+    body {
+        direction: rtl;
+    }
+
     .election-card {
         background-color: #fff; /* White background */
         color: rgba(0, 0, 0, 1); /* Black text */
@@ -117,8 +125,15 @@
             background-color: #f8f9fa;
             color: #dc3545;
         }
+
     .row {
         /* margin-right: -15px; */
         margin-left: 92px;
+    }
+    .btn-primary {
+        color: #fff;
+        background-color: #337ab7;
+        border-color: #2e6da4;
+        margin-right: 40rem;
     }
 </style>

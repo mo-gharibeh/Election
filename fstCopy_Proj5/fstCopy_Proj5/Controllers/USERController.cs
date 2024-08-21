@@ -18,6 +18,10 @@ namespace E_Voting.Controllers
         {
             return View();
         }
+        public ActionResult Logout()
+        {
+            return RedirectToAction("Index");
+        }
 
         public ActionResult Login(User user)
         {
@@ -98,9 +102,11 @@ namespace E_Voting.Controllers
         // Send Email
         private void SendConfirmationEmail(string toEmail, string confirmationCode)
         {
-            string fromEmail = "techlearnhub.contact@gmail.com";
-            string smtpUsername = "techlearnhub.contact@gmail.com";
-            string smtpPassword = "lyrlogeztsxclank";
+            string fromEmail = "teamorange077@gmail.com";
+            string smtpUsername = "teamorange077@gmail.com";
+            string smtpPassword = "thxc lkmk weir bxbq";
+            //Credentials = new NetworkCredential("teamorange077@gmail.com", "thxc lkmk weir bxbq"),
+
 
             string subjectText = "Your Confirmation Code";
             string messageText = $"Your confirmation code is {confirmationCode}";

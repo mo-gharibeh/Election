@@ -345,6 +345,7 @@
     <Content Include="images\king_hssien.jpg" />
     <Content Include="images\law.jpg" />
     <Content Include="images\local.png" />
+    <Content Include="images\localParty.jpg" />
     <Content Include="images\loginimg.png" />
     <Content Include="images\Mafraq.jpg" />
     <Content Include="images\Mansaf.png" />

@@ -715,7 +715,7 @@ namespace fstCopy_Proj5.Models
             var client = new SmtpClient("smtp.gmail.com")
             {
                 Port = 587,
-                Credentials = new NetworkCredential("teamorange077@gmail.com", "qrsz uzjv guop iukc"),
+                Credentials = new NetworkCredential("teamorange077@gmail.com", "thxc lkmk weir bxbq"),
                 EnableSsl = true,
             };
 
