@@ -65,27 +65,6 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="GeneralListCandidates">
-      <EntityTypeMapping TypeName="ElectionModel.GeneralListCandidate">
-        <MappingFragment StoreEntitySet="GeneralListCandidates">
-          <ScalarProperty Name="CandidateID" ColumnName="CandidateID" />
-          <ScalarProperty Name="GeneralListingName" ColumnName="GeneralListingName" />
-          <ScalarProperty Name="CandidateName" ColumnName="CandidateName" />
-          <ScalarProperty Name="NationalNumber" ColumnName="NationalNumber" />
-          <ScalarProperty Name="Email" ColumnName="Email" />
-          <ScalarProperty Name="Status" ColumnName="Status" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="GeneralListings">
-      <EntityTypeMapping TypeName="ElectionModel.GeneralListing">
-        <MappingFragment StoreEntitySet="GeneralListing">
-          <ScalarProperty Name="GeneralListingID" ColumnName="GeneralListingID" />
-          <ScalarProperty Name="Name" ColumnName="Name" />
-          <ScalarProperty Name="NumberOfVotes" ColumnName="NumberOfVotes" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="LocalLists">
       <EntityTypeMapping TypeName="ElectionModel.LocalList">
         <MappingFragment StoreEntitySet="LocalList">
@@ -144,6 +123,33 @@
           <ScalarProperty Name="PartyElections" ColumnName="PartyElections" />
           <ScalarProperty Name="whitePaperLocalElections" ColumnName="whitePaperLocalElections" />
           <ScalarProperty Name="whitePaperPartyElections" ColumnName="whitePaperPartyElections" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GeneralListCandidates">
+      <EntityTypeMapping TypeName="ElectionModel.GeneralListCandidate">
+        <MappingFragment StoreEntitySet="GeneralListCandidates">
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Religion" ColumnName="Religion" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="NationalNumber" ColumnName="NationalNumber" />
+          <ScalarProperty Name="CandidateName" ColumnName="CandidateName" />
+          <ScalarProperty Name="GeneralListingName" ColumnName="GeneralListingName" />
+          <ScalarProperty Name="CandidateID" ColumnName="CandidateID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GeneralListings">
+      <EntityTypeMapping TypeName="ElectionModel.GeneralListing">
+        <MappingFragment StoreEntitySet="GeneralListing">
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="NumberOfVotes" ColumnName="NumberOfVotes" />
+          <ScalarProperty Name="Delegate_Email" ColumnName="Delegate_Email" />
+          <ScalarProperty Name="Delegate_Phone" ColumnName="Delegate_Phone" />
+          <ScalarProperty Name="Delegate_Name" ColumnName="Delegate_Name" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="GeneralListingID" ColumnName="GeneralListingID" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

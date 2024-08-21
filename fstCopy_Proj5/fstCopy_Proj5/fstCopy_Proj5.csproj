@@ -298,29 +298,60 @@
     <Content Include="Content\readme.txt" />
     <Content Include="Content\single.html" />
     <Content Include="Global.asax" />
+    <Content Include="images\1.jpg" />
+    <Content Include="images\57.png" />
+    <Content Include="images\59.png" />
     <Content Include="images\Ajlon.jpg" />
     <Content Include="images\amman1.jpg" />
     <Content Include="images\Amman2.jpg" />
     <Content Include="images\Amman3.jpg" />
     <Content Include="images\aqaba.jpg" />
     <Content Include="images\As-salt.jpg" />
+    <Content Include="images\b16b5fbebadec3b6f15a8c2a361c2247.jpg" />
     <Content Include="images\c221a1e2c34a0c95.jpg" />
+    <Content Include="images\candicate2.jpg" />
+    <Content Include="images\candidate1.jpg" />
+    <Content Include="images\candidate3.jpg" />
+    <Content Include="images\download %281%29.jpg" />
+    <Content Include="images\download.jpg" />
     <Content Include="images\download_1.jpg" />
+    <Content Include="images\elec.jpeg.jpeg" />
+    <Content Include="images\elec.jpg" />
+    <Content Include="images\F72WHVSWEAAdEe7.jpg" />
+    <Content Include="images\file %282%29.jpg" />
+    <Content Include="images\file.gif" />
     <Content Include="images\general.jpg" />
+    <Content Include="images\h1.jpg" />
+    <Content Include="images\image.jpg" />
+    <Content Include="images\images %281%29.jpg" />
+    <Content Include="images\images %281%29.png" />
+    <Content Include="images\images %282%29.jpg" />
+    <Content Include="images\images %283%29.jpg" />
+    <Content Include="images\images %284%29.jpg" />
+    <Content Include="images\images %285%29.jpg" />
     <Content Include="images\images.jpg" />
     <Content Include="images\images.png" />
     <Content Include="images\irbid1.jpg" />
     <Content Include="images\irbid2.jpg" />
     <Content Include="images\jarash.jpg" />
+    <Content Include="images\jordan power.png" />
+    <Content Include="images\Jordan-flag1.jpg" />
+    <Content Include="images\Jordan-map.png" />
     <Content Include="images\jordan.jpg" />
+    <Content Include="images\jordan1.jpg" />
     <Content Include="images\karak.jpg" />
     <Content Include="images\king.jpg" />
     <Content Include="images\local.png" />
     <Content Include="images\loginimg.png" />
     <Content Include="images\Mafraq.jpg" />
     <Content Include="images\Mansaf.png" />
+    <Content Include="images\OIP %281%29.jpg" />
+    <Content Include="images\OIP.jpg" />
     <Content Include="images\petra.jpg" />
+    <Content Include="images\pic.jpg" />
+    <Content Include="images\profile.jpg" />
     <Content Include="images\Screenshot 2024-05-08 163719.png" />
+    <Content Include="images\Screenshot 2024-05-22 110822125.png" />
     <Content Include="images\share-image.png" />
     <Content Include="images\zarqaa.jpg" />
     <Content Include="Models\Model1.Context.tt">
@@ -333,6 +364,13 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
+    <Content Include="myMap\countrymap.js" />
+    <Content Include="myMap\Documentation.html" />
+    <Content Include="myMap\license.txt" />
+    <Content Include="myMap\mapdata.js" />
+    <Content Include="myMap\map_images\frog.png" />
+    <Content Include="myMap\map_images\x.png" />
+    <Content Include="myMap\test.html" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -426,6 +464,7 @@
     <Content Include="Models\Model1.edmx.diagram">
       <DependentUpon>Model1.edmx</DependentUpon>
     </Content>
+    <Content Include="images\pic.webp" />
     <None Include="packages.config" />
     <Content Include="Views\Shared\_MainLayout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
@@ -496,6 +535,11 @@
     <Content Include="Views\Debates1\DebatesAdmin.cshtml" />
     <Content Include="Views\DATEs\IndexAdmin.cshtml" />
     <Content Include="Views\Debates1\Edit.cshtml" />
+    <Content Include="pdf\بيانات المترشحين_0.xlsx" />
+    <Content Include="pdf\شروط ومرفقات طلب الترشح للدائرة الانتخابية %28العامة_محلية%29 2024_1-merged.pdf" />
+    <Content Include="pdf\قانون الانتخاب لمجلس النواب رقم %284%29 لسنة 2022.pdf" />
+    <Content Include="Views\GeneralListings\GeneralListCandidates.cshtml" />
+    <Content Include="Views\GeneralListings\ThankYou.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

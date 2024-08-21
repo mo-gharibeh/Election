@@ -14,8 +14,21 @@ namespace fstCopy_Proj5.Models
     
     public partial class GeneralListing
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public GeneralListing()
+        {
+            this.GeneralListCandidates = new HashSet<GeneralListCandidate>();
+        }
+    
         public int GeneralListingID { get; set; }
         public string Name { get; set; }
+        public string Delegate_Name { get; set; }
+        public string Delegate_Phone { get; set; }
+        public string Delegate_Email { get; set; }
         public Nullable<int> NumberOfVotes { get; set; }
+        public string Status { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<GeneralListCandidate> GeneralListCandidates { get; set; }
     }
 }

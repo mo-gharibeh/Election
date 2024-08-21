@@ -390,6 +390,8 @@ C:\Users\Orange\Desktop\Project5 Election\final copy\Election-main\fstCopy_Proj5
 C:\Users\Orange\Desktop\Project5 Election\final copy\Election-main\fstCopy_Proj5\fstCopy_Proj5\bin\System.Web.Mvc.xml
 C:\Users\Orange\Desktop\Project5 Election\final copy\Election-main\fstCopy_Proj5\fstCopy_Proj5\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 C:\Users\Orange\Desktop\Project5 Election\final copy\Election-main\fstCopy_Proj5\fstCopy_Proj5\obj\Debug\fstCopy_.69518A5C.Up2Date
+C:\Users\Orange\Desktop\Project5 Election\Election\fstCopy_Proj5\fstCopy_Proj5\obj\Debug\fstCopy_Proj5.csproj.AssemblyReference.cache
+C:\Users\Orange\Desktop\Project5 Election\Election\fstCopy_Proj5\fstCopy_Proj5\obj\Debug\fstCopy_Proj5.csproj.CoreCompileInputs.cache
 C:\Users\Orange\Desktop\Project5 Election\Election\fstCopy_Proj5\fstCopy_Proj5\bin\fstCopy_Proj5.dll.config
 C:\Users\Orange\Desktop\Project5 Election\Election\fstCopy_Proj5\fstCopy_Proj5\bin\fstCopy_Proj5.dll
 C:\Users\Orange\Desktop\Project5 Election\Election\fstCopy_Proj5\fstCopy_Proj5\bin\fstCopy_Proj5.pdb
@@ -465,8 +467,6 @@ C:\Users\Orange\Desktop\Project5 Election\Election\fstCopy_Proj5\fstCopy_Proj5\b
 C:\Users\Orange\Desktop\Project5 Election\Election\fstCopy_Proj5\fstCopy_Proj5\bin\System.Web.Helpers.xml
 C:\Users\Orange\Desktop\Project5 Election\Election\fstCopy_Proj5\fstCopy_Proj5\bin\System.Web.Mvc.xml
 C:\Users\Orange\Desktop\Project5 Election\Election\fstCopy_Proj5\fstCopy_Proj5\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\Orange\Desktop\Project5 Election\Election\fstCopy_Proj5\fstCopy_Proj5\obj\Debug\fstCopy_Proj5.csproj.AssemblyReference.cache
-C:\Users\Orange\Desktop\Project5 Election\Election\fstCopy_Proj5\fstCopy_Proj5\obj\Debug\fstCopy_Proj5.csproj.CoreCompileInputs.cache
 C:\Users\Orange\Desktop\Project5 Election\Election\fstCopy_Proj5\fstCopy_Proj5\obj\Debug\fstCopy_.69518A5C.Up2Date
 C:\Users\Orange\Desktop\Project5 Election\Election\fstCopy_Proj5\fstCopy_Proj5\obj\Debug\fstCopy_Proj5.dll
 C:\Users\Orange\Desktop\Project5 Election\Election\fstCopy_Proj5\fstCopy_Proj5\obj\Debug\fstCopy_Proj5.pdb

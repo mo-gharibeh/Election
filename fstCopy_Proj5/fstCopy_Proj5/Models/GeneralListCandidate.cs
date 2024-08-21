@@ -18,7 +18,11 @@ namespace fstCopy_Proj5.Models
         public string GeneralListingName { get; set; }
         public string CandidateName { get; set; }
         public int NationalNumber { get; set; }
+        public string Gender { get; set; }
         public string Email { get; set; }
+        public string Religion { get; set; }
         public string Status { get; set; }
+    
+        public virtual GeneralListing GeneralListing { get; set; }
     }
 }
