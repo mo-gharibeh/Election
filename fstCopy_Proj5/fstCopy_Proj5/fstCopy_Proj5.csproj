@@ -473,7 +473,7 @@
     <Content Include="Views\Debates1\Index.cshtml" />
     <Content Include="Views\Debates1\Details.cshtml" />
     <Content Include="Views\Debates1\Create.cshtml" />
-    <Content Include="Views\Debates1\Edit.cshtml" />
+    <Content Include="Views\Debates1\Edit1.cshtml" />
     <Content Include="Views\Debates1\Delete.cshtml" />
     <Content Include="Views\Debates1\IndexDebatsesHome.cshtml" />
     <Content Include="Views\Ads\Publishs.cshtml" />
@@ -495,6 +495,7 @@
     <Content Include="Views\Home\button1.cshtml" />
     <Content Include="Views\Debates1\DebatesAdmin.cshtml" />
     <Content Include="Views\DATEs\IndexAdmin.cshtml" />
+    <Content Include="Views\Debates1\Edit.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

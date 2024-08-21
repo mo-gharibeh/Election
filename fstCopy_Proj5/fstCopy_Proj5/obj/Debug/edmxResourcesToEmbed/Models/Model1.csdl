@@ -29,9 +29,9 @@
     </Key>
     <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="email" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
-    <Property Name="name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
-    <Property Name="subject" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
-    <Property Name="message" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="subject" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="message" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <Property Name="IsRead" Type="Boolean" />
   </EntityType>
   <EntityType Name="DATE">
@@ -51,11 +51,11 @@
     <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="Circle_ID" Type="Int32" />
     <Property Name="Date_Of_Debate" Type="DateTime" Precision="0" />
-    <Property Name="Topic" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
-    <Property Name="First_Candidate" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
-    <Property Name="First_Candidate_List" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
-    <Property Name="Second_Candidate" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
-    <Property Name="Second_Candidate_List" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Topic" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="First_Candidate" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="First_Candidate_List" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Second_Candidate" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Second_Candidate_List" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
     <Property Name="Status" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
     <Property Name="Zoom_link" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
   </EntityType>

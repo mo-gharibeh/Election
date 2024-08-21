@@ -55,10 +55,10 @@ namespace fstCopy_Proj5.Controllers
             {
                 db.Debates.Add(debate);
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("Index","Home");
             }
 
-            return View(debate);
+            return RedirectToAction("Index", "Home");
         }
 
         // GET: Debates1/Edit/5
@@ -68,11 +68,20 @@ namespace fstCopy_Proj5.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
+
             Debate debate = db.Debates.Find(id);
             if (debate == null)
             {
                 return HttpNotFound();
             }
+
+            // Populate the dropdown options
+            ViewBag.StatusOptions = new SelectList(new List<SelectListItem>
+            {
+                new SelectListItem { Value = "Accept", Text = "Accept" },
+                new SelectListItem { Value = "Reject", Text = "Reject" }
+            }, "Value", "Text", debate.Status);
+
             return View(debate);
         }
 
@@ -83,17 +92,45 @@ namespace fstCopy_Proj5.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Edit([Bind(Include = "ID,Circle_ID,Date_Of_Debate,Topic,First_Candidate,First_Candidate_List,Second_Candidate,Second_Candidate_List,Status,Zoom_link")] Debate debate)
         {
-
-            var x1 = db.Debates.Where(x => x.ID == debate.ID).FirstOrDefault();
-            x1.Status = debate.Status;
-            x1.Zoom_link = debate.Zoom_link;
-
             if (ModelState.IsValid)
             {
-                db.Entry(x1).State = EntityState.Modified;
-                db.SaveChanges();
-                return RedirectToAction("Index");
+                if (debate.Status == "Accept")
+                {
+                    var existingDebate = db.Debates.Find(debate.ID);
+                    if (existingDebate == null)
+                    {
+                        return HttpNotFound();
+                    }
+
+                    // Update the fields
+                    existingDebate.Circle_ID = debate.Circle_ID;
+                    existingDebate.Date_Of_Debate = debate.Date_Of_Debate;
+                    existingDebate.Topic = debate.Topic;
+                    existingDebate.First_Candidate = debate.First_Candidate;
+                    existingDebate.First_Candidate_List = debate.First_Candidate_List;
+                    existingDebate.Second_Candidate = debate.Second_Candidate;
+                    existingDebate.Second_Candidate_List = debate.Second_Candidate_List;
+                    existingDebate.Status = debate.Status;
+                    existingDebate.Zoom_link = debate.Zoom_link;
+
+                    db.Entry(existingDebate).State = EntityState.Modified;
+                    db.SaveChanges();
+                    return RedirectToAction("Index");
+                }
+                else
+                {
+                    // If status is not "Accept", do not save changes
+                    ModelState.AddModelError("", "Only records with 'Accept' status can be saved.");
+                }
             }
+
+            // Repopulate dropdown options in case of validation failure
+            ViewBag.StatusOptions = new SelectList(new List<SelectListItem>
+            {
+                new SelectListItem { Value = "Accept", Text = "Accept" },
+                new SelectListItem { Value = "Reject", Text = "Reject" }
+            }, "Value", "Text", debate.Status);
+
             return View(debate);
         }
 

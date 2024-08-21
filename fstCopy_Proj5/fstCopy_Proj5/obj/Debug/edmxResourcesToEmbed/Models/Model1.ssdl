@@ -29,9 +29,9 @@
     </Key>
     <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="email" Type="varchar" MaxLength="255" />
-    <Property Name="name" Type="varchar" MaxLength="255" />
-    <Property Name="subject" Type="varchar" MaxLength="255" />
-    <Property Name="message" Type="text" />
+    <Property Name="name" Type="nvarchar" MaxLength="50" />
+    <Property Name="subject" Type="nvarchar" MaxLength="50" />
+    <Property Name="message" Type="nvarchar(max)" />
     <Property Name="IsRead" Type="bit" />
   </EntityType>
   <EntityType Name="DATES">
@@ -51,11 +51,11 @@
     <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Circle_ID" Type="int" />
     <Property Name="Date_Of_Debate" Type="date" />
-    <Property Name="Topic" Type="varchar" MaxLength="255" />
-    <Property Name="First_Candidate" Type="varchar" MaxLength="255" />
-    <Property Name="First_Candidate_List" Type="varchar" MaxLength="255" />
-    <Property Name="Second_Candidate" Type="varchar" MaxLength="255" />
-    <Property Name="Second_Candidate_List" Type="varchar" MaxLength="255" />
+    <Property Name="Topic" Type="nvarchar" MaxLength="255" />
+    <Property Name="First_Candidate" Type="nvarchar" MaxLength="255" />
+    <Property Name="First_Candidate_List" Type="nvarchar" MaxLength="255" />
+    <Property Name="Second_Candidate" Type="nvarchar" MaxLength="255" />
+    <Property Name="Second_Candidate_List" Type="nvarchar" MaxLength="255" />
     <Property Name="Status" Type="varchar" MaxLength="255" />
     <Property Name="Zoom_link" Type="nvarchar(max)" />
   </EntityType>

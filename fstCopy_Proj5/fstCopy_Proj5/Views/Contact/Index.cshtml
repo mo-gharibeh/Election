@@ -46,7 +46,7 @@
                         <tbody>
                             @foreach (var item in Model)
                             {
-                                string rowClass = item.IsRead ? "light-gray-bg " : "";
+                                string rowClass = (bool)item.IsRead ? "light-gray-bg " : "";
                                 <tr class="@rowClass">
                                     <td>
                                         <p class="mb-0 text-muted"><strong>@Html.DisplayFor(modelItem => item.email)</strong></p>

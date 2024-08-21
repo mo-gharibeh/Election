@@ -9,7 +9,7 @@
         <EntityTypeShape EntityType="ElectionModel.Admin" Width="1.5" PointX="0.75" PointY="5.75" IsExpanded="true" />
         <EntityTypeShape EntityType="ElectionModel.Contact" Width="1.5" PointX="2.75" PointY="5.75" IsExpanded="true" />
         <EntityTypeShape EntityType="ElectionModel.DATE" Width="1.5" PointX="5.75" PointY="4.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="ElectionModel.Debate" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ElectionModel.Debate" Width="2.125" PointX="7.75" PointY="0.875" IsExpanded="true" />
         <EntityTypeShape EntityType="ElectionModel.GeneralListCandidate" Width="1.5" PointX="7.75" PointY="4.75" IsExpanded="true" />
         <EntityTypeShape EntityType="ElectionModel.GeneralListing" Width="1.5" PointX="4.75" PointY="7.75" IsExpanded="true" />
         <EntityTypeShape EntityType="ElectionModel.LocalList" Width="1.5" PointX="0.75" PointY="1.75" IsExpanded="true" />

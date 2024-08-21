@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="ElectionModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="ElectionModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Ad">
           <Key>
             <PropertyRef Name="id" />
@@ -34,9 +34,9 @@
           </Key>
           <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="email" Type="varchar" MaxLength="255" />
-          <Property Name="name" Type="varchar" MaxLength="255" />
-          <Property Name="subject" Type="varchar" MaxLength="255" />
-          <Property Name="message" Type="text" />
+          <Property Name="name" Type="nvarchar" MaxLength="50" />
+          <Property Name="subject" Type="nvarchar" MaxLength="50" />
+          <Property Name="message" Type="nvarchar(max)" />
           <Property Name="IsRead" Type="bit" />
         </EntityType>
         <EntityType Name="DATES">
@@ -56,11 +56,11 @@
           <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Circle_ID" Type="int" />
           <Property Name="Date_Of_Debate" Type="date" />
-          <Property Name="Topic" Type="varchar" MaxLength="255" />
-          <Property Name="First_Candidate" Type="varchar" MaxLength="255" />
-          <Property Name="First_Candidate_List" Type="varchar" MaxLength="255" />
-          <Property Name="Second_Candidate" Type="varchar" MaxLength="255" />
-          <Property Name="Second_Candidate_List" Type="varchar" MaxLength="255" />
+          <Property Name="Topic" Type="nvarchar" MaxLength="255" />
+          <Property Name="First_Candidate" Type="nvarchar" MaxLength="255" />
+          <Property Name="First_Candidate_List" Type="nvarchar" MaxLength="255" />
+          <Property Name="Second_Candidate" Type="nvarchar" MaxLength="255" />
+          <Property Name="Second_Candidate_List" Type="nvarchar" MaxLength="255" />
           <Property Name="Status" Type="varchar" MaxLength="255" />
           <Property Name="Zoom_link" Type="nvarchar(max)" />
         </EntityType>
@@ -172,8 +172,7 @@ warning 6035: The relationship 'FK__GeneralLi__Gener__5FB337D6' has columns that
             <End Role="LocalListCandidates" EntitySet="LocalListCandidates" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="ElectionModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -206,9 +205,9 @@ warning 6035: The relationship 'FK__GeneralLi__Gener__5FB337D6' has columns that
           </Key>
           <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="email" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
-          <Property Name="name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
-          <Property Name="subject" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
-          <Property Name="message" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="subject" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="message" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="IsRead" Type="Boolean" />
         </EntityType>
         <EntityType Name="DATE">
@@ -228,11 +227,11 @@ warning 6035: The relationship 'FK__GeneralLi__Gener__5FB337D6' has columns that
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Circle_ID" Type="Int32" />
           <Property Name="Date_Of_Debate" Type="DateTime" Precision="0" />
-          <Property Name="Topic" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
-          <Property Name="First_Candidate" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
-          <Property Name="First_Candidate_List" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
-          <Property Name="Second_Candidate" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
-          <Property Name="Second_Candidate_List" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Topic" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="First_Candidate" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="First_Candidate_List" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Second_Candidate" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Second_Candidate_List" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
           <Property Name="Status" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
           <Property Name="Zoom_link" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
         </EntityType>
