@@ -25,6 +25,7 @@ namespace fstCopy_Proj5.Models
         public Nullable<int> NumberOfVotes { get; set; }
         public string ElectionArea { get; set; }
         public string Governorate { get; set; }
+        public string ImageUpload { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<LocalListCandidate> LocalListCandidates { get; set; }

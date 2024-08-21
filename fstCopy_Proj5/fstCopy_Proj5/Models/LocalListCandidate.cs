@@ -27,6 +27,7 @@ namespace fstCopy_Proj5.Models
         public Nullable<int> LocalListingID { get; set; }
         public string Status { get; set; }
         public string Email { get; set; }
+        public string ImageUpload { get; set; }
     
         public virtual LocalList LocalList { get; set; }
     }

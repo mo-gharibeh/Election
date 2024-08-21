@@ -24,7 +24,7 @@ namespace fstCopy_Proj5.Controllers
             {
                 if (isRead.Value)
                 {
-                    contacts = contacts.Where(c => (bool) c.IsRead);
+                    contacts = contacts.Where(c => (bool)c.IsRead);
                 }
                 else
                 {
@@ -62,24 +62,24 @@ namespace fstCopy_Proj5.Controllers
             return View();
         }
 
-       
 
 
-                // POST: contact_us/Create
-                [HttpPost]
-                [ValidateAntiForgeryToken]
+
+        // POST: contact_us/Create
+        [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult CreateContact(Contact contact)
         {
             if (ModelState.IsValid)
-                    {
-                        db.Contacts.Add(contact);
-                        db.SaveChanges();
-                        TempData["SuccessMessage"] = "شكرًا لك على تواصلك معنا. رأيك وملاحظاتك تهمنا ونقدر دعمك. سنقوم بمراجعة رسالتك والرد عليك في أقرب وقت ممكن.";
-                        return RedirectToAction("CreateContact");
-                    }
+            {
+                db.Contacts.Add(contact);
+                db.SaveChanges();
+                TempData["SuccessMessage"] = "شكرًا لك على تواصلك معنا. رأيك وملاحظاتك تهمنا ونقدر دعمك. سنقوم بمراجعة رسالتك والرد عليك في أقرب وقت ممكن.";
+                return RedirectToAction("CreateContact");
+            }
 
-                    return View(contact);
-                }
+            return View(contact);
+        }
 
 
 

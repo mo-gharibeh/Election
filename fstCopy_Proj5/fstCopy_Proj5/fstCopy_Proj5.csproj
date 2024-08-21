@@ -299,6 +299,7 @@
     <Content Include="Content\single.html" />
     <Content Include="Global.asax" />
     <Content Include="images\1.jpg" />
+    <Content Include="images\2024vote.png" />
     <Content Include="images\57.png" />
     <Content Include="images\59.png" />
     <Content Include="images\Ajlon.jpg" />
@@ -341,6 +342,8 @@
     <Content Include="images\jordan1.jpg" />
     <Content Include="images\karak.jpg" />
     <Content Include="images\king.jpg" />
+    <Content Include="images\king_hssien.jpg" />
+    <Content Include="images\law.jpg" />
     <Content Include="images\local.png" />
     <Content Include="images\loginimg.png" />
     <Content Include="images\Mafraq.jpg" />
@@ -349,10 +352,12 @@
     <Content Include="images\OIP.jpg" />
     <Content Include="images\petra.jpg" />
     <Content Include="images\pic.jpg" />
+    <Content Include="images\pic.webp" />
     <Content Include="images\profile.jpg" />
     <Content Include="images\Screenshot 2024-05-08 163719.png" />
     <Content Include="images\Screenshot 2024-05-22 110822125.png" />
     <Content Include="images\share-image.png" />
+    <Content Include="images\vource.png" />
     <Content Include="images\zarqaa.jpg" />
     <Content Include="Models\Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
@@ -464,7 +469,7 @@
     <Content Include="Models\Model1.edmx.diagram">
       <DependentUpon>Model1.edmx</DependentUpon>
     </Content>
-    <Content Include="images\pic.webp" />
+    <Content Include="files\شروط ومرفقات طلب الترشح للدائرة الانتخابية %28العامة_محلية%29 2024_1-merged %281%29.pdf" />
     <None Include="packages.config" />
     <Content Include="Views\Shared\_MainLayout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
@@ -540,6 +545,7 @@
     <Content Include="pdf\قانون الانتخاب لمجلس النواب رقم %284%29 لسنة 2022.pdf" />
     <Content Include="Views\GeneralListings\GeneralListCandidates.cshtml" />
     <Content Include="Views\GeneralListings\ThankYou.cshtml" />
+    <Content Include="Views\Home\Search.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

@@ -1,23 +1,22 @@
 ﻿@model IEnumerable<fstCopy_Proj5.Models.GeneralListCandidate>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "المرشحين";
     Layout = "~/Views/Shared/_AdminLayoutPage.cshtml";
 }
 
-<h2>Candidate applications for the party list</h2>
-
+<h2>طلبات ترشح قائمة الحزب</h2>
 
 <div class="filter-form">
     @using (Html.BeginForm("Index", "GeneralListCandidates", FormMethod.Get, new { id = "filterForm" }))
     {
         <div class="form-group">
-            @Html.Label("General Listing Name")
-            @Html.DropDownList("generalListingName", ViewBag.GeneralListingName as SelectList, "Select", new { @class = "form-control", @onchange = "document.getElementById('filterForm').submit();" })
+            @Html.Label("اسم القائمة العامة")
+            @Html.DropDownList("generalListingName", ViewBag.GeneralListingName as SelectList, "اختر", new { @class = "form-control", @onchange = "document.getElementById('filterForm').submit();" })
         </div>
         <div class="form-group">
             @Html.CheckBox("onlyAccepted", (ViewBag.OnlyAccepted as bool?) ?? false, new { @onchange = "document.getElementById('filterForm').submit();" })
-            @Html.Label("Only Accepted")
+            @Html.Label("فقط المقبولين")
         </div>
     }
 </div>
@@ -26,13 +25,13 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.CandidateName)
+                @Html.DisplayName("اسم المرشح")
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Email)
+                @Html.DisplayName("البريد الإلكتروني")
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.GeneralListingName)
+                @Html.DisplayName("اسم القائمة العامة")
             </th>
             <th></th>
         </tr>
@@ -55,7 +54,7 @@
                 </td>
                 <td>
                     <small class="mb-0 text-muted">
-                        @Html.DisplayFor(modelItem => item.GeneralListingName)
+                        @Html.DisplayFor(modelItem => item.GeneralListing.Name)
                     </small>
                 </td>
                 <td>
@@ -63,10 +62,10 @@
                     {
                         @Html.Hidden("CandidateID", item.CandidateID)
                         @Html.DropDownList("Status", new SelectList(new[]
-                                  {
-                            new SelectListItem { Text = "Choose", Value = "" },
-                            new SelectListItem { Text = "Accept", Value = "1" },
-                            new SelectListItem { Text = "Reject", Value = "0" }
+                        {
+                            new SelectListItem { Text = "اختر", Value = "" },
+                            new SelectListItem { Text = "قبول", Value = "1" },
+                            new SelectListItem { Text = "رفض", Value = "0" }
                         }, "Value", "Text", item.Status), new { @class = "form-control", @onchange = "this.form.submit();" })
                     }
                 </td>
@@ -75,3 +74,17 @@
     </tbody>
 </table>
 
+<style>
+    .accepted-bg {
+        background-color: #d4edda;
+    }
+
+    .rejected-bg {
+        background-color: #f8d7da;
+    }
+
+    table th, table td {
+        text-align: right;
+        direction: rtl;
+    }
+</style>

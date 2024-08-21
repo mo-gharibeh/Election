@@ -69,6 +69,7 @@
     <Property Name="ElectionArea" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="Governorate" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
     <NavigationProperty Name="LocalListCandidates" Relationship="Self.FK__LocalList__Local__4D94879B" FromRole="LocalList" ToRole="LocalListCandidates" />
+    <Property Name="ImageUpload" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
   </EntityType>
   <EntityType Name="LocalListCandidate">
     <Key>
@@ -88,6 +89,7 @@
     <Property Name="Status" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
     <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <NavigationProperty Name="LocalList" Relationship="Self.FK__LocalList__Local__4D94879B" FromRole="LocalListCandidates" ToRole="LocalList" />
+    <Property Name="ImageUpload" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
   </EntityType>
   <EntityType Name="Payment">
     <Key>
@@ -117,6 +119,9 @@
     <Property Name="PartyElections" Type="Boolean" />
     <Property Name="whitePaperLocalElections" Type="Boolean" />
     <Property Name="whitePaperPartyElections" Type="Boolean" />
+    <Property Name="PlaceOfResidence" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+    <Property Name="NameOftheStation" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+    <Property Name="FundNumber" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
   </EntityType>
   <Association Name="FK__LocalList__Local__4D94879B">
     <End Role="LocalList" Type="Self.LocalList" Multiplicity="0..1" />

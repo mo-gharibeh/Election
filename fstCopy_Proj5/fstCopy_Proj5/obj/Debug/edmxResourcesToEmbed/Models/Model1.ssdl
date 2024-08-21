@@ -93,6 +93,7 @@
     <Property Name="NumberOfVotes" Type="int" />
     <Property Name="ElectionArea" Type="nvarchar" MaxLength="50" Nullable="false" />
     <Property Name="Governorate" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="ImageUpload" Type="varchar(max)" />
   </EntityType>
   <EntityType Name="LocalListCandidates">
     <Key>
@@ -111,6 +112,7 @@
     <Property Name="LocalListingID" Type="int" />
     <Property Name="Status" Type="nvarchar" MaxLength="10" />
     <Property Name="Email" Type="varchar" MaxLength="50" />
+    <Property Name="ImageUpload" Type="nvarchar(max)" />
   </EntityType>
   <EntityType Name="Payment">
     <Key>
@@ -140,6 +142,9 @@
     <Property Name="PartyElections" Type="bit" />
     <Property Name="whitePaperLocalElections" Type="bit" />
     <Property Name="whitePaperPartyElections" Type="bit" />
+    <Property Name="PlaceOfResidence" Type="nvarchar" MaxLength="60" />
+    <Property Name="NameOftheStation" Type="nvarchar" MaxLength="60" />
+    <Property Name="FundNumber" Type="nvarchar" MaxLength="60" />
   </EntityType>
   <Association Name="FK__GeneralLi__Gener__70DDC3D8">
     <End Role="GeneralListing" Type="Self.GeneralListing" Multiplicity="1">

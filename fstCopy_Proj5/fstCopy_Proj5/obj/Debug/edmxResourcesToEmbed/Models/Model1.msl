@@ -68,6 +68,7 @@
     <EntitySetMapping Name="LocalLists">
       <EntityTypeMapping TypeName="ElectionModel.LocalList">
         <MappingFragment StoreEntitySet="LocalList">
+          <ScalarProperty Name="ImageUpload" ColumnName="ImageUpload" />
           <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="ListName" ColumnName="ListName" />
           <ScalarProperty Name="NumberOfVotes" ColumnName="NumberOfVotes" />
@@ -79,6 +80,7 @@
     <EntitySetMapping Name="LocalListCandidates">
       <EntityTypeMapping TypeName="ElectionModel.LocalListCandidate">
         <MappingFragment StoreEntitySet="LocalListCandidates">
+          <ScalarProperty Name="ImageUpload" ColumnName="ImageUpload" />
           <ScalarProperty Name="CandidateID" ColumnName="CandidateID" />
           <ScalarProperty Name="CandidateName" ColumnName="CandidateName" />
           <ScalarProperty Name="NationalNumber" ColumnName="NationalNumber" />
@@ -110,6 +112,9 @@
     <EntitySetMapping Name="Users">
       <EntityTypeMapping TypeName="ElectionModel.User">
         <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="FundNumber" ColumnName="FundNumber" />
+          <ScalarProperty Name="NameOftheStation" ColumnName="NameOftheStation" />
+          <ScalarProperty Name="PlaceOfResidence" ColumnName="PlaceOfResidence" />
           <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="NationalNumber" ColumnName="NationalNumber" />
           <ScalarProperty Name="Email" ColumnName="Email" />

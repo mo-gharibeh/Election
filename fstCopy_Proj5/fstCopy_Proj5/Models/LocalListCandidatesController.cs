@@ -4,13 +4,14 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
 using System.Data.Entity.Validation;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Net.Mail;
 using System.Web;
 using System.Web.Mvc;
 
-namespace Brief.Models
+namespace fstCopy_Proj5.Models
 {
     public class LocalListCandidatesController : Controller
     {
@@ -38,20 +39,35 @@ namespace Brief.Models
             PopulateDropDowns();
             return View();
         }
-
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult CreateList(LocalList localList)
+        public ActionResult CreateList(LocalList localList, HttpPostedFileBase ImageUpload)
         {
             if (ModelState.IsValid)
             {
                 try
                 {
+                    if (ImageUpload != null && ImageUpload.ContentLength > 0)
+                    {
+                       
+                        string path = Path.Combine(Server.MapPath("~/Images/Lists/"), Path.GetFileName(ImageUpload.FileName));
+
+                      
+                        ImageUpload.SaveAs(path);
+
+                    
+                        localList.ImageUpload = "/Images/Lists/"+ Path.GetFileName(ImageUpload.FileName);
+                    }
+
+                    // إضافة القائمة إلى قاعدة البيانات
                     db.LocalLists.Add(localList);
                     db.SaveChanges();
+
+                    // تخزين معلومات الجلسة
                     Session["LocalListID"] = localList.ID;
                     Session["Governorate"] = localList.Governorate;
                     Session["ElectionArea"] = localList.ElectionArea;
+
                     return RedirectToAction("Create");
                 }
                 catch (DbEntityValidationException ex)
@@ -69,9 +85,11 @@ namespace Brief.Models
                     ModelState.AddModelError(string.Empty, ex.Message);
                 }
             }
+
             PopulateDropDowns();
             return View(localList);
         }
+
 
         public ActionResult Create()
         {
@@ -81,121 +99,311 @@ namespace Brief.Models
             PopulateDropDowns();
             return View();
         }
+        //[HttpPost]
+        //[ValidateAntiForgeryToken]
+        //public ActionResult Create([Bind(Include = "CandidateID,CandidateName,NationalNumber,Gender,Religion,Type_Chair,BirthdateCandidate,Governorate,ElectionArea,NumberOfVotesCandidate,LocalListingID,Email")] LocalListCandidate localListCandidate, HttpPostedFileBase ImageUpload)
+        //{
+        //    if (ModelState.IsValid)
+        //    {
+        //        // التحقق من الرقم الوطني (10 أرقام)
+        //        if (localListCandidate.NationalNumber.Length != 10)
+        //        {
+        //            ModelState.AddModelError("NationalNumber", "الرقم الوطني يجب أن يكون 10 أرقام.");
+        //        }
+
+        //        // التحقق من تاريخ الميلاد (العمر أكبر من 25 سنة)
+        //        if (!string.IsNullOrEmpty(localListCandidate.BirthdateCandidate))
+        //        {
+        //            DateTime birthDate;
+        //            if (DateTime.TryParse(localListCandidate.BirthdateCandidate, out birthDate))
+        //            {
+        //                int age = DateTime.Now.Year - birthDate.Year;
+        //                if (birthDate > DateTime.Now.AddYears(-age)) age--;
+
+        //                if (age < 25)
+        //                {
+        //                    ModelState.AddModelError("BirthdateCandidate", "العمر يجب أن يكون 25 سنة أو أكثر.");
+        //                }
+        //            }
+        //            else
+        //            {
+        //                ModelState.AddModelError("BirthdateCandidate", "تنسيق تاريخ غير صحيح.");
+        //            }
+        //        }
+
+        //        // التحقق من الحقول المطلوبة
+        //        if (string.IsNullOrEmpty(localListCandidate.CandidateName))
+        //        {
+        //            ModelState.AddModelError("CandidateName", "اسم المرشح مطلوب.");
+        //        }
+
+        //        // التحقق من نوع الكرسي والترشح لعجلون
+        //        if (localListCandidate.Governorate == "عجلون")
+        //        {
+        //            var currentListCandidates = db.LocalListCandidates
+        //                .Where(c => c.LocalListingID == localListCandidate.LocalListingID)
+        //                .ToList();
+
+        //            int christianCount = currentListCandidates.Count(c => c.Type_Chair == "مسيحي");
+        //            int quotaCount = currentListCandidates.Count(c => c.Type_Chair == "كوتا");
+        //            int competitiveCount = currentListCandidates.Count(c => c.Type_Chair == "تنافس");
+
+        //            if (localListCandidate.Type_Chair == "مسيحي" && christianCount >= 1)
+        //            {
+        //                ModelState.AddModelError("Type_Chair", "لا يمكن إضافة أكثر من مرشح مسيحي واحد.");
+        //            }
+        //            else if (localListCandidate.Type_Chair == "كوتا" && quotaCount >= 1)
+        //            {
+        //                ModelState.AddModelError("Type_Chair", "لا يمكن إضافة أكثر من مرشح كوتا واحد.");
+        //            }
+        //            else if (localListCandidate.Type_Chair == "تنافس" && competitiveCount >= 1)
+        //            {
+        //                ModelState.AddModelError("Type_Chair", "لا يمكن إضافة أكثر من مرشح تنافس واحد.");
+        //            }
+        //        }
+        //        else if (localListCandidate.Governorate == "إربد" && localListCandidate.ElectionArea == "إربد الأولى")
+        //        {
+        //            var currentListCandidates = db.LocalListCandidates
+        //                .Where(c => c.LocalListingID == localListCandidate.LocalListingID)
+        //                .ToList();
+
+        //            int quotaCount = currentListCandidates.Count(c => c.Type_Chair == "كوتا");
+        //            int competitiveCount = currentListCandidates.Count(c => c.Type_Chair == "تنافس");
+
+        //            if (localListCandidate.Type_Chair == "كوتا" && quotaCount >= 1)
+        //            {
+        //                ModelState.AddModelError("Type_Chair", "لا يمكن إضافة أكثر من مرشح كوتا واحد.");
+        //            }
+        //            else if (localListCandidate.Type_Chair == "تنافس" && competitiveCount >= 7)
+        //            {
+        //                ModelState.AddModelError("Type_Chair", "لا يمكن إضافة أكثر من 7 مرشحين تنافس.");
+        //            }
+        //        }
+        //        else if (localListCandidate.Governorate == "إربد" && localListCandidate.ElectionArea == "إربد الثانية")
+        //        {
+        //            var currentListCandidates = db.LocalListCandidates
+        //                .Where(c => c.LocalListingID == localListCandidate.LocalListingID)
+        //                .ToList();
+
+        //            int christianCount = currentListCandidates.Count(c => c.Type_Chair == "مسيحي");
+        //            int quotaCount = currentListCandidates.Count(c => c.Type_Chair == "كوتا");
+        //            int competitiveCount = currentListCandidates.Count(c => c.Type_Chair == "تنافس");
+
+        //            if (localListCandidate.Type_Chair == "مسيحي" && christianCount >= 1)
+        //            {
+        //                ModelState.AddModelError("Type_Chair", "لا يمكن إضافة أكثر من مرشح مسيحي واحد.");
+        //            }
+        //            else if (localListCandidate.Type_Chair == "كوتا" && quotaCount >= 1)
+        //            {
+        //                ModelState.AddModelError("Type_Chair", "لا يمكن إضافة أكثر من مرشح كوتا واحد.");
+        //            }
+        //            else if (localListCandidate.Type_Chair == "تنافس" && competitiveCount >= 5)
+        //            {
+        //                ModelState.AddModelError("Type_Chair", "لا يمكن إضافة أكثر من 5 مرشحين تنافس.");
+        //            }
+        //        }
+
+        //        // معالجة تحميل الصورة
+        //        if (ImageUpload != null && ImageUpload.ContentLength > 0)
+        //        {
+        //            string fileName = Path.GetFileName(ImageUpload.FileName);
+        //            string uniqueFileName = $"{Path.GetFileNameWithoutExtension(fileName)}_{Guid.NewGuid()}{Path.GetExtension(fileName)}";
+        //            string path = Path.Combine(Server.MapPath("~/Images/"), uniqueFileName);
+
+        //            try
+        //            {
+        //                // Ensure the directory exists
+        //                if (!Directory.Exists(Server.MapPath("~/Images/")))
+        //                {
+        //                    Directory.CreateDirectory(Server.MapPath("~/Images/"));
+        //                }
+
+        //                ImageUpload.SaveAs(path);
+        //                localListCandidate.ImageUpload = "/Images/Candidates/" + uniqueFileName;
+        //            }
+        //            catch (Exception ex)
+        //            {
+        //                ModelState.AddModelError("", "حدث خطأ أثناء رفع الصورة: " + ex.Message);
+        //            }
+        //        }
+
+        //        // إذا لم يكن هناك أي أخطاء في الفالديشن، احفظ المرشح
+        //        if (ModelState.IsValid)
+        //        {
+        //            db.LocalListCandidates.Add(localListCandidate);
+        //            db.SaveChanges();
+        //            return RedirectToAction("CreateCandidates", new { listId = localListCandidate.LocalListingID });
+        //        }
+        //    }
+
+        //    // عرض البيانات المدخلة مع رسائل الخطأ
+        //    ViewBag.LocalListID = localListCandidate.LocalListingID;
+        //    ViewBag.Governorate = Session["Governorate"];
+        //    ViewBag.ElectionArea = Session["ElectionArea"];
+        //    ViewBag.Email = Session["Email"];
+        //    PopulateDropDowns(localListCandidate);
+        //    return View(localListCandidate);
+        //}
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "CandidateID,CandidateName,NationalNumber,Gender,Religion,Type_Chair,BirthdateCandidate,Governorate,ElectionArea,NumberOfVotesCandidate,LocalListingID,Email")] LocalListCandidate localListCandidate)
+        public ActionResult Create([Bind(Include = "CandidateID,CandidateName,NationalNumber,Gender,Religion,Type_Chair,BirthdateCandidate,Governorate,ElectionArea,NumberOfVotesCandidate,LocalListingID,Email")] LocalListCandidate localListCandidate, HttpPostedFileBase ImageUpload)
         {
             if (ModelState.IsValid)
             {
-                // التحقق من الرقم الوطني (10 أرقام)
-                if (localListCandidate.NationalNumber.Length != 10)
+                try
                 {
-                    ModelState.AddModelError("NationalNumber", "الرقم الوطني يجب أن يكون 10 أرقام.");
-                }
-
-                // التحقق من تاريخ الميلاد (العمر أكبر من 25 سنة)
-                if (!string.IsNullOrEmpty(localListCandidate.BirthdateCandidate))
-                {
-                    DateTime birthDate;
-                    if (DateTime.TryParse(localListCandidate.BirthdateCandidate, out birthDate))
+                    // التحقق من الرقم الوطني (10 أرقام)
+                    if (localListCandidate.NationalNumber.Length != 10)
                     {
-                        int age = DateTime.Now.Year - birthDate.Year;
-                        if (birthDate > DateTime.Now.AddYears(-age)) age--;
-                        //localListCandidate.Status = "Accepted";
-                        db.LocalListCandidates.Add(localListCandidate);
-                        if (age < 25)
+                        ModelState.AddModelError("NationalNumber", "الرقم الوطني يجب أن يكون 10 أرقام.");
+                    }
+
+                    // التحقق من تاريخ الميلاد (العمر أكبر من 25 سنة)
+                    if (!string.IsNullOrEmpty(localListCandidate.BirthdateCandidate))
+                    {
+                        DateTime birthDate;
+                        if (DateTime.TryParse(localListCandidate.BirthdateCandidate, out birthDate))
                         {
-                            ModelState.AddModelError("BirthdateCandidate", "العمر يجب أن يكون 25 سنة أو أكثر.");
+                            int age = DateTime.Now.Year - birthDate.Year;
+                            if (birthDate > DateTime.Now.AddYears(-age)) age--;
+
+                            if (age < 25)
+                            {
+                                ModelState.AddModelError("BirthdateCandidate", "العمر يجب أن يكون 25 سنة أو أكثر.");
+                            }
+                        }
+                        else
+                        {
+                            ModelState.AddModelError("BirthdateCandidate", "تنسيق تاريخ غير صحيح.");
                         }
                     }
-                    else
+
+                    // التحقق من الحقول المطلوبة
+                    if (string.IsNullOrEmpty(localListCandidate.CandidateName))
                     {
-                        ModelState.AddModelError("BirthdateCandidate", "تنسيق تاريخ غير صحيح.");
+                        ModelState.AddModelError("CandidateName", "اسم المرشح مطلوب.");
+                    }
+
+
+                    // التحقق من نوع الكرسي والترشح لعجلون
+                    if (localListCandidate.Governorate == "عجلون")
+                    {
+                        var currentListCandidates = db.LocalListCandidates
+                            .Where(c => c.LocalListingID == localListCandidate.LocalListingID)
+                            .ToList();
+
+                        int christianCount = currentListCandidates.Count(c => c.Type_Chair == "مسيحي");
+                        int quotaCount = currentListCandidates.Count(c => c.Type_Chair == "كوتا");
+                        int competitiveCount = currentListCandidates.Count(c => c.Type_Chair == "تنافس");
+
+                        if (localListCandidate.Type_Chair == "مسيحي" && christianCount >= 1)
+                        {
+                            ModelState.AddModelError("Type_Chair", "لا يمكن إضافة أكثر من مرشح مسيحي واحد.");
+                        }
+                        else if (localListCandidate.Type_Chair == "كوتا" && quotaCount >= 1)
+                        {
+                            ModelState.AddModelError("Type_Chair", "لا يمكن إضافة أكثر من مرشح كوتا واحد.");
+                        }
+                        else if (localListCandidate.Type_Chair == "تنافس" && competitiveCount >= 1)
+                        {
+                            ModelState.AddModelError("Type_Chair", "لا يمكن إضافة أكثر من مرشح تنافس واحد.");
+                        }
+                    }
+                    else if (localListCandidate.Governorate == "إربد" && localListCandidate.ElectionArea == "إربد الأولى")
+                    {
+                        var currentListCandidates = db.LocalListCandidates
+                            .Where(c => c.LocalListingID == localListCandidate.LocalListingID)
+                            .ToList();
+
+                        int quotaCount = currentListCandidates.Count(c => c.Type_Chair == "كوتا");
+                        int competitiveCount = currentListCandidates.Count(c => c.Type_Chair == "تنافس");
+
+                        if (localListCandidate.Type_Chair == "كوتا" && quotaCount >= 1)
+                        {
+                            ModelState.AddModelError("Type_Chair", "لا يمكن إضافة أكثر من مرشح كوتا واحد.");
+                        }
+                        else if (localListCandidate.Type_Chair == "تنافس" && competitiveCount >= 7)
+                        {
+                            ModelState.AddModelError("Type_Chair", "لا يمكن إضافة أكثر من 7 مرشحين تنافس.");
+                        }
+                    }
+                    else if (localListCandidate.Governorate == "إربد" && localListCandidate.ElectionArea == "إربد الثانية")
+                    {
+                        var currentListCandidates = db.LocalListCandidates
+                            .Where(c => c.LocalListingID == localListCandidate.LocalListingID)
+                            .ToList();
+
+                        int christianCount = currentListCandidates.Count(c => c.Type_Chair == "مسيحي");
+                        int quotaCount = currentListCandidates.Count(c => c.Type_Chair == "كوتا");
+                        int competitiveCount = currentListCandidates.Count(c => c.Type_Chair == "تنافس");
+
+                        if (localListCandidate.Type_Chair == "مسيحي" && christianCount >= 1)
+                        {
+                            ModelState.AddModelError("Type_Chair", "لا يمكن إضافة أكثر من مرشح مسيحي واحد.");
+                        }
+                        else if (localListCandidate.Type_Chair == "كوتا" && quotaCount >= 1)
+                        {
+                            ModelState.AddModelError("Type_Chair", "لا يمكن إضافة أكثر من مرشح كوتا واحد.");
+                        }
+                        else if (localListCandidate.Type_Chair == "تنافس" && competitiveCount >= 5)
+                        {
+                            ModelState.AddModelError("Type_Chair", "لا يمكن إضافة أكثر من 5 مرشحين تنافس.");
+                        }
+                    }
+
+
+                    // معالجة تحميل الصورة
+                    if (ImageUpload != null && ImageUpload.ContentLength > 0)
+                    {
+                        var fileName = Path.GetFileName(ImageUpload.FileName);
+                        var uniqueFileName = $"{Path.GetFileNameWithoutExtension(fileName)}_{Guid.NewGuid()}{Path.GetExtension(fileName)}";
+                        var path = Path.Combine(Server.MapPath("~/Images/Candidates/"), uniqueFileName);
+
+                        try
+                        {
+                            // Ensure the directory exists
+                            if (!Directory.Exists(Server.MapPath("~/Images/Candidates/")))
+                            {
+                                Directory.CreateDirectory(Server.MapPath("~/Images/Candidates/"));
+                            }
+
+                            ImageUpload.SaveAs(path);
+
+                            // Set the image path in the model
+                            localListCandidate.ImageUpload = uniqueFileName;
+                        }
+                        catch (Exception ex)
+                        {
+                            ModelState.AddModelError("", "حدث خطأ أثناء رفع الصورة: " + ex.Message);
+                        }
+                    }
+
+                    // إذا لم يكن هناك أي أخطاء في الفالديشن، احفظ المرشح
+                    if (ModelState.IsValid)
+                    {
+                        db.LocalListCandidates.Add(localListCandidate);
+                        db.SaveChanges();
+
+                        // Redirect to the appropriate action
+                        return RedirectToAction("CreateCandidates", new { listId = localListCandidate.LocalListingID });
                     }
                 }
-
-                // التحقق من الحقول المطلوبة
-                if (string.IsNullOrEmpty(localListCandidate.CandidateName))
+                catch (DbEntityValidationException ex)
                 {
-                    ModelState.AddModelError("CandidateName", "اسم المرشح مطلوب.");
-                }
-
-                // التحقق من نوع الكرسي والترشح
-                if (localListCandidate.Governorate == "عجلون")
-                {
-                    // تحقق من الكراسي لعجلون
-                    var currentListCandidates = db.LocalListCandidates
-                        .Where(c => c.LocalListingID == localListCandidate.LocalListingID)
-                        .ToList();
-
-                    int christianCount = currentListCandidates.Count(c => c.Type_Chair == "مسيحي");
-                    int quotaCount = currentListCandidates.Count(c => c.Type_Chair == "كوتا");
-                    int competitiveCount = currentListCandidates.Count(c => c.Type_Chair == "تنافس");
-
-                    if (localListCandidate.Type_Chair == "مسيحي" && christianCount >= 1)
+                    // Handle validation errors
+                    foreach (var validationErrors in ex.EntityValidationErrors)
                     {
-                        ModelState.AddModelError("Type_Chair", "لا يمكن إضافة أكثر من مرشح مسيحي واحد.");
-                    }
-                    else if (localListCandidate.Type_Chair == "كوتا" && quotaCount >= 1)
-                    {
-                        ModelState.AddModelError("Type_Chair", "لا يمكن إضافة أكثر من مرشح كوتا واحد.");
-                    }
-                    else if (localListCandidate.Type_Chair == "تنافس" && competitiveCount >= 1)
-                    {
-                        ModelState.AddModelError("Type_Chair", "لا يمكن إضافة أكثر من مرشح تنافس واحد.");
+                        foreach (var validationError in validationErrors.ValidationErrors)
+                        {
+                            ModelState.AddModelError(validationError.PropertyName, validationError.ErrorMessage);
+                        }
                     }
                 }
-                else if (localListCandidate.Governorate == "إربد" && localListCandidate.ElectionArea == "إربد الأولى")
+                catch (Exception ex)
                 {
-                    // تحقق من الكراسي لإربد الأولى
-                    var currentListCandidates = db.LocalListCandidates
-                        .Where(c => c.LocalListingID == localListCandidate.LocalListingID)
-                        .ToList();
-
-                    int quotaCount = currentListCandidates.Count(c => c.Type_Chair == "كوتا");
-                    int competitiveCount = currentListCandidates.Count(c => c.Type_Chair == "تنافس");
-
-                    if (localListCandidate.Type_Chair == "كوتا" && quotaCount >= 1)
-                    {
-                        ModelState.AddModelError("Type_Chair", "لا يمكن إضافة أكثر من مرشح كوتا واحد.");
-                    }
-                    else if (localListCandidate.Type_Chair == "تنافس" && competitiveCount >= 7)
-                    {
-                        ModelState.AddModelError("Type_Chair", "لا يمكن إضافة أكثر من 7 مرشحين تنافس.");
-                    }
-                }
-                else if (localListCandidate.Governorate == "إربد" && localListCandidate.ElectionArea == "إربد الثانية")
-                {
-                    // تحقق من الكراسي لإربد الثانية
-                    var currentListCandidates = db.LocalListCandidates
-                        .Where(c => c.LocalListingID == localListCandidate.LocalListingID)
-                        .ToList();
-
-                    int christianCount = currentListCandidates.Count(c => c.Type_Chair == "مسيحي");
-                    int quotaCount = currentListCandidates.Count(c => c.Type_Chair == "كوتا");
-                    int competitiveCount = currentListCandidates.Count(c => c.Type_Chair == "تنافس");
-
-                    if (localListCandidate.Type_Chair == "مسيحي" && christianCount >= 1)
-                    {
-                        ModelState.AddModelError("Type_Chair", "لا يمكن إضافة أكثر من مرشح مسيحي واحد.");
-                    }
-                    else if (localListCandidate.Type_Chair == "كوتا" && quotaCount >= 1)
-                    {
-                        ModelState.AddModelError("Type_Chair", "لا يمكن إضافة أكثر من مرشح كوتا واحد.");
-                    }
-                    else if (localListCandidate.Type_Chair == "تنافس" && competitiveCount >= 5)
-                    {
-                        ModelState.AddModelError("Type_Chair", "لا يمكن إضافة أكثر من 5 مرشحين تنافس.");
-                    }
-                }
-
-                // إذا لم يكن هناك أي أخطاء في الفالديشن، احفظ المرشح
-                if (ModelState.IsValid)
-                {
-                    db.LocalListCandidates.Add(localListCandidate);
-                    db.SaveChanges();
-                    return RedirectToAction("CreateCandidates", new { listId = localListCandidate.LocalListingID });
+                    // Log the exception or handle it as needed
+                    ModelState.AddModelError("", "An unexpected error occurred. Please try again.");
                 }
             }
 
@@ -244,6 +452,7 @@ namespace Brief.Models
             PopulateDropDowns();
             return View(candidates);
         }
+        
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult CreateCandidates(List<LocalListCandidate> candidates)
@@ -261,9 +470,9 @@ namespace Brief.Models
                     int quotaCount = 0;
                     int competitiveCount = 0;
 
-                    // التحقق من المرشحين لكل منطقة
-                    foreach (var candidate in candidates)
+                    for (int i = 0; i < candidates.Count; i++)
                     {
+                        var candidate = candidates[i];
                         candidate.LocalListingID = localListID;
 
                         if (candidate.Type_Chair == "مسيحي")
@@ -279,8 +488,7 @@ namespace Brief.Models
                             competitiveCount++;
                         }
 
-                        // التحقق من المقاعد المتاحة لكل منطقة
-                        if ((governorate == "عجلون" || (governorate == "إربد" && electionArea == "إربد الثانية")) && christianCount > 1)
+                        if ((governorate == "عجلون" || (governorate == "إربد" && electionArea == "إربد الثانية") || (governorate == "إربد" && electionArea == "إربد الأولى")) && christianCount > 1)
                         {
                             ModelState.AddModelError("Type_Chair", "لا يمكن إضافة أكثر من مرشح مسيحي واحد.");
                         }
@@ -302,9 +510,36 @@ namespace Brief.Models
                         {
                             ModelState.AddModelError("", "الرقم الوطني موجود بالفعل في القائمة.");
                         }
+
+                        // Handle file upload for each candidate
+                        var file = Request.Files[$"ImageUploads[{i}]"];
+                        if (file != null && file.ContentLength > 0)
+                        {
+                            string fileName = Path.GetFileName(file.FileName);
+                            string uniqueFileName = $"{Path.GetFileNameWithoutExtension(fileName)}_{Guid.NewGuid()}{Path.GetExtension(fileName)}";
+                            string path = Path.Combine(Server.MapPath("~/Images/Candidates/"), uniqueFileName);
+
+                            try
+                            {
+                                if (!Directory.Exists(Server.MapPath("~/Images/Candidates/")))
+                                {
+                                    Directory.CreateDirectory(Server.MapPath("~/Images/Candidates/"));
+                                }
+
+                                file.SaveAs(path);
+                                candidate.ImageUpload = "/Images/Candidates/" + uniqueFileName;
+                            }
+                            catch (Exception ex)
+                            {
+                                ModelState.AddModelError("", "حدث خطأ أثناء رفع الصورة: " + ex.Message);
+                            }
+                        }
+                        else
+                        {
+                            ModelState.AddModelError("ImageUpload", "الرجاء اختيار صورة صالحة للتحميل.");
+                        }
                     }
 
-                    // إذا كانت هناك أخطاء، إعادة عرض الصفحة مع رسائل الخطأ
                     if (!ModelState.IsValid)
                     {
                         ViewBag.Governorate = Session["Governorate"];
@@ -313,7 +548,6 @@ namespace Brief.Models
                         return View(candidates);
                     }
 
-                    // إذا لم تكن هناك أخطاء، احفظ البيانات واذهب إلى صفحة الشكر
                     try
                     {
                         foreach (var candidate in candidates)
@@ -338,7 +572,6 @@ namespace Brief.Models
                         ModelState.AddModelError(string.Empty, "حدث خطأ: " + ex.InnerException?.Message ?? ex.Message);
                     }
 
-                    // إذا حدث خطأ في الحفظ، إعادة عرض الصفحة مع رسائل الخطأ
                     ViewBag.Governorate = Session["Governorate"];
                     ViewBag.ElectionArea = Session["ElectionArea"];
                     PopulateDropDowns();
@@ -346,7 +579,6 @@ namespace Brief.Models
                 }
             }
 
-            // في حال وجود خطأ آخر، إعادة عرض الصفحة
             ViewBag.Governorate = Session["Governorate"];
             ViewBag.ElectionArea = Session["ElectionArea"];
             PopulateDropDowns();
@@ -355,14 +587,13 @@ namespace Brief.Models
 
 
 
-
         private void PopulateDropDowns(LocalListCandidate localListCandidate = null)
         {
             ViewBag.LocalListingID = new SelectList(db.LocalLists, "LocalListingID", "LocalListingName", localListCandidate?.LocalListingID);
             ViewBag.Religions = new SelectList(new List<string> { "مسلم", "مسيحي" }, localListCandidate?.Religion);
             ViewBag.Genders = new SelectList(new List<string> { "ذكر", "أنثى" }, localListCandidate?.Gender);
-            ViewBag.Governorates = new SelectList(new List<string> { "إربد", "عجلون" }, localListCandidate?.Governorate);
-            ViewBag.ElectionAreas = new SelectList(new List<string> { "إربد الأولى", "إربد الثانية", "عجلون" }, localListCandidate?.ElectionArea);
+            ViewBag.Governorates = new SelectList(new List<string> { "إربد", "عجلون" ,"عمان "}, localListCandidate?.Governorate);
+            ViewBag.ElectionAreas = new SelectList(new List<string> { "إربد الأولى", "إربد الثانية", "عجلون" ,"عمان الأولى","عمان الثانية","عمان الثالثة"}, localListCandidate?.ElectionArea);
             ViewBag.TypeChairs = new SelectList(new List<string> { "كوتا", "مسيحي", "تنافس" }, localListCandidate?.Type_Chair);
         }
 

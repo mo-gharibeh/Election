@@ -27,5 +27,8 @@ namespace fstCopy_Proj5.Models
         public Nullable<bool> PartyElections { get; set; }
         public Nullable<bool> whitePaperLocalElections { get; set; }
         public Nullable<bool> whitePaperPartyElections { get; set; }
+        public string PlaceOfResidence { get; set; }
+        public string NameOftheStation { get; set; }
+        public string FundNumber { get; set; }
     }
 }

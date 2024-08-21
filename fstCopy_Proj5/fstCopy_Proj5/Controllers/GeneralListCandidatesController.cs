@@ -1,13 +1,14 @@
-﻿using fstCopy_Proj5.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.Entity;
 using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
+using fstCopy_Proj5.Models;
 
-namespace fstCopy_Proj5.Controllers
+namespace E_Voting.Controllers
 {
     public class GeneralListCandidatesController : Controller
     {
@@ -16,32 +17,17 @@ namespace fstCopy_Proj5.Controllers
 
         // GET: GeneralListCandidates
         public ActionResult Index(string generalListingName, bool? onlyAccepted)
-
         {
-
-            var generalListings = db.GeneralListings.ToList();
-            var initialValue = generalListings.FirstOrDefault()?.Name; // Select the first item's name as the initial value
-
-            // Set the selected value to either the passed generalListingName or the initialValue
-            var selectedValue = generalListingName ?? initialValue;
-
-            // Create the SelectList with the selected value
-            ViewBag.GeneralListingName = new SelectList(generalListings, "Name", "Name", selectedValue: selectedValue);
-
-            // Use the selectedValue for further logic in your action if needed
-            generalListingName = selectedValue;
-
-
-            var generalListCandidates = db.GeneralListCandidates.ToList();
+            var generalListCandidates = db.GeneralListCandidates.Include(g => g.GeneralListing);
 
             if (!string.IsNullOrEmpty(generalListingName))
             {
-                generalListCandidates = generalListCandidates.Where(c => c.GeneralListingName == generalListingName).ToList();
+                generalListCandidates = generalListCandidates.Where(c => c.GeneralListingName == generalListingName);
             }
 
             if (onlyAccepted.HasValue && onlyAccepted.Value)
             {
-                generalListCandidates = generalListCandidates.Where(c => c.Status == "1").ToList();
+                generalListCandidates = generalListCandidates.Where(c => c.Status == "1");
             }
 
             ViewBag.GeneralListingName = new SelectList(db.GeneralListings, "Name", "Name", generalListingName);
@@ -93,7 +79,30 @@ namespace fstCopy_Proj5.Controllers
             return View(generalListCandidate);
         }
 
+        /* // GET: GeneralListCandidates/Create
+         public ActionResult Create()
+         {
+             ViewBag.GeneralListingName = new SelectList(db.GeneralListings, "Name", "Name");
+             return View();
+         }
 
+         // POST: GeneralListCandidates/Create
+         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
+         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
+         [HttpPost]
+         [ValidateAntiForgeryToken]
+         public ActionResult Create([Bind(Include = "CandidateID,GeneralListingName,CandidateName,Email,Status")] GeneralListCandidate generalListCandidate)
+         {
+             if (ModelState.IsValid)
+             {
+                 db.GeneralListCandidates.Add(generalListCandidate);
+                 db.SaveChanges();
+                 return RedirectToAction("Index");
+             }
+
+             ViewBag.GeneralListingName = new SelectList(db.GeneralListings, "Name", "Name", generalListCandidate.GeneralListingName);
+             return View(generalListCandidate);
+         }*/
 
 
 
@@ -101,14 +110,8 @@ namespace fstCopy_Proj5.Controllers
         // GET: GeneralListCandidates/Create
         public ActionResult Create()
         {
+            ViewBag.GeneralListingName = new SelectList(db.GeneralListings, "Name", "Name");
 
-            var generalListings = db.GeneralListings.ToList();
-            var initialValue = generalListings.FirstOrDefault()?.Name; // This will select the first item's name as the initial value
-
-            ViewBag.GeneralListingName = new SelectList(generalListings, "Name", "Name", selectedValue: initialValue);
-            //ViewBag.GeneralListingName = new SelectList(db.GeneralListings, "Name", "Name");
-            // ViewBag.GeneralListingName =  "الحق";
-            //Session["GeneralListingName"] = ViewBag.GeneralListingName;
             // Initialize a new GeneralListCandidate object with a default Status value
             var candidate = new GeneralListCandidate
             {
@@ -139,11 +142,11 @@ namespace fstCopy_Proj5.Controllers
 
                 db.GeneralListCandidates.Add(generalListCandidate);
                 db.SaveChanges();
-                return RedirectToAction("ThankYou", "GeneralListCandidates");
+                return RedirectToAction("Index");
             }
 
             ViewBag.GeneralListingName = new SelectList(db.GeneralListings, "Name", "Name", generalListCandidate.GeneralListingName);
-            return RedirectToAction("ThankYou", "GeneralListCandidates");
+            return View(generalListCandidate);
         }
 
 
@@ -152,13 +155,44 @@ namespace fstCopy_Proj5.Controllers
         public ActionResult FilterAcceptedCandidates(string generalListingName)
         {
             var acceptedCandidates = db.GeneralListCandidates
-                                       .Include(g => g.GeneralListingName)
+                                       .Include(g => g.GeneralListing)
                                        .Where(c => c.GeneralListingName == generalListingName && c.Status == "1")
                                        .ToList();
 
             ViewBag.GeneralListingName = new SelectList(db.GeneralListings, "Name", "Name", generalListingName);
             return View(acceptedCandidates);
         }
+
+
+
+        /*
+                [HttpPost]
+                [ValidateAntiForgeryToken]
+                public ActionResult Create([Bind(Include = "CandidateID,GeneralListingName,CandidateName,Email,Status")] GeneralListCandidate generalListCandidate)
+                {
+                    if (ModelState.IsValid)
+                    {
+                        // Count the number of candidates already registered for the same General Listing
+                        int count = db.GeneralListCandidates.Count(c => c.GeneralListingName == generalListCandidate.GeneralListingName);
+                        if (count >= 40)
+                        {
+                            ModelState.AddModelError("GeneralListingName", "The number of candidates for the same General Listing Name cannot exceed 40.");
+                            ViewBag.GeneralListingName = new SelectList(db.GeneralListings, "Name", "Name", generalListCandidate.GeneralListingName);
+                            return View(generalListCandidate);
+                        }
+
+                        db.GeneralListCandidates.Add(generalListCandidate);
+                        db.SaveChanges();
+                        return RedirectToAction("Index");
+                    }
+
+                    ViewBag.GeneralListingName = new SelectList(db.GeneralListings, "Name", "Name", generalListCandidate.GeneralListingName);
+                    return View(generalListCandidate);
+                }
+        */
+
+
+
 
 
 
@@ -229,10 +263,6 @@ namespace fstCopy_Proj5.Controllers
                 db.Dispose();
             }
             base.Dispose(disposing);
-        }
-        public ActionResult ThankYou()
-        {
-            return View();
         }
     }
 }

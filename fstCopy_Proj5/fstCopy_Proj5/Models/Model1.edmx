@@ -98,6 +98,7 @@
           <Property Name="NumberOfVotes" Type="int" />
           <Property Name="ElectionArea" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="Governorate" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="ImageUpload" Type="varchar(max)" />
         </EntityType>
         <EntityType Name="LocalListCandidates">
           <Key>
@@ -116,6 +117,7 @@
           <Property Name="LocalListingID" Type="int" />
           <Property Name="Status" Type="nvarchar" MaxLength="10" />
           <Property Name="Email" Type="varchar" MaxLength="50" />
+          <Property Name="ImageUpload" Type="nvarchar(max)" />
         </EntityType>
         <EntityType Name="Payment">
           <Key>
@@ -145,6 +147,9 @@
           <Property Name="PartyElections" Type="bit" />
           <Property Name="whitePaperLocalElections" Type="bit" />
           <Property Name="whitePaperPartyElections" Type="bit" />
+          <Property Name="PlaceOfResidence" Type="nvarchar" MaxLength="60" />
+          <Property Name="NameOftheStation" Type="nvarchar" MaxLength="60" />
+          <Property Name="FundNumber" Type="nvarchar" MaxLength="60" />
         </EntityType>
         <Association Name="FK__GeneralLi__Gener__70DDC3D8">
           <End Role="GeneralListing" Type="Self.GeneralListing" Multiplicity="1">
@@ -266,6 +271,7 @@
           <Property Name="ElectionArea" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Governorate" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <NavigationProperty Name="LocalListCandidates" Relationship="Self.FK__LocalList__Local__4D94879B" FromRole="LocalList" ToRole="LocalListCandidates" />
+          <Property Name="ImageUpload" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="LocalListCandidate">
           <Key>
@@ -285,6 +291,7 @@
           <Property Name="Status" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
           <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="LocalList" Relationship="Self.FK__LocalList__Local__4D94879B" FromRole="LocalListCandidates" ToRole="LocalList" />
+          <Property Name="ImageUpload" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="Payment">
           <Key>
@@ -314,6 +321,9 @@
           <Property Name="PartyElections" Type="Boolean" />
           <Property Name="whitePaperLocalElections" Type="Boolean" />
           <Property Name="whitePaperPartyElections" Type="Boolean" />
+          <Property Name="PlaceOfResidence" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+          <Property Name="NameOftheStation" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+          <Property Name="FundNumber" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
         </EntityType>
         <Association Name="FK__LocalList__Local__4D94879B">
           <End Role="LocalList" Type="Self.LocalList" Multiplicity="0..1" />
@@ -462,6 +472,7 @@
           <EntitySetMapping Name="LocalLists">
             <EntityTypeMapping TypeName="ElectionModel.LocalList">
               <MappingFragment StoreEntitySet="LocalList">
+                <ScalarProperty Name="ImageUpload" ColumnName="ImageUpload" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="ListName" ColumnName="ListName" />
                 <ScalarProperty Name="NumberOfVotes" ColumnName="NumberOfVotes" />
@@ -473,6 +484,7 @@
           <EntitySetMapping Name="LocalListCandidates">
             <EntityTypeMapping TypeName="ElectionModel.LocalListCandidate">
               <MappingFragment StoreEntitySet="LocalListCandidates">
+                <ScalarProperty Name="ImageUpload" ColumnName="ImageUpload" />
                 <ScalarProperty Name="CandidateID" ColumnName="CandidateID" />
                 <ScalarProperty Name="CandidateName" ColumnName="CandidateName" />
                 <ScalarProperty Name="NationalNumber" ColumnName="NationalNumber" />
@@ -504,6 +516,9 @@
           <EntitySetMapping Name="Users">
             <EntityTypeMapping TypeName="ElectionModel.User">
               <MappingFragment StoreEntitySet="Users">
+                <ScalarProperty Name="FundNumber" ColumnName="FundNumber" />
+                <ScalarProperty Name="NameOftheStation" ColumnName="NameOftheStation" />
+                <ScalarProperty Name="PlaceOfResidence" ColumnName="PlaceOfResidence" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="NationalNumber" ColumnName="NationalNumber" />
                 <ScalarProperty Name="Email" ColumnName="Email" />
